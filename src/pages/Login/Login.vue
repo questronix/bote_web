@@ -21,19 +21,16 @@ export default {
   data (){
     return {
      username: '',
-     email: '',
      password: ''
     }
   },
   methods: {
     login() {
         console.log(this.username);
-        console.log(this.email);
         console.log(this.password);
         
         this.username = '';
         this.password = '';
-        this.email = '';
         //api call
     }
   }
@@ -61,7 +58,7 @@ i {
     position: absolute;
     color: #707070;
     font-size: 30px;
-    margin-top: 10px;
+    margin-top: 15px;
     margin-left: 7px;
 }
 input{
