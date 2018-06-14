@@ -17,7 +17,7 @@
 </template>
 
 <script>
-import Api from '../../lib/Api';
+import Api from '../../../lib/Api.js';
 
 export default {
   data (){
