@@ -15,7 +15,7 @@ router.get('/login', (req, res, next)=>{
   res.render('web/login');
 });
 
-router.get('/dashboard', (req, res, next)=>{
+router.get('/web/dashboard', (req, res, next)=>{
   res.render('web/dashboard');
 });
 
@@ -24,7 +24,7 @@ router.get('/mobile/login', (req, res, next)=>{
   res.render('mobile/login');
 });
 
-router.get('/dashboard', (req, res, next)=>{
+router.get('/mobile/dashboard', (req, res, next)=>{
   res.render('mobile/dashboard');
 });
 module.exports = router;
