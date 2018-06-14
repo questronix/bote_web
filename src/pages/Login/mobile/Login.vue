@@ -17,6 +17,7 @@
 </template>
 
 <script>
+
 import Api from '../../../lib/Api.js';
 
 export default {
@@ -28,6 +29,7 @@ export default {
   },
   methods: {
     login() {
+
         Api.post('login', {
           username: this.username,
           password: this.password
@@ -36,7 +38,10 @@ export default {
         }).catch(error=>{
           console.log(error);
         });
-        //api call
+        console.log(this.username);
+        console.log(this.password);
+        
+
     }
   }
 }
