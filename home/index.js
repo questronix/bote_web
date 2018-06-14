@@ -8,4 +8,8 @@ router.get('/', (req, res, next)=>{
 router.get('/login', (req, res, next)=>{
   res.render('login');
 });
+
+router.get('/dashboard', (req, res, next)=>{
+  res.render('dashboard');
+});
 module.exports = router;
