@@ -1,10 +1,11 @@
 <template>
     <div id="dashboard">
-    <Slideout menu="#menu" panel="#panel" side="right" :toggleSelectors="['.toggle-button']" @on-open="open" easing="ease-in-out" duration="0">
+    <Slideout menu="#menu" duration="300" panel="#panel" side="right" :toggleSelectors="['.toggle-button', '.another-toggle']">
         <nav id="menu">
             <div>
+                <i class="material-icons another-toggle i">clear</i>
                 <p class="menu-items">Menu</p>
-                <p class="menu-items" >Log out</p>
+                <p v-on:click="logout" class="menu-items" >Log out</p>
             </div>
             
         </nav>
@@ -33,7 +34,9 @@ export default {
       Slideout
   },
   methods: {
-
+      logout(){
+          console.log('Logout');
+      }
   }
 }
 </script>
@@ -112,7 +115,6 @@ h1{
     width: 256px;
     height: 100vh;
     overflow-y: scroll;
-    -webkit-overflow-scrolling: touch;
     z-index: 2;
     display: none;
     background-color: #230F2A;
@@ -138,6 +140,7 @@ h1{
 .slideout-open,
 .slideout-open body,
 .slideout-open .slideout-panel {
+    overflow: visible;
 }
 
 .slideout-open .slideout-menu {
@@ -158,6 +161,20 @@ display: block;
   width: 100%;
   background-color: rgba(0,0,0,.5);
   z-index: 99;
+}
+
+.close {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.i{
+  color: #7C7B7C;
+}
+
+.i:active, .i:hover{
+    color: #f1f1f1;
 }
 </style>
 
