@@ -13,7 +13,7 @@ const app = express();
 const bodyParser = require('body-parser');
 
 //set the template engine into ejs
-app.set('views', path.join(__dirname, 'views'));
+app.set('views', path.join(__dirname, 'views/web'));
 app.set('view engine', 'ejs');
 app.engine('ejs', require('ejs').renderFile);
 
@@ -24,7 +24,6 @@ app.use(bodyParser.urlencoded({ extended: true })); // for parsing application/x
 app.use('/static', express.static(path.join(__dirname, 'dist/public/')));
 
 let home = require('./home');
-
 //declare session middleware
 app.use(session({
     secret: 'this.is.super.secret.key', //make this unique and keep it somewhere safe
