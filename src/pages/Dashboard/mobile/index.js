@@ -1,12 +1,8 @@
 import Vue from 'vue/dist/vue';
-import Login from './Login.vue';
-
+import Dashboard from './Dashboard.vue';
 import Api from '../../../lib/Api.js';
 
-
-Api.post('login', {
-  username: 'kenster',
-  password: 'P@ssw0rd'
+Api.post('logout', {
 }).then(data=>{
   console.log(data);
 }).catch(error=>{
@@ -14,6 +10,6 @@ Api.post('login', {
 });
 
 new Vue({
-  el: '#login',
-  render: h => h(Login)
+  el: '#dashboard',
+  render: h => h(Dashboard)
 })

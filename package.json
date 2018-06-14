@@ -29,7 +29,8 @@
     "express-session": "^1.15.6",
     "request": "^2.87.0",
     "vue": "^2.5.16",
-    "vue-router": "^3.0.1"
+    "vue-router": "^3.0.1",
+    "vue-slideout": "^1.7.0"
   },
   "devDependencies": {
     "ajv": "^6.5.1",
