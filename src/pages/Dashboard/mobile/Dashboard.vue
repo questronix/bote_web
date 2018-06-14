@@ -28,15 +28,22 @@
 <script>
 
 import Slideout from 'vue-slideout'
+import Api from '../../../lib/Api.js';
 
 export default {
   components: {
       Slideout
   },
   methods: {
-      logout(){
-          console.log('Logout');
+      logout() {
+        Api.post('logout', {
+        }).then(data=>{
+          console.log(data);
+        }).catch(error=>{
+          console.log(error);
+        });
       }
+        //api call
   }
 }
 </script>
