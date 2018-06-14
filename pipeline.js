@@ -7,8 +7,9 @@ const path = require('path');
 const APP_DIR = path.resolve(__dirname, 'src/pages');
 
 const jsFilesToInject = {
-  home: [`${APP_DIR}/home/index.js`],
-  login: [`${APP_DIR}/Login/index.js`]
+  home: [`${APP_DIR}/home/web/index.js`],
+  login: [`${APP_DIR}/Login/web/index.js`],
+  dashboard: [`${APP_DIR}/dashboard/web/index.js`]
 };
 
 module.exports.entries = jsFilesToInject;
