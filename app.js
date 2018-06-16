@@ -34,6 +34,6 @@ app.use(session({
 }));
 
 app.use('/', home);
-app.use('/login', login);
+app.use('/', login);
 
 module.exports = app;
