@@ -19,8 +19,8 @@
             
 
             
-            <input v-model="username" type="text" placeholder="Username or Email Address" name = "uname" required/>
-            <input v-model="password" type="password" placeholder="Password" name= "pword" required/>
+            <input v-model="username" type="text" placeholder="Username or Email Address" required/>
+            <input v-model="password" type="password" placeholder="Password" required/>
             <label>
                 <input type="checkbox" checked="unchecked" name="remember"> Remember me
             </label>
@@ -36,8 +36,10 @@
 </template>
 
 <script>
+
+import Api from '../../../lib/Api.js';
     
-    export default{
+export default{
     name: 'app',
     data: function(){
         return{
@@ -48,6 +50,20 @@
         }
     },
     methods: {
+    login() {
+
+        Api.post('login', {
+          username: this.username,
+          password: this.password
+        }).then(data=>{
+          console.log(data);
+        }).catch(error=>{
+          console.log(error);
+        });
+        console.log(this.username);
+        console.log(this.password);
+    },
+    //signup
     addCredential: function(username, password){
         if(!(this.credentials.hasOwnProperty(username))){
             this.credentials[username] = password;
@@ -64,6 +80,7 @@
             alert(`Wrong password`);
         }else{
             alert(`${username} has successfully logged in`);
+            login();
         }
     }
     }

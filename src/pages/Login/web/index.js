@@ -8,7 +8,3 @@ new Vue({
   el: '#login',
   render: h => h(Login)
 })
-
-// export default new Router({
-
-// })
