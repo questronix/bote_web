@@ -9,7 +9,6 @@ router.post('/', (req, res, next)=>{
   });
   ajax.post(req.body)
   .then(data=>{
-    // res.redirect(localhost:PORT/login).status(200);
     res.json(data);
   }).catch(error=>{
     res.json(error);
