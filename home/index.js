@@ -7,11 +7,6 @@ router.get('/', (req, res, next)=>{
 });
 
 router.get('/login', (req, res, next)=>{
-
-  res.render('web/index');
-});
-
-router.get('/login', (req, res, next)=>{
   res.render('web/login');
 });
 

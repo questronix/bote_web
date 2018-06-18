@@ -28,11 +28,20 @@
 </template>
 
 <script>
+
+import Api from '../../../lib/Api.js';
   export default{
     name: 'dashboard',
     methods: {
       logout: function(){
-        alert(`You have successfully logged out`);
+
+        Api.post('logout', {
+        }).then(data=>{
+          console.log(data);
+        }).catch(error=>{
+          console.log(error);
+        });
+      
       }
     }
   }
