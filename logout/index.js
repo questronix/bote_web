@@ -7,8 +7,7 @@ router.post('/', (req, res, next)=>{
   ajax.setOptions({
     url: `${process.env.CORE_URL}/logout`
   });
-  ajax.post(req.body)
-  .then(data=>{
+  ajax.post(req.session).then(data=>{
     res.json(data);
   }).catch(error=>{
     res.json(error);

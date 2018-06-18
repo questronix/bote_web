@@ -23,11 +23,6 @@ app.use(bodyParser.urlencoded({ extended: true })); // for parsing application/x
 // serve the files out of ./public as our main files
 app.use('/static', express.static(path.join(__dirname, 'dist/public/')));
 
-const home = require('./home');
-const dashboard = require('./dashboard');
-const login = require('./login');
-const logout = require('./logout');
-
 //declare session middleware
 app.use(session({
     secret: 'this.is.super.secret.key', //make this unique and keep it somewhere safe
@@ -35,12 +30,17 @@ app.use(session({
     resave: false
 }));
 
-let clients = ['/mobile', ''];
+let home = require('./home');
+let login = require('./login');
+let dashboard = require('./dashboard');
+let logout = require('./logout');
 
-for (let i in clients){
+let clients = ['/mobile', ''];
+for(let i in clients){
     app.use(`${clients[i]}`, home);
-    app.use(`${clients[i]}/dashboard`, dashboard);
     app.use(`${clients[i]}/login`, login);
+    app.use(`${clients[i]}/dashboard`, dashboard);
     app.use(`${clients[i]}/logout`, logout);
 }
+
 module.exports = app;

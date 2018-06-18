@@ -39,6 +39,7 @@ export default {
         Api.post('logout', {
         }).then(data=>{
           console.log(data);
+          window.location.href="/mobile/login";
         }).catch(error=>{
           console.log(error);
         });

@@ -3,12 +3,12 @@ const router = express.Router();
 
 const ajax = require('../common/services/Ajax');
 
-router.get('/', (req, res, next)=>{
-  if (req.baseUrl.indexOf('mobile') > -1) res.render('mobile/login');
+router.get('/', (req, res, next) => {
+  if(req.baseUrl.indexOf('mobile') > -1) res.render('mobile/login');
   else res.render('web/login');
 });
 
-router.post('/', (req, res, next)=>{
+router.post('/send', (req, res, next)=>{
   ajax.setOptions({
     url: `${process.env.CORE_URL}/login`
   });
