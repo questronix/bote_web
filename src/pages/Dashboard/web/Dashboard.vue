@@ -34,10 +34,10 @@ import Api from '../../../lib/Api.js';
     name: 'dashboard',
     methods: {
       logout: function(){
-
         Api.post('logout', {
         }).then(data=>{
           console.log(data);
+          window.location.href = '/login';
         }).catch(error=>{
           console.log(error);
         });
