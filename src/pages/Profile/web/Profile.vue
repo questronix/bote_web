@@ -1,7 +1,9 @@
 <template>
-  <div id="app">
+  <div id="profile">
     
     <nav-bar> </nav-bar>
-    <h1>Index</h1>
+    <br>
+    <br>
+    <h1>Profile</h1>
   </div>
 </template>

@@ -1,5 +1,6 @@
 <template>
   <div id="app" class="flex-container">
+    <nav-bar> </nav-bar>
     <h1 id=logo_name>LOGIN FORM</h1>
     
     <button onclick="document.getElementById('id01').style.display='block'" style="width:auto;">Login</button>
@@ -80,12 +81,7 @@ window.onclick = function(event) {
   display: flex;
   flex-direction: column;
 }
-html{
-  background: linear-gradient(#221d42, #5c1c4f);
-  background-repeat: no-repeat;
-  height: 100%
-  
-}
+
 #logo_name{
     color:#ff2a60;
     text-align:center;   
