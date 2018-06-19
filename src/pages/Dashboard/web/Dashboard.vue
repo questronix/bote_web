@@ -8,8 +8,7 @@
 </template>
 
 <script>
-import navigationBar from '../../../components/navigationBar';
-import '../../../css/background.css';
+
 import Api from '../../../lib/Api.js';
 
   export default{
