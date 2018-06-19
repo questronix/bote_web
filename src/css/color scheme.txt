@@ -1,0 +1,10 @@
+Color scheme
+
+#22ID42 blue violet
+#371e46 violet
+#ff2a60 pink
+#302f2f grey
+#000000 black
+#ffffff white
+
+
