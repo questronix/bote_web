@@ -18,7 +18,7 @@
             <label>
                 <input type="checkbox" checked="unchecked" name="remember" /> Remember me
             </label>
-            <button class="login_button" v-on:click="login"> LOG IN </button>
+            <button type="submit" class="login_button"> LOG IN </button>
             
             <div class="container" >
                 <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
@@ -47,8 +47,8 @@ export default{
                 password: this.password
             })
             .then(data=>{
-                console.log(data);
-                window.location.href = '/dashboard';
+                if(data.body.status === 1) window.location.href = '/dashboard';
+                else alert(data.body.msg);
             })
             .catch(error=>{
                 console.log(error);

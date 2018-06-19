@@ -34,8 +34,8 @@ export default {
           username: this.username,
           password: this.password
         }).then(data=>{
-          console.log(data);
-          window.location.href = "/mobile/dashboard";
+          if(data.body.status === 1) window.location.href = '/mobile/dashboard';
+          else alert(data.body.msg);
         }).catch(error=>{
           console.log(error);
         });
