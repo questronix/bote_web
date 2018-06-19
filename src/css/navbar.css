@@ -1,0 +1,48 @@
+body{
+    margin:0;
+}
+.pages{
+    list-style-type: none;
+    background-color:#0d0c0c;
+    position:fixed;
+    margin: 0;
+    top:0;
+    padding:0;
+    width:100%;
+    overflow:hidden;
+    font-family: "Montserrat", "sans-serif";
+    
+    
+}
+.pages input[type=text]{
+    background-color:white;
+    float:left;
+    padding:5px;
+    border:none;
+    margin-top:18px;
+    font-size: 13px;
+    border-radius:15px;
+    width: 35em;
+    margin-left:30px;
+}
+li{
+    float:right;
+    
+}
+
+li a {
+    display: block;
+    color:white;
+    text-align: center;
+    padding: 20px 20px;
+    text-decoration: none;
+}
+
+a:hover{
+    color:#ff2a60;
+}
+
+/* removes underline in links */
+a:link{
+    text-decoration:none;
+}
