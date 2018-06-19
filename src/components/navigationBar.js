@@ -1,4 +1,5 @@
 import Vue from 'vue/dist/vue';
+import '../css/navbar.css';
 
 let navigationBar = Vue.component('nav-bar',{
     
@@ -13,7 +14,7 @@ let navigationBar = Vue.component('nav-bar',{
             <li><a href="#drinks">Drinks</a></li>
             <li><a href="#bars">Bars</a></li>
             <li><a href="#home">Home</a></li>
-        </ul>a
+        </ul>
         `     
 });
 
