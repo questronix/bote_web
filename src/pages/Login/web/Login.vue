@@ -47,8 +47,8 @@ export default{
                 password: this.password
             })
             .then(data=>{
-                console.log(data);
-                window.location.href = '/dashboard';
+                if(data.body.status === 1) window.location.href = '/dashboard';
+                else alert(data.body.msg);
             })
             .catch(error=>{
                 console.log(error);
