@@ -18,7 +18,7 @@
             <label>
                 <input type="checkbox" checked="unchecked" name="remember" /> Remember me
             </label>
-            <button class="login_button" v-on:click="login"> LOG IN </button>
+            <button type="submit" class="login_button"> LOG IN </button>
             
             <div class="container" >
                 <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
