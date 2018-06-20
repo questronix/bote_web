@@ -41,6 +41,8 @@
 }
 
 #editprofile{
+    transition-timing-function: ease-in-out;
+    transition: background-color .15s;
     margin-left: 30px;
     border-radius: 50px;
     background-color: white;

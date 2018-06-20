@@ -7,4 +7,11 @@ Color scheme
 #000000 black
 #ffffff white
 
-
+Color scheme ( orange )
+#000000 black
+#212121 dark grey
+#303030 mid grey 
+#424242 light grey 
+#cd7d0b orange
+#c7b659 yellow
+#3b719e blue

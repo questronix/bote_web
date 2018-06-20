@@ -1,41 +1,38 @@
 <template>
-  <div id="app" class="flex-container">
-    <nav-bar> </nav-bar>
-    <h1 id=logo_name>LOGIN FORM</h1>
-    
-    <button onclick="document.getElementById('id01').style.display='block'" style="width:auto;">Login</button>
-    <div id="id01" class="modal">
-        <form @submit.prevent="login" class="modal-content animate">
-            <div class="imgcontainer">
-                <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
-            </div>
-            <br />
-            <br />
-            <h1 class="bote_name">BOTE</h1>
-            <br />         
-            
-            <input v-model="username" type="text" placeholder="Username or Email Address" required />
-            <input v-model="password" type="password" placeholder="Password" required />
-            <label>
-                <input type="checkbox" checked="unchecked" name="remember" /> Remember me
-            </label>
-            <button type="submit" class="login_button"> LOG IN </button>
-            
-            <div class="container" >
-                <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
-                <span class="psw"> <a href="#"> Forgot password?</a></span>
-            </div>
-        </form>
+  <div id="login" class="flex-container">      
+      <a onclick="document.getElementById('id01').style.display='block'" style="width:auto;" id="loginnav">Login</a>
+      <div id="id01" class="modal">
+          <form @submit.prevent="login" class="modal-content animate">
+              <div class="imgcontainer">
+                  <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+              </div>
+              <br />
+              <br />
+              <h1 class="bote_name">BOTE</h1>
+              <br />         
+              
+              <input v-model="username" type="text" placeholder="Username or Email Address" required />
+              <input v-model="password" type="password" placeholder="Password" required />
+              <label>
+                  <input type="checkbox" checked="unchecked" name="remember" /> Remember me
+              </label>
+              <button type="submit" class="login_button"> LOG IN </button>
+              
+              <div class="container" >
+                  <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
+                  <span class="psw"> <a href="#"> Forgot password?</a></span>
+              </div>
+          </form>
+      </div>
     </div>
-  </div>
 </template>
 
 <script>
+import Vue from 'vue/dist/vue';
+import Api from '../../lib/Api.js';
 
-import Api from '../../../lib/Api.js';
-    
-export default{
-    data: function(){
+let loginbutton = Vue.component('login-button', {
+  data: function(){
         return {
             username: '',
             password:''
@@ -58,7 +55,9 @@ export default{
             console.log(this.password);
         }
     }
-}
+});
+
+export default loginbutton;
 
 // Get the modal
 var modal = document.getElementById('id01');
@@ -71,22 +70,22 @@ window.onclick = function(event) {
 }
 </script>
 
-<style scoped>
-#app {
+<style>
+#login {
   align-items: center;
   justify-content: center;
 }
 
-.flex-container{
+#login .flex-container{
   display: flex;
   flex-direction: column;
 }
 
-#logo_name{
+#login #logo_name{
     color:#ff2a60;
     text-align:center;   
 }
-input[type=text], input[type=password] {
+#login input[type=text], #login input[type=password] {
     width: 100%;
     padding: 12px 20px;
     margin: 8px 0;
@@ -96,8 +95,7 @@ input[type=text], input[type=password] {
     border-radius:20px;
 }
 
-button {
-    background-color: #ff2a60;
+#login button {
     color: white;
     padding: 14px 20px;
     margin: 8px 0;
@@ -106,28 +104,26 @@ button {
     cursor: pointer;
     width: 100%;
 }
-body{
-    font-family: "Montserrat", "sans-serif";
-    font-size: 12px;
-}
-button:hover {
+
+#login button:hover {
     opacity: 0.8;
+    color: #cd7d0b;
 }
-.cancelbtn {
+#login .cancelbtn {
     width: auto;
     padding: 10px 18px;
     background-color: gray;
 }
 /* Center the image and position the close button */
-.imgcontainer {
+#login .imgcontainer {
     text-align: center;
     margin: 24px 0 12px 0;
     position: relative;
 }
-.container {
+#login .container {
     padding: 10px;
 }
-.bote_name{
+#login .bote_name{
     color:#ff2a60;
     text-align:center;
     font-size:30px;
@@ -136,7 +132,7 @@ button:hover {
 
 
 /* The Modal (background) */
-.modal {
+#login .modal {
     display: none; /* Hidden by default */
     position: fixed; /* Stay in place */
     z-index: 1; /* Sit on top */
@@ -152,7 +148,7 @@ button:hover {
 }
 
 /* Modal Content/Box */
-.modal-content {
+#login .modal-content {
     background-color: #fefefe;
     margin: 5% auto 15% auto; /* 5% from the top, 15% from the bottom and centered */
     border: 1px solid #888;
@@ -162,7 +158,7 @@ button:hover {
 }
 
 /* The Close Button (x) */
-.close {
+#login .close {
     position: absolute;
     right: 25px;
     top: 0;
@@ -170,22 +166,22 @@ button:hover {
     font-size: 30px;
     font-weight: bold;
 }
-.close:hover,
-.close:focus {
+#login .close:hover,
+#login .close:focus {
     color: 5c1c4f;
     cursor: pointer;
 }
-.login_button{
+#login .login_button{
     border-radius:10px;
-    font-size:15px;
+    background-color: #cd7d0b;
 }
-.psw{
+#login .psw{
         float: right;
         padding-top:20px;
     }
 
 /* Add Zoom Animation */
-.animate {
+#login .animate {
     -webkit-animation: animatezoom 0.6s;
     animation: animatezoom 0.6s
 }
@@ -210,6 +206,11 @@ button:hover {
        width: 100%;
     }
     
+}
+
+#loginnav{
+  background: none;
+  cursor: pointer;
 }
 
 </style>
