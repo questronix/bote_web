@@ -10,17 +10,15 @@ body{
     padding:0;
     width:100%;
     overflow:hidden;
-    font-family: "Montserrat", "sans-serif";
-    
-    
+    font-family: "Montserrat", "sans-serif"; 
 }
 
-li{
+.pages li{
     float:right;
     
 }
 
-li a {
+.pages li a {
     display: block;
     color:white;
     text-align: center;
@@ -28,11 +26,11 @@ li a {
     text-decoration: none;
 }
 
-a:hover{
+.pages a:hover{
     color:#ff2a60;
 }
 
 /* removes underline in links */
-a:link{
+.pages a:link{
     text-decoration:none;
 }
