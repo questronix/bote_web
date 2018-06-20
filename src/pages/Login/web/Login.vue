@@ -1,6 +1,6 @@
 <template>
   <div id="app" class="flex-container">
-    <nav-bar> </nav-bar>
+    <nav-bar v-bind:isLoggedIn="isLoggedIn"> </nav-bar>
     <h1 id=logo_name>LOGIN FORM</h1>
     
     <button onclick="document.getElementById('id01').style.display='block'" style="width:auto;">Login</button>
@@ -38,7 +38,8 @@ export default{
     data: function(){
         return {
             username: '',
-            password:''
+            password:'',
+            isLoggedIn: false
         }
     },
     methods: {
