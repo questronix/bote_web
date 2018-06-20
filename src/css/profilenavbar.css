@@ -1,23 +1,33 @@
 .profilenav{
     font-family: "Montserrat", "sans-serif"; 
+    background-color: white;
 }
 
-.profilenav ul{
+.profilenav #image{
+    padding-right: 20px;
+    font-size: 30px;
+    font-weight: bold;
+}
+.profilenav ul{ 
     display: flex;
     list-style-type: none;
 }
 
-.profilenav li{
+.profilenav ul li{
     padding: 20px;
 }
 
-.profilenav a{
-    color: white;
-    text-decoration: none;
-    
+.profilenav ul li:first-child{
+    margin-right: 70px;
+    margin-left: 50px;
 }
 
-.profilenav a:hover{
+.profilenav a{
+    color: black;
+    text-decoration: none;
+}
+
+.profilenav a:hover span{
     color: #ff2a60;
 }
 
@@ -28,4 +38,21 @@
 #navitem span{
     font-weight: bold;
     font-size: 20px;
+}
+
+#editprofile{
+    margin-left: 30px;
+    border-radius: 50px;
+    background-color: white;
+    color: #ff2a60;
+    border-color: #ff2a60;
+    border-style: solid;
+    font-size:15px;
+    padding: 15px;
+}
+
+#editprofile:hover{
+    
+    background-color: #ff2a60;
+    color: white;
 }
