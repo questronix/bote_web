@@ -22,4 +22,8 @@ router.get('/mobile/login', (req, res, next)=>{
 router.get('/mobile/dashboard', (req, res, next)=>{
   res.render('mobile/dashboard');
 });
+
+router.get('/mobile/profile', (req, res, next)=>{
+  res.render('mobile/profile');
+});
 module.exports = router;
