@@ -1,0 +1,8 @@
+
+html,body{
+    background: linear-gradient(#221d42, #371e46);
+    background-repeat: no-repeat;
+    height: 100%;
+    overflow: auto;
+
+}

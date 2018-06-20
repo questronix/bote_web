@@ -1,7 +1,7 @@
 <template>
-  <div id="error">
+  <div id="app">
     
     <nav-bar> </nav-bar>
-    <h1>404 Error</h1>
+    <h1>Index</h1>
   </div>
 </template>
