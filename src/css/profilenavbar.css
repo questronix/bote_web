@@ -1,0 +1,31 @@
+.profilenav{
+    font-family: "Montserrat", "sans-serif"; 
+}
+
+.profilenav ul{
+    display: flex;
+    list-style-type: none;
+}
+
+.profilenav li{
+    padding: 20px;
+}
+
+.profilenav a{
+    color: white;
+    text-decoration: none;
+    
+}
+
+.profilenav a:hover{
+    color: #ff2a60;
+}
+
+#navitem{
+   text-align: center;
+}
+
+#navitem span{
+    font-weight: bold;
+    font-size: 20px;
+}

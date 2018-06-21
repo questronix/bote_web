@@ -29,11 +29,12 @@ export default {
   methods: {
     login() {
 
-        Api.post('login', {
+        Api.post('login/send', {
           username: this.username,
           password: this.password
         }).then(data=>{
-          console.log(data);
+          if(data.body.status === 1) window.location.href = '/mobile/dashboard';
+          else alert(data.body.msg);
         }).catch(error=>{
           console.log(error);
         });

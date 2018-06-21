@@ -1,0 +1,36 @@
+body{
+    margin:0;
+}
+.pages{
+    list-style-type: none;
+    background-color:#0d0c0c;
+    position:fixed;
+    margin: 0;
+    top:0;
+    padding:0;
+    width:100%;
+    overflow:hidden;
+    font-family: "Montserrat", "sans-serif"; 
+}
+
+.pages li{
+    float:right;
+    
+}
+
+.pages li a {
+    display: block;
+    color:white;
+    text-align: center;
+    padding: 20px 20px;
+    text-decoration: none;
+}
+
+.pages a:hover{
+    color:#ff2a60;
+}
+
+/* removes underline in links */
+.pages a:link{
+    text-decoration:none;
+}
