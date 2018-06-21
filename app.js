@@ -38,9 +38,9 @@ let logout = require('./logout');
 let clients = ['/mobile', ''];
 for(let i in clients){
     app.use(`${clients[i]}`, home);
-    app.use(`${clients[i]}/login`, login);
     app.use(`${clients[i]}/dashboard`, dashboard);
     app.use(`${clients[i]}/logout`, logout);
+    app.use(`${clients[i]}/login`, login);
 }
 
 module.exports = app;
