@@ -12,6 +12,6 @@ Color scheme ( orange )
 #212121 dark grey
 #303030 mid grey 
 #424242 light grey 
-#cd7d0b orange
+#e48909 orange
 #c7b659 yellow
 #3b719e blue
