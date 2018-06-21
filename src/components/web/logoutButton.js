@@ -8,7 +8,7 @@ let loginbutton = Vue.component('logout-button', {
         Api.post('logout', {
         }).then(data=>{
           console.log(data);
-          window.location.href = '/login';
+          window.location.href = '/';
         }).catch(error=>{
           console.log(error);
         });

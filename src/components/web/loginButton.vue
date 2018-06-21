@@ -45,8 +45,9 @@ let loginbutton = Vue.component('login-button', {
                 password: this.password
             })
             .then(data=>{
-                if(data.body.status === 1) window.location.href = '/dashboard';
-                else alert(data.body.msg);
+                console.log(data);
+                if(data.body.status === 1 && data.body.user.status === 1) window.location.href = '/dashboard';
+                else alert(data.body.errors[0].message);
             })
             .catch(error=>{
                 console.log(error);
@@ -124,7 +125,7 @@ window.onclick = function(event) {
     padding: 10px;
 }
 #login .bote_name{
-    color:#ff2a60;
+    color:#cd7d0b;
     text-align:center;
     font-size:30px;
 }
