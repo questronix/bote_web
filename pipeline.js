@@ -11,6 +11,8 @@ const jsFilesToInject = {
   homeMobile: [`${APP_DIR}/Home/mobile/index.js`],
   loginMobile: [`${APP_DIR}/Login/mobile/index.js`],
   dashboardMobile: [`${APP_DIR}/Dashboard/mobile/index.js`],
+  profileMobile: [`${APP_DIR}/Profile/mobile/index.js`],
+
 
   homeWeb: [`${APP_DIR}/Home/web/index.js`],
   loginWeb: [`${APP_DIR}/Login/web/index.js`],

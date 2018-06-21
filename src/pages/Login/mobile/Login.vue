@@ -1,7 +1,6 @@
 <template>
     <div id="login">
     <h1>Sign in</h1>
-
     <form @submit.prevent="login">
     
     <i class="material-icons">person</i>
@@ -51,7 +50,7 @@ export default {
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style >
 body {
-  background: linear-gradient( #2A1B43,#5C1C4F);
+  background: #212121;
   font-family: 'Montserrat', sans-serif;
 }
 body, html {
@@ -84,7 +83,7 @@ button {
     padding: 15px;
     margin: 5px 0 22px 0;
     border: none;
-    background-color: #FF2A60;
+    background-color: #CD7D0B;
     opacity: 0.8;
     background-repeat: no-repeat;
 }
@@ -95,7 +94,7 @@ button:hover {
 }
 
 h1 {
-  color: #FF2A60;  
+  color: #CD7D0B;  
   margin-top: 300px;
   text-align: center;
 }
@@ -106,8 +105,9 @@ input[type=text], input[type=password] {
   margin: 5px 0 22px 0;
   display: inline-block;
   border: none;
-  background: #AC95A6;
+  background: #424242;
   text-indent: 30px;
 }
+
 </style>
 
