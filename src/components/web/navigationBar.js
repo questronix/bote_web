@@ -24,6 +24,7 @@ let navigationBar = Vue.component('nav-bar',{
             </div>
         </div>
         `     
+        
 });
 
 export default navigationBar;

@@ -8,8 +8,7 @@ let profileNavigationBar = Vue.component('profile-nav', {
       beers: 230,
       followers: 456,
       following: 349,
-      avatar: "https://materiell.com/wp-content/uploads/2015/03/doug_full1.png",
-      
+      avatar: "https://materiell.com/wp-content/uploads/2015/03/doug_full1.png",      
 
     };
   },
