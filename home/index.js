@@ -1,25 +1,11 @@
 const express = require('express');
 const router = express.Router();
 
+const ajax = require('../common/services/Ajax');
+
 router.get('/', (req, res, next)=>{
-
-  res.render('mobile/index');
+  if (req.baseUrl.indexOf('mobile') > -1) res.render('mobile/index');
+  else res.render('web/profile');
 });
 
-router.get('/login', (req, res, next)=>{
-  res.render('web/login');
-});
-
-router.get('/web/dashboard', (req, res, next)=>{
-  res.render('web/dashboard');
-});
-
-
-router.get('/mobile/login', (req, res, next)=>{
-  res.render('mobile/login');
-});
-
-router.get('/mobile/dashboard', (req, res, next)=>{
-  res.render('mobile/dashboard');
-});
 module.exports = router;

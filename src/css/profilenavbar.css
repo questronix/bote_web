@@ -1,0 +1,58 @@
+
+.profilenav{
+    font-family: "Montserrat", "sans-serif"; 
+    background-color: white;
+    margin-top:0;
+    padding-top:0;
+}
+
+.profilenav ul{ 
+    display: flex;
+    list-style-type: none;
+}
+
+.profilenav ul li{
+    padding: 20px;
+}
+
+.profilenav ul li:first-child{
+    margin-right: 70px;
+    margin-left: 50px;
+}
+
+.profilenav a{
+    color: black;
+    text-decoration: none;
+}
+
+.profilenav a:hover span{
+    color: #e48909;
+}
+
+#navitem{
+   text-align: center;
+}
+
+#navitem span{
+    font-weight: bold;
+    font-size: 20px;
+}
+
+#editprofile{
+    transition-timing-function: ease-in-out;
+    transition: background-color .15s;
+    margin-left: 30px;
+    border-radius: 50px;
+    background-color: white;
+    color: #e48909;
+    border-color: #e48909;
+    border-style: solid;
+    font-size:15px;
+    padding: 15px;
+}
+
+#editprofile:hover{
+    
+    background-color: #e48909;
+    color: white;
+}

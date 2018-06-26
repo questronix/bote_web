@@ -1,0 +1,17 @@
+Color scheme
+
+#22ID42 blue violet
+#371e46 violet
+#ff2a60 pink
+#302f2f grey
+#000000 black
+#ffffff white
+
+Color scheme ( orange )
+#000000 black
+#212121 dark grey
+#303030 mid grey 
+#424242 light grey 
+#e48909 orange
+#c7b659 yellow
+#3b719e blue
