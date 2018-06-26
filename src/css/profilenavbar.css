@@ -9,6 +9,7 @@
 .profilenav ul{ 
     margin-top: 0px;
     display: flex;
+    margin:0px;
     list-style-type: none;
 }
 
@@ -60,6 +61,15 @@
     color: white;
 }
 
+
+.avatar{
+    width:180px;
+    margin-right:40px;
+    margin-left:40px;
+    margin-top:-40px;
+    position: absolute;
+} 
+
 #editcancel{
     color: red;
     border-color: red;
@@ -70,3 +80,4 @@
     background-color: red;
     color: white;
 }
+
