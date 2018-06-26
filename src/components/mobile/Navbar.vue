@@ -5,7 +5,7 @@
         <a href="#" class="active"><i class="material-icons">search</i></a>
         <input id="searchbartext" type="text" placeholder="Search for places, drinks, bars, people, etc."/>
       </div>
-      <img :src="require('../../img/sample-profile.jpg')"/>
+      <img :src="require('./adminetc.png')"/>
       <a href="#" class="active"><i id="strict" class="material-icons">notifications</i></a>
     </div>
     <div class="lower-section">
@@ -19,10 +19,12 @@
 </template>
 
 <script>
+  export default {
 
+  }
 </script>
 
-<style scoped>
+<style>
   .navbar-section {
     background-color: #212121;
     height: 20vh;
