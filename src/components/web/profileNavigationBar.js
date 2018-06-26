@@ -7,11 +7,15 @@ let profileNavigationBar = Vue.component('profile-nav', {
       bars: 10,
       beers: 230,
       followers: 456,
-      following: 349
+      following: 349,
+      avatar: "https://materiell.com/wp-content/uploads/2015/03/doug_full1.png",
+      
+
     };
   },
   template: `
     <div class="profilenav">
+        <img class="avatar" :src="avatar"/>
         
         <ul>
             <li> <span id="image"> IMAGE </span> </li>

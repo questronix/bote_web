@@ -20,7 +20,7 @@ let navigationBar = Vue.component('nav-bar',{
                 <a href="news" style="border-right: 0.2px solid #2c2828"><strong>News</strong></a>
                 <a v-if="isLoggedIn === false" href="signup" ><strong>Sign Up</strong></a>
                 <a v-if="isLoggedIn === false"><strong><login-button> </login-button></strong></a>
-                <a v-else="isLoggedIn === true" style="padding:0; padding-right=10px"> <strong><logout-button> </logout-button> </strong></a>
+                <a v-else="isLoggedIn === true" style="padding:0; padding-right:10px"> <strong><logout-button> </logout-button> </strong></a>
             </div>
         </div>
         `     
