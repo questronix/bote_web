@@ -12,7 +12,9 @@ let profileNavigationBar = Vue.component('profile-nav', {
   },
   template: `
     <div class="profilenav">
+        
         <ul>
+            <li> <span id="image"> IMAGE </span> </li>
             <li> <div id="navitem">
                     <a href="#"> 
                         Bars <br/> 
@@ -30,7 +32,8 @@ let profileNavigationBar = Vue.component('profile-nav', {
             <li> <div id="navitem">
                     <a href="#"> Following <br/>
                         <span> {{following}} </span>
-                    </a></li> </div>
+                    </a> </div> </li> 
+            <li> <button id="editprofile"> Edit Profile</button></li>
         </ul>
     </div>
    `
