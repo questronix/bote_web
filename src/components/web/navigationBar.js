@@ -10,17 +10,19 @@ let navigationBar = Vue.component('nav-bar',{
     },
     template:
         `
-        <ul class="pages">
-            <li style="float:left; color:yellow;"><a href="#home"><strong>BOTE</strong></a></li>            
+        <div class="navigation">
+            <a href="Home" classs="bote_logo"><strong>BOTE</strong></a>
             <search-bar placeholder="Search"> </search-bar>
-            <li v-if="isLoggedIn === false"> <login-button> </login-button></li>
-            <li v-else="isLoggedIn === true"> <logout-button> </logout-button></li>         
-            <li v-if="isLoggedIn === false"><a href="#signup">Sign Up</a></li>            
-            <li style="border-right: 0.2px solid #2c2828"><a href="#news">News</a></li>            
-            <li><a href="#drinks">Drinks</a></li>
-            <li><a href="#bars">Bars</a></li>
-            <li><a href="#home">Home</a></li>
-        </ul>  
+            <div class="pages">
+                <a href="home"><strong>Home</strong></a>                
+                <a href="bars"><strong>Bars</strong></a>
+                <a href="drinks"><strong>Drinks</strong></a>
+                <a href="news" style="border-right: 0.2px solid #2c2828"><strong>News</strong></a>
+                <a v-if="isLoggedIn === false" href="signup" ><strong>Sign Up</strong></a>
+                <a v-if="isLoggedIn === false"><strong><login-button> </login-button></strong></a>
+                <a v-else="isLoggedIn === true" style="padding:0; padding-right=10px"> <strong><logout-button> </logout-button> </strong></a>
+            </div>
+        </div>
         `     
 });
 

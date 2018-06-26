@@ -4,8 +4,13 @@
     <nav-bar isLoggedIn> </nav-bar>
     <br>
     <br>
-    <h1>Profile</h1>
-
+    <cover-photo></cover-photo>    
     <profile-nav> </profile-nav>
   </div>
 </template>
+
+<script>
+  export default{
+
+  }  
+</script>

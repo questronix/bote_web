@@ -1,13 +1,11 @@
+
 .profilenav{
     font-family: "Montserrat", "sans-serif"; 
     background-color: white;
+    margin-top:0;
+    padding-top:0;
 }
 
-.profilenav #image{
-    padding-right: 20px;
-    font-size: 30px;
-    font-weight: bold;
-}
 .profilenav ul{ 
     display: flex;
     list-style-type: none;
@@ -28,7 +26,7 @@
 }
 
 .profilenav a:hover span{
-    color: #ff2a60;
+    color: #e48909;
 }
 
 #navitem{
@@ -46,8 +44,8 @@
     margin-left: 30px;
     border-radius: 50px;
     background-color: white;
-    color: #ff2a60;
-    border-color: #ff2a60;
+    color: #e48909;
+    border-color: #e48909;
     border-style: solid;
     font-size:15px;
     padding: 15px;
@@ -55,6 +53,6 @@
 
 #editprofile:hover{
     
-    background-color: #ff2a60;
+    background-color: #e48909;
     color: white;
 }

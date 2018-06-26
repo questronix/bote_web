@@ -7,19 +7,16 @@
                   <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
               </div>
               <br />
-              <br />
+              
               <h1 class="bote_name">BOTE</h1>
               <br />         
               
               <input v-model="username" type="text" placeholder="Username or Email Address" required />
               <input v-model="password" type="password" placeholder="Password" required />
-              <label>
-                  <input type="checkbox" checked="unchecked" name="remember" /> Remember me
-              </label>
-              <button type="submit" class="login_button"> LOG IN </button>
+              <label class="box"> <input type="checkbox" checked="unchecked" name="remember" /> Remember me </label>
+              <button type="submit" class="login_button"> LOGIN </button>
               
               <div class="container" >
-                  <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
                   <span class="psw"> <a href="#"> Forgot password?</a></span>
               </div>
           </form>
@@ -72,18 +69,23 @@ window.onclick = function(event) {
 </script>
 
 <style>
+html{
+    font-family: "Montserrat", "sans-serif"; 
+}
 #login {
   align-items: center;
   justify-content: center;
+  
 }
 
 #login .flex-container{
   display: flex;
   flex-direction: column;
+  
 }
 
 #login #logo_name{
-    color:#ff2a60;
+    color:#e48909;
     text-align:center;   
 }
 #login input[type=text], #login input[type=password] {
@@ -96,8 +98,12 @@ window.onclick = function(event) {
     border-radius:20px;
 }
 
+.box{
+    float:left;
+    font-size:10px;
+}
 #login button {
-    color: white;
+    color: #e48909;
     padding: 14px 20px;
     margin: 8px 0;
     border: none;
@@ -108,13 +114,9 @@ window.onclick = function(event) {
 
 #login button:hover {
     opacity: 0.8;
-    color: #cd7d0b;
+    
 }
-#login .cancelbtn {
-    width: auto;
-    padding: 10px 18px;
-    background-color: gray;
-}
+
 /* Center the image and position the close button */
 #login .imgcontainer {
     text-align: center;
@@ -122,14 +124,14 @@ window.onclick = function(event) {
     position: relative;
 }
 #login .container {
-    padding: 10px;
+    padding: 25px;
+    
 }
 #login .bote_name{
-    color:#cd7d0b;
+    color:#e48909;
     text-align:center;
     font-size:30px;
 }
-
 
 
 /* The Modal (background) */
@@ -150,9 +152,8 @@ window.onclick = function(event) {
 
 /* Modal Content/Box */
 #login .modal-content {
-    background-color: #fefefe;
+    background-color: #303030;
     margin: 5% auto 15% auto; /* 5% from the top, 15% from the bottom and centered */
-    border: 1px solid #888;
     width: 50%; /* Could be more or less, depending on screen size */
     padding:20px;
     border-radius:20px;
@@ -161,24 +162,35 @@ window.onclick = function(event) {
 /* The Close Button (x) */
 #login .close {
     position: absolute;
-    right: 25px;
-    top: 0;
-    color: #000;
-    font-size: 30px;
+    right: 30px;
+    padding:0;
+    color: white;
+    font-size: 20px;
     font-weight: bold;
 }
-#login .close:hover,
+#login .close:hover{
+    color:#e48909;
+    cursor:pointer;
+}
 #login .close:focus {
     color: 5c1c4f;
     cursor: pointer;
 }
+
+/* Navigation Login Button */
 #login .login_button{
-    border-radius:10px;
-    background-color: #cd7d0b;
+    border-radius:20px;
+    color:white;
+    background-color: #e48909;
+    font-size: 17px;
+    font-weight: bold;
+    
 }
 #login .psw{
-        float: right;
-        padding-top:20px;
+        font-size: 2px; 
+        padding:0;
+        margin:0;
+        align:center;
     }
 
 /* Add Zoom Animation */
@@ -203,15 +215,15 @@ window.onclick = function(event) {
        display: block;
        float: right;
     }
-    .cancelbtn {
-       width: 100%;
-    }
     
 }
 
 #loginnav{
   background: none;
   cursor: pointer;
+  padding:0px;
+  padding-right:10px;
+  
 }
 
 </style>
