@@ -12,6 +12,11 @@ let profileNavigationBar = Vue.component('profile-nav', {
 
     };
   },
+  props: {
+        edit: Function,
+        toggleSave: Function,
+        isEditting: Boolean
+    },
   template: `
     <div class="profilenav">
         <img class="avatar" :src="avatar"/>
@@ -36,7 +41,13 @@ let profileNavigationBar = Vue.component('profile-nav', {
                     <a href="#"> Following <br/>
                         <span> {{following}} </span>
                     </a> </div> </li> 
-            <li> <button id="editprofile"> Edit Profile</button></li>
+            <li> 
+                <button v-if="isEditting === false" id="editprofile" v-on:click="edit" > Edit Profile</button>
+                <div v-else="isEditting === true">
+                    <button id="editprofile" v-on:click="toggleSave" >Save</button>
+                    <button id="editcancel" v-on:click="edit" >Cancel</button>
+                </div>
+            </li>
         </ul>
     </div>
    `

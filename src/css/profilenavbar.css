@@ -4,9 +4,10 @@
     background-color: white;
     margin-top:0;
     padding-top:0;
-}
+} 
 
 .profilenav ul{ 
+    margin-top: 0px;
     display: flex;
     margin:0px;
     list-style-type: none;
@@ -17,7 +18,7 @@
 }
 
 .profilenav ul li:first-child{
-    margin-right: 70px;
+    margin-right: 200px;
     margin-left: 50px;
 }
 
@@ -39,17 +40,19 @@
     font-size: 20px;
 }
 
-#editprofile{
+#editprofile, #editcancel{
     transition-timing-function: ease-in-out;
     transition: background-color .15s;
     margin-left: 30px;
     border-radius: 50px;
     background-color: white;
-    color: #e48909;
-    border-color: #e48909;
     border-style: solid;
     font-size:15px;
     padding: 15px;
+}
+#editprofile{
+    color: #e48909;
+    border-color: #e48909;
 }
 
 #editprofile:hover{
@@ -66,3 +69,15 @@
     margin-top:-40px;
     position: absolute;
 } 
+
+#editcancel{
+    color: red;
+    border-color: red;
+}
+
+#editcancel:hover{
+    
+    background-color: red;
+    color: white;
+}
+

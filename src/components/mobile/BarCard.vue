@@ -11,7 +11,7 @@
   }
 </script>
 
-<style scoped>
+<style>
   .bar-card {
     height: 30vh;
     width: 100%;
