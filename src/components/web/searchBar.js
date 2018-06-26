@@ -9,7 +9,7 @@ let searchBar = Vue.component('search-bar',{
             
             <form id="search">
                 
-                <input type="text" placeholder="Search"/>
+                <input type="text" placeholder="Search bars,drinks,etc..."/>
                 
             </form>
             <a href="#"><i id="searchicon" class="material-icons"> search </i></a>
