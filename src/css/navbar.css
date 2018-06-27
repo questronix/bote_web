@@ -9,6 +9,7 @@ body{
     font-family: "Montserrat", "sans-serif"; 
     top:0;  
     width: 100%;
+    min-width: 720px;
 }
 
 .navigation a{

@@ -1,0 +1,61 @@
+.main{
+    background-color: #424242;
+    margin: 90px 5% 20px;
+    padding-bottom: 20px;
+}
+
+#categorycard{
+    color: white;
+    padding: 10px 0px 90px;
+}
+
+#categorycard #next{
+    color: #e48909;
+    float: right;
+    margin: 30px 4%;
+    
+}
+
+#categorycard #next i{
+    font-size: 40px;
+}
+#categoryname{
+    padding: 15px 5%;
+    background-color: #303030;
+    color:#e48909;
+}
+.bars{
+    display: flex;
+}
+#barcard{
+    background-color: white;
+    color: black;
+    width: 25%;
+    margin: 0px 4%;
+    box-shadow: 0 5px 10px 5px rgba(0,0,0,0.2), 0 6px 20px 6px rgba(0,0,0,0.15);
+}
+
+#barcard #dropdown{
+    float: right;
+    color: #424242;
+}
+
+#barcard p{
+    color: #424242;
+}
+#barcard #image{
+   /* background-image: url("https://pixel.nymag.com/imgs/daily/grub/2017/best-of-new-york/uws-bar-es.w710.h473.jpg");
+    background-size: cover;*/
+    background-color: black;
+    overflow: hidden;
+}
+
+#barcard #image img{
+    height: 300px;
+}
+#barcard #caption{
+    padding: 5%;
+}
+#barcard #caption #name{
+    font-weight: bold;
+}
