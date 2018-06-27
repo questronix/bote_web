@@ -1,0 +1,20 @@
+
+.post{
+    margin-top: 10px;
+    background: white;
+    max-width:700px;
+    margin-left:300px;   
+    border-radius: 10px;
+}
+
+.user_icon{
+    width:50px;
+    height: auto;
+    padding:20px;   
+    
+}
+
+#name{
+    font-weight: 800;
+    margin-top: -20px;
+}
