@@ -17,7 +17,7 @@ let main = Vue.component('main-content',{
           </bar-category>
            <bar-category category='Nearest Bars' :bars='[{barname:"Bar Rat", bardetails: "mura d2", img:"https://pixel.nymag.com/imgs/daily/grub/2017/best-of-new-york/uws-bar-es.w710.h473.jpg"},
                                                          {barname: "Bar 2", bardetails: "try mo 2", img:"https://pixel.nymag.com/imgs/daily/grub/2017/best-of-new-york/uws-bar-es.w710.h473.jpg"},
-                                                         {barname: "Bar ni Gemma", bardetails: "bar ito ni gemma"}]'>
+                                                         {barname: "Bar ni Gemma", bardetails: "bar ito ni gemma", img:"https://pixel.nymag.com/imgs/daily/grub/2017/best-of-new-york/uws-bar-es.w710.h473.jpg"}]'>
                                                          
                                                          
           </bar-category>
