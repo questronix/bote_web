@@ -1,0 +1,26 @@
+.main{
+    margin-top: 90px;
+}
+.main h1{
+    color:#e48909;
+}
+
+.main #filter{
+    float: left;
+    margin-left: 5%;
+    color: white;
+    margin-right: 40%;
+}
+
+.main #filter i{
+
+    font-size: 40px;
+}
+.maincontent{
+    background-color: #424242;
+    margin: 20px 5% 20px;
+    padding-bottom: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}

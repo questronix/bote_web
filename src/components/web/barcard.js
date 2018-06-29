@@ -1,5 +1,5 @@
 import Vue from 'vue/dist/vue';
-import '../../css/dashboardmaincard.css';
+import '../../css/barcard.css';
 
 let barcard = Vue.component('bar-card',{
     data: function(){

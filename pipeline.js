@@ -17,7 +17,8 @@ const jsFilesToInject = {
   homeWeb: [`${APP_DIR}/Home/web/index.js`],
   dashboardWeb: [`${APP_DIR}/Dashboard/web/index.js`],
   profileWeb: [`${APP_DIR}/Profile/web/index.js`],
-  errorWeb: [`${APP_DIR}/Error/web/index.js`]
+  errorWeb: [`${APP_DIR}/Error/web/index.js`],
+  barsWeb: [`${APP_DIR}/Bars/web/index.js`]
 
 };
 
