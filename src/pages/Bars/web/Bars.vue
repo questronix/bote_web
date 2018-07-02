@@ -1,9 +1,7 @@
 <template>
-  <div id="dashboard">
-    
+  <div id="bars">
     <nav-bar isLoggedIn> </nav-bar>
     <main-content> </main-content>
-    
   </div>
 </template>
 
@@ -12,7 +10,7 @@
 import Api from '../../../lib/Api.js';
 
   export default{
-    name: 'dashboard',
+    name: 'bars',
     data: function(){
       return{
         isLoggedIn: true
