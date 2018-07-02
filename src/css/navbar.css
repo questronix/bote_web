@@ -1,5 +1,6 @@
 body{
     margin:0;
+    
 }
 .navigation{
     z-index: 1000;
@@ -10,7 +11,8 @@ body{
     font-family: "Montserrat", "sans-serif"; 
     top:0;  
     width: 100%;
-    min-width: 720px;
+    min-width:720px;
+
 }
 
 .navigation a{

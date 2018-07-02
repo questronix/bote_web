@@ -1,85 +1,60 @@
 
+body{
+    margin:0;    
+    
+}
+.profile_all{
+    margin-top:60px;    
+    min-width: 720px;
+    
+}
+
 .profilenav{
     font-family: "Montserrat", "sans-serif"; 
-    background-color: white;
-    margin-top:0;
-    padding-top:0;
+    padding:20px;
+    overflow: hidden;
     display:flex;
-    position:relative;
+    width:100%;
+    
 }
 .avatar{
-    width:200px;
-    height:200px;
+    width:150px;
+    height:100%;
     margin-right:40px;
     margin-left:40px;
-    margin-top:-60px;
-    z-index: 1;
-    position:absolute;
 
 }
 
-.profilenav ul{ 
-    display: flex;
-    margin:0px;
+.profilenav{
+    background:#e48909;
+ 
+}
+li{
+    text-decoration: none;
     list-style-type: none;
+    display: inline;
+    
 }
-
-.profilenav ul li{
-    padding: 20px;
+li span{
+    padding-top:10px;
 }
-
-.profilenav ul li:nth-child(1){
-    margin-left: 300px;
+li{
+    padding: 5px;
 }
-.profilenav ul li:nth-child(4){
-    margin-right: 200px;
+li:first-child{
+    font-size: 18px;a
+    color:black;
 }
-.profilenav a{
-    color: black;
+li:nth-child(2){    
+    font-size:14px;
+}
+li:nth-child(3),li:last-child{    
+    font-size:12px;
+}
+a{
     text-decoration: none;
 }
-
-.profilenav a:hover span{
-    color: #e48909;
-}
-
-#navitem{
-   text-align: center;
-}
-
-#navitem span{
-    font-weight: bold;
-    font-size: 20px;
-}
-
-#editprofile,#editcancel{
-    transition-timing-function: ease-in-out;
-    transition: background-color .15s;
-    margin-left: 30px;
-    border-radius: 50px;
-    background-color: white;
-    border-style: solid;
+ul  .material-icons{
     font-size:15px;
-    padding: 15px;
-}
-
-#editprofile{
-    color: #e48909;
-    border-color: #e48909;
-}
-
-#editprofile:hover{
     
-    background-color: #e48909;
-    color: white;
 }
-
-#editcancel{
-    color:red;
-    border-color:red;
-} 
-#editcancel:hover{
-    background-color: red;
-    color: white;
-}
-
