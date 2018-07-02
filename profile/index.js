@@ -8,7 +8,8 @@ const ajax = require('../common/services/Ajax');
 
 router.get('/:username', (req, res, next) => {
   ajax.setOptions({
-    url: `${process.env.CORE_URL}/profile/${req.params.username}`
+    url: `${process.env.CORE_URL}/profile/${req.params.username}`,
+    headers: req.headers
   });
   ajax.get()
   // used to get the stringified body of the response
