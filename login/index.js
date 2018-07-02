@@ -8,7 +8,7 @@ router.get('/', (req, res, next) => {
   else res.render('web/index');
 });
 
-router.post('/send', (req, res, next)=>{
+router.post('/', (req, res, next)=>{
   ajax.setOptions({
     url: `${process.env.CORE_URL}/login`
   });
