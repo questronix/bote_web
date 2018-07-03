@@ -1,0 +1,31 @@
+#beercard {
+  text-align: left;
+  background-color: white;
+  color: black;
+  margin: 1em 0;
+  box-shadow: 0 5px 10px 5px rgba(0, 0, 0, 0.3), 0 6px 20px 6px rgba(0, 0, 0, 0.15); }
+  #beercard:hover {
+    box-shadow: 0 5px 10px 5px rgba(228, 137, 9, 0.3), 0 6px 20px 6px rgba(0, 0, 0, 0.2); }
+  #beercard #image {
+    /* background-image: url("https://pixel.nymag.com/imgs/daily/grub/2017/best-of-new-york/uws-beer-es.w710.h473.jpg");
+     background-size: cover;*/
+    overflow: hidden; }
+    #beercard #image img {
+      height: 200px; }
+  #beercard #caption {
+    padding: 3%; }
+    #beercard #caption #name {
+      font-weight: bold; }
+  #beercard #quantity {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 2%;
+    color: #e48909;
+    font-weight: bold;
+    font-size: larger; }
+    #beercard #quantity a {
+      color: #e48909;
+      padding: 0px 7%; }
+
+/*# sourceMappingURL=beercard.css.map */
