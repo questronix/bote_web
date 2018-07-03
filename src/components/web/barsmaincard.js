@@ -24,20 +24,20 @@ let main = Vue.component('main-content',{
                 
             <div class="maincontent">
                 <div id="barcards">
-                <bar-card v-for="(bar, index) in bars" :barname="bar.barname" :bardetails="bar.bardetails" :img="bar.img"> </bar-card>
-                <bar-card v-for="(bar, index) in bars" :barname="bar.barname" :bardetails="bar.bardetails" :img="bar.img"> </bar-card>
-                <bar-card v-for="(bar, index) in bars" :barname="bar.barname" :bardetails="bar.bardetails" :img="bar.img"> </bar-card>
-                <bar-card v-for="(bar, index) in bars" :barname="bar.barname" :bardetails="bar.bardetails" :img="bar.img"> </bar-card>
+                <bar-card v-for="(bar, index) in bars" :key="index" :barname="bar.barname" :bardetails="bar.bardetails" :img="bar.img"> </bar-card>
+                <bar-card v-for="(bar, index) in bars" :key="index" :barname="bar.barname" :bardetails="bar.bardetails" :img="bar.img"> </bar-card>
+                <bar-card v-for="(bar, index) in bars" :key="index" :barname="bar.barname" :bardetails="bar.bardetails" :img="bar.img"> </bar-card>
+                <bar-card v-for="(bar, index) in bars" :key="index" :barname="bar.barname" :bardetails="bar.bardetails" :img="bar.img"> </bar-card>
                 </div>
                 <div id="loadmore" v-if="loadmore === false">
                     <a href="#"><button v-on:click="toggleLoadMore">LOAD MORE</button> </a>
                 </div>
-                <div v-else="loadmore === true">
+                <div v-else>
                     <div id="barcards">
-                    <bar-card v-for="(bar, index) in bars" :barname="bar.barname" :bardetails="bar.bardetails" :img="bar.img"> </bar-card>
-                    <bar-card v-for="(bar, index) in bars" :barname="bar.barname" :bardetails="bar.bardetails" :img="bar.img"> </bar-card>
-                    <bar-card v-for="(bar, index) in bars" :barname="bar.barname" :bardetails="bar.bardetails" :img="bar.img"> </bar-card>
-                    <bar-card v-for="(bar, index) in bars" :barname="bar.barname" :bardetails="bar.bardetails" :img="bar.img"> </bar-card>
+                    <bar-card v-for="(bar, index) in bars" :key="index" :barname="bar.barname" :bardetails="bar.bardetails" :img="bar.img"> </bar-card>
+                    <bar-card v-for="(bar, index) in bars" :key="index" :barname="bar.barname" :bardetails="bar.bardetails" :img="bar.img"> </bar-card>
+                    <bar-card v-for="(bar, index) in bars" :key="index" :barname="bar.barname" :bardetails="bar.bardetails" :img="bar.img"> </bar-card>
+                    <bar-card v-for="(bar, index) in bars" :key="index" :barname="bar.barname" :bardetails="bar.bardetails" :img="bar.img"> </bar-card>
                     </div>
                     <div id="loadmore">
                         <a href="#"><button v-on:click="toggleLoadMore">SHOW LESS</button> </a>
