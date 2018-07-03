@@ -10,5 +10,9 @@ html,body{
 
 .dashboardpage{
     background-color: #e48909;
-    background: linear-gradient(#e48909, black);
+    background: linear-gradient(#e48909, brown);
+}
+
+.indexpage{
+    background: linear-gradient(#e48909, brown);
 }
