@@ -1,26 +1,42 @@
-.main{
-    margin-top: 90px;
-}
-.main h1{
-    color:#e48909;
-}
-
-.main #filter{
+.bars {
+  margin-top: 90px; }
+  .bars h1 {
+    color: #e48909; }
+  .bars #filter {
     float: left;
-    margin-left: 5%;
     color: white;
     margin-right: 40%;
-}
+    margin-left: 5%; }
+    .bars #filter i {
+      font-size: 40px; }
 
-.main #filter i{
+.maincontent {
+  background-color: #424242;
+  margin: 20px 3% 20px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  display: flex;
+  flex-direction: column; }
 
-    font-size: 40px;
-}
-.maincontent{
-    background-color: #424242;
-    margin: 20px 5% 20px;
-    padding-bottom: 20px;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-}
+#barcards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly; }
+
+#loadmore {
+  display: flex;
+  justify-content: center; }
+  #loadmore button {
+    border-color: #e48909;
+    border-style: solid;
+    font-weight: bold;
+    font-size: medium;
+    background: none;
+    color: #e48909;
+    padding: 15px 40%;
+    margin-top: 5%; }
+    #loadmore button:hover {
+      background-color: #e48909;
+      color: white; }
+
+/*# sourceMappingURL=barsmaincard.css.map */
