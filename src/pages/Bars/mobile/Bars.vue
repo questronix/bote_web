@@ -17,8 +17,7 @@
       <img src="http://valkyrie.thepalacemanila.com/Media/uploads/p19hvas3ruvbv6q0m061h401jd44.jpg" alt="" class="circle">
       <span class="title">Valkyrie Manila</span>
       <p>36 9th Avenue, Taguig, Metro Manila</p>
-      </a><p> Line</p>
-      </p>
+      <p> Line</p>
       <a href="#!" class="secondary-content"><i class="material-icons">place</i></a>
     </li>
     <li class="collection-item avatar">
