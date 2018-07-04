@@ -1,0 +1,28 @@
+.cart {
+  margin: 90px 2%;
+  color: white; }
+  .cart #header, .cart #drink, .cart #summary {
+    background-color: #424242;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1%; }
+  .cart #header {
+    font-weight: bold; }
+  .cart #drink {
+    margin: 1% 0;
+    padding: 1%; }
+    .cart #drink #firstrow {
+      display: flex;
+      flex-direction: row; }
+      .cart #drink #firstrow #drinkimage {
+        height: 20px;
+        weight: 20px;
+        background-color: white; }
+      .cart #drink #firstrow #info {
+        display: flex;
+        flex-direction: column; }
+    .cart #drink #quantity, .cart #drink #quantity a {
+      color: #e48909; }
+
+/*# sourceMappingURL=cart.css.map */
