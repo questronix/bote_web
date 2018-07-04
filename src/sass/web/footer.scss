@@ -1,0 +1,28 @@
+$background: black;
+$header: #e48909;
+$text: white;
+
+.footer{
+    
+    background-color: $background;
+    display: flex;
+    justify-content: space-evenly;
+    padding: 2%;
+
+    #logo{
+        color: $text;
+    } 
+    ul{
+        list-style: none;
+        text-align: center;
+    }
+
+    li {
+        color: $text;
+    }
+    #title{
+        color: $header;
+        font-weight: bold;
+        font-size: 20px;
+    }
+}

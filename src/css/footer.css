@@ -1,0 +1,18 @@
+.footer {
+  background-color: black;
+  display: flex;
+  justify-content: space-evenly;
+  padding: 2%; }
+  .footer #logo {
+    color: white; }
+  .footer ul {
+    list-style: none;
+    text-align: center; }
+  .footer li {
+    color: white; }
+  .footer #title {
+    color: #e48909;
+    font-weight: bold;
+    font-size: 20px; }
+
+/*# sourceMappingURL=footer.css.map */

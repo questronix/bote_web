@@ -1,7 +1,9 @@
 body{
     margin:0;
+    
 }
 .navigation{
+    z-index: 1000;
     background-color:#000000;
     position:fixed;
     padding:10px 10px;
@@ -9,8 +11,9 @@ body{
     font-family: "Montserrat", "sans-serif"; 
     top:0;  
     width: 100%;
-}
+    min-width:720px;
 
+}
 
 .navigation a{
     float : left;

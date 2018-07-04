@@ -116,6 +116,13 @@ let ajax = {
 
     setOptions: (args) => {
         this.options = args;
+        if(!this.options.hasOwnProperty("headers")){
+            this.options.headers = {
+                'credentials' : 'same-origin'
+            };
+        }else{
+            this.options.headers.credentials = 'same-origin';
+        }
         return ajax;
     },
 
