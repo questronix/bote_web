@@ -1,5 +1,6 @@
 <template>
   <div>
+
   </div>
 </template>
 
@@ -12,7 +13,7 @@ export default {
 
 <style>
 body {
-  background: linear-gradient( #2A1B43,#5C1C4F);
+  background-color: #212121;
   font-family: 'Montserrat', sans-serif;
 }
 body, html {

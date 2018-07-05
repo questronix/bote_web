@@ -70,9 +70,7 @@ i {
     margin-top: 15px;
     margin-left: 7px;
 }
-input{
-    color: #191921;
-}
+
 button {
     font-family: 'Montserrat', sans-serif;
     font-weight: bold;

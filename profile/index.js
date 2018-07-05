@@ -3,8 +3,9 @@ const router = express.Router();
 const ajax = require('../common/services/Ajax');
 
 // router.get('/', (req, res, next) => {
-//   // redirect to own profile
+  // redirect to own profile
 // });
+
 
 router.get('/me', (req, res, next) => {
   ajax.setOptions({
@@ -14,6 +15,25 @@ router.get('/me', (req, res, next) => {
   ajax.get()
   .then( data => {
     res.send(data);
+  })
+  .catch( error => {
+    res.json(error);
+  })
+});
+
+router.get('/:username/following', (req, res, next) => {
+  ajax.setOptions({
+    url: `${process.env.CORE_URL}/profile/${req.params.username}`
+  });
+  ajax.get()
+  // used to get the stringified body of the response
+  .then( data => {
+    return JSON.parse(data.body);
+  })
+  .then( data => {
+    if (req.baseUrl.indexOf('mobile') > -1) res.render('mobile/following', data.user);
+    else res.render('web/following', data.user);
+    // res.send(data);
   })
   .catch( error => {
     res.json(error);
@@ -58,5 +78,6 @@ router.get('/me', (req, res, next) => {
 //     res.json(error);
 //   })
 // });
+
 
 module.exports = router;

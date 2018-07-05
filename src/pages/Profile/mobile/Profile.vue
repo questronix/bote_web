@@ -44,7 +44,7 @@ body {
 }
 body,html {
   margin: 0;
-  height: 50%;
+  height: 100%;
 }
 
 </style>
