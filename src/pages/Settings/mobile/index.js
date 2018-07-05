@@ -1,9 +1,9 @@
 import Vue from 'vue/dist/vue';
-import Login from './Login.vue';
+import Settings from './Settings.vue';
 
 import Api from '../../../lib/Api.js';
 
 new Vue({
-  el: '#login',
-  render: h => h(Login)
+  el: '#settings',
+  render: h => h(Settings)
 })

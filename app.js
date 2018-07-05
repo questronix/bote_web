@@ -37,6 +37,7 @@ let profile = require('./profile');
 let logout = require('./logout');
 let barProfile = require('./barProfile');
 let bars = require('./bars');
+let settings = require('./settings');
 
 
 let clients = ['/mobile', ''];
@@ -48,6 +49,7 @@ for(let i in clients){
     app.use(`${clients[i]}/login`, login);
     app.use(`${clients[i]}/barProfile`, barProfile);
     app.use(`${clients[i]}/bars`, bars);
+    app.use(`${clients[i]}/settings`, settings);
 }
 
 module.exports = app;
