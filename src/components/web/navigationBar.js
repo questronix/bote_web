@@ -11,7 +11,7 @@ let navigationBar = Vue.component('nav-bar',{
     template:
         `
         <div class="navigation">
-            <a href="Home" classs="bote_logo"><strong>BOTE</strong></a>
+            <img src="https://i.imgur.com/LIjxAK3.png">
             <search-bar placeholder="Search"> </search-bar>
             <div class="pages">
                 <a href="home"><strong>Home</strong></a>                

@@ -18,6 +18,7 @@
 <script>
 
 import Api from '../../../lib/Api.js';
+import Storage from '../../../lib/Storage';
 
 export default {
   data (){
@@ -29,19 +30,17 @@ export default {
   methods: {
     login() {
 
-        Api.post('login/send', {
+        Api.post('/mobile/login', null, {
           username: this.username,
           password: this.password
         }).then(data=>{
-          if(data.body.status === 1) window.location.href = '/mobile/dashboard';
-          else alert(data.body.msg);
+          if(data.response.statusCode == 200){
+            Storage.setKey('access-token', data.body);
+            window.location.href = '/mobile/dashboard';
+          }
         }).catch(error=>{
           console.log(error);
         });
-        console.log(this.username);
-        console.log(this.password);
-        
-
     }
   }
 }
@@ -71,9 +70,7 @@ i {
     margin-top: 15px;
     margin-left: 7px;
 }
-input{
-    color: #191921;
-}
+
 button {
     font-family: 'Montserrat', sans-serif;
     font-weight: bold;

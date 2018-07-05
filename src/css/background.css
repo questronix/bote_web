@@ -1,8 +1,18 @@
 
 html,body{
-    background-color: #303030;
+    background-color: #212121;
     background-repeat: no-repeat;
     height: 100%;
     overflow: auto;
+    min-width: 720px;
 
+}
+
+.dashboardpage{
+    background-color: #e48909;
+    background: linear-gradient(#e48909, brown);
+}
+
+.indexpage{
+    background: linear-gradient(#e48909, brown);
 }
