@@ -2,53 +2,63 @@ $buttonbackground: #e48909;
 $buttontextcolor: white;
 $title: #e48909;
 
-#index{
+body,html{
     height: 100%;
-    display: flex;
-    flex-direction: column;
+}
+#bote_landing{
+    min-height: 800px;
+    background-image: url(https://i.imgur.com/5LX5EMP.jpg);
+    position: relative;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+
+      
+.btn .social{
+    background-color:orange;
+}
+.card_container{
+    height: 600px;
+    display:flex;
     justify-content: space-between;
+    align-items: center;
+    background-color:#212121;
+    padding:50px 50px;
+    position:relative;
+
+
 }
 
-#botelogo{
-    font:{
-        size: 300px;
-        weight: bolder;
-    }
-    text-align: center;
-    margin-top: 60px;
-}
-
-.whatsOnBote button{
-    background-color: $buttonbackground;
-    border: {
-        radius: 50px;
-        style: none;
-    }
-    font:{
-        size:30px;
-        weight: bold;
-    }
-    color: white;
-    justify-content: center;
-    padding: 15px 2%;
-    margin: 2% 0 2% 37%;
-}
-
-.infocard{
+img{
     background-color: black;
-    display: flex;
-    margin: 20px 5%;
-    padding: 20px 3%;
-    border-radius: 50px;
+}
 
-    #title{
-    color: $title;
-    font-weight: bold;
-    font-size: 30px;
-    width: 550px;
-    }
+.card{
+    margin:30px;
+}
 
-    #desc{
-        color: white;
-    }
+.card .card-content{
+    background-color: #e48909;
+    color: white;
+}
+
+.card .card-content .card-title {
+    color: black;
+
+}
+
+.card .card-reveal{
+    background-color: #e48909;
+    color:black;
+}
+
+.page-footer{
+    background-color: black;
+}
+
+img{
+    width:30%;
 }
