@@ -10,13 +10,11 @@ router.get('/', (req, res, next) => {
 
 router.post('/', (req, res, next)=>{
   ajax.setOptions({
-    url: `${process.env.CORE_URL}/login`
+    url: `${process.env.CORE_URL}/login`,
   });
   ajax.post(req.body).then(data=>{
-    console.log(data);
     res.json(data);
   }).catch(error=>{
-    console.log(error);
     res.json(error);
   });
 });

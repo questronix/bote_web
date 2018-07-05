@@ -12,7 +12,13 @@
       <a href="#" class="active"><i class="material-icons">home</i></a>
       <a href="#"><i class="material-icons">shopping_cart</i></a>
       <a href="#"><i class="material-icons">chat_bubble</i></a>
-      <a href="#"><i class="material-icons toggle-button">settings</i></a>
+      <div class="dropdown">
+      <a href="#"><i class="material-icons">settings</i></a>
+      <div class="dropdown-content">
+        <a href="#">Settings</a>
+        <a href="#">Logout</a>
+       </div>
+      </div>
     </div>
 
   </div>
@@ -84,14 +90,52 @@
   }
   .lower-section a {
       float: left; /* Float links side by side */
+      min-width: 25%;
       text-align: center; /* Center-align text */
-      width: 25%; /* Equal width (5 icons with 20% width each = 100%) */
       padding: 10px 0; /* Some top and bottom padding */
       transition: all 0.3s ease; /* Add transition for hover effects */
       color: white; /* White text color */
       font-size: 25px; /* Increased font size */
   }
+  
   .lower-section i:hover {
       color: #CD7D0B;
   }
+
+.dropdown i{
+  padding-left: 45px;
+}
+
+  /* The container <div> - needed to position the dropdown content */
+.dropdown {
+  
+    position: relative;
+    display: inline-block;
+}
+
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+    float: right;
+    margin-top: 40px;
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+    color: black;
+    text-decoration: none;
+    display: block;
+}
+
+/* Change color of dropdown links on hover */
+.dropdown-content a:hover {background-color: #ddd;}
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {display: block;}
+
 </style scoped>
