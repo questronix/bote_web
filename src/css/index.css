@@ -1,38 +1,48 @@
-#index {
-  height: 100%;
+body, html {
+  height: 100%; }
+
+#bote_landing {
+  min-height: 800px;
+  background-image: url(https://i.imgur.com/5LX5EMP.jpg);
+  position: relative;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover; }
+
+.btn .social {
+  background-color: orange; }
+
+.card_container {
+  height: 600px;
   display: flex;
-  flex-direction: column;
-  justify-content: space-between; }
+  justify-content: space-between;
+  align-items: center;
+  background-color: #212121;
+  padding: 50px 50px;
+  position: relative; }
 
-#botelogo {
-  font-size: 300px;
-  font-weight: bolder;
-  text-align: center;
-  margin-top: 60px; }
+img {
+  background-color: black; }
 
-.whatsOnBote button {
+.card {
+  margin: 30px; }
+
+.card .card-content {
   background-color: #e48909;
-  border-radius: 50px;
-  border-style: none;
-  font-size: 30px;
-  font-weight: bold;
-  color: white;
-  justify-content: center;
-  padding: 15px 2%;
-  margin: 2% 0 2% 37%; }
+  color: white; }
 
-.infocard {
-  background-color: black;
-  display: flex;
-  margin: 20px 5%;
-  padding: 20px 3%;
-  border-radius: 50px; }
-  .infocard #title {
-    color: #e48909;
-    font-weight: bold;
-    font-size: 30px;
-    width: 550px; }
-  .infocard #desc {
-    color: white; }
+.card .card-content .card-title {
+  color: black; }
+
+.card .card-reveal {
+  background-color: #e48909;
+  color: black; }
+
+.page-footer {
+  background-color: black; }
+
+img {
+  width: 30%; }
 
 /*# sourceMappingURL=index.css.map */

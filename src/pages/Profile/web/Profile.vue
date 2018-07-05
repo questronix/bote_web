@@ -1,12 +1,8 @@
 <template>
   <div id="profile">
-    
-    <nav-bar isLoggedIn> </nav-bar>
-    <br>
-    <br>
-    <cover-photo></cover-photo>    
-    <profile-nav :isEditting="isEditting" :toggleSave="toggleSave" :edit="edit"> </profile-nav>
-    <user-info :edituser='edituser'  :user='user' :save ="save" :isEditting="isEditting"> </user-info>
+      <nav-bar isLoggedIn> </nav-bar>    
+      <profile-nav :isEditting="isEditting" :toggleSave="toggleSave" :edit="edit" :edituser='edituser'  :user='user' :save ="save" > </profile-nav>    
+      <feeds :user='user'></feeds>
   </div>
 </template>
 
@@ -49,4 +45,3 @@
     }
   }  
 </script>
-

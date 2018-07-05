@@ -5,7 +5,7 @@ const Ajax = require('../common/services/Ajax');
 
 router.get('/', (req, res, next)=>{
   if (req.baseUrl.indexOf('mobile') > -1) res.render('mobile/index');
-  else res.render('web/profile');
+  else res.render('web/');
 });
 
 router.get('/session', (req, res)=>{
