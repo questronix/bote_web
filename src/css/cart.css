@@ -1,28 +1,58 @@
 .cart {
-  margin: 90px 2%;
-  color: white; }
-  .cart #header, .cart #drink, .cart #summary {
-    background-color: #424242;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 1%; }
-  .cart #header {
+  color: white;
+  margin-top: 90px;
+  width: 95%; }
+  .cart table h6 {
     font-weight: bold; }
-  .cart #drink {
-    margin: 1% 0;
-    padding: 1%; }
-    .cart #drink #firstrow {
-      display: flex;
-      flex-direction: row; }
-      .cart #drink #firstrow #drinkimage {
-        height: 20px;
-        weight: 20px;
-        background-color: white; }
-      .cart #drink #firstrow #info {
+  .cart table i {
+    cursor: pointer; }
+  .cart table #details {
+    text-align: left; }
+  .cart table .drinkimg {
+    margin-right: 25px; }
+  .cart #promocode {
+    padding-left: 5px; }
+  .cart .voucher {
+    padding-top: 35px;
+    font-weight: bold; }
+
+/*
+.cart{
+    margin: 90px 2%;
+    color: $text;
+    #header, #drink,#summary{
+        background-color: $background;
         display: flex;
-        flex-direction: column; }
-    .cart #drink #quantity, .cart #drink #quantity a {
-      color: #e48909; }
+        align-items: center;
+        justify-content: space-between;
+        padding: 1%;
+    }
+    #header{
+        font-weight: bold;
+    }
+    #drink{
+        margin: 1% 0;
+        padding: 1%;
+        #firstrow{
+            display: flex;
+            flex-direction: row;
+            #drinkimage{
+                height: 20px;
+                weight: 20px;
+                background-color: $text;
+            }
+            #info{
+                display: flex;
+                flex-direction: column;
+            }
+            
+        }
+        #quantity, #quantity a {
+            color: $link;
+            
+        }   
+    }
+
+}*/
 
 /*# sourceMappingURL=cart.css.map */

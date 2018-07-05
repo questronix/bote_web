@@ -1,6 +1,35 @@
 $background: #424242;
 $text: white;
 $link: #e48909;
+
+.cart{
+    color: $text;
+    margin-top: 90px;
+    width: 95%;
+    table{
+        h6{
+            font-weight: bold;
+        }
+        i{
+            cursor: pointer;
+        }
+        #details{
+            text-align: left;
+        }
+        .drinkimg{
+            margin-right: 25px;
+        }
+    }
+    #promocode{
+        padding-left: 5px;
+    }
+
+    .voucher{
+        padding-top: 35px;
+        font-weight: bold;
+    }
+}
+/*
 .cart{
     margin: 90px 2%;
     color: $text;
@@ -37,4 +66,4 @@ $link: #e48909;
         }   
     }
 
-}
+}*/
