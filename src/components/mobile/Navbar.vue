@@ -1,97 +1,113 @@
 <template>
-  <div class="navbar-section">
-    <div class="upper-section">
-      <div class="searchbar">
-        <a href="#" class="active"><i class="material-icons">search</i></a>
-        <input id="searchbartext" type="text" placeholder="Search for places, drinks, bars, people, etc."/>
+  <div class="main_navbar">
+    <nav> <!--SEARCHBAR-->
+      <div class="nav-wrapper">
+        <form>
+          <div class="input-field">
+            <input id="search" type="search" required>
+            <label class="label-icon" for="search">
+              <a href="#"><i class="material-icons">search</i></a>
+            </label>
+            <!-- <i class="material-icons">close</i> -->
+          </div>
+        </form>
+        <div class="img-profile">
+          <img src="https://i2-prod.mirror.co.uk/incoming/article10263400.ece/ALTERNATES/s1200/PROD-Kim-Jong-Un.jpg">
+        </div>
+        <div class="notif-icon">
+          <a href="#"><i class="material-icons">notifications</i></a>
+        </div>
       </div>
-      <img :src="require('./adminetc.png')"/>
-      <a href="#" class="active"><i id="strict" class="material-icons">notifications</i></a>
-    </div>
-    <div class="lower-section">
-      <a href="#" class="active"><i class="material-icons">home</i></a>
-      <a href="#"><i class="material-icons">shopping_cart</i></a>
-      <a href="#"><i class="material-icons">chat_bubble</i></a>
-      <a href="#"><i class="material-icons toggle-button">settings</i></a>
-    </div>
 
+    </nav>
+
+    <nav>
+      <div class="icons-below">
+        <a href="#"><i class="material-icons">home</i></a>
+        <a href="#"><i class="material-icons">shopping_cart</i></a>
+        <a href="#"><i class="material-icons">message</i></a>
+        <a href="#"><i class="material-icons">settings</i></a>
+      </div>
+    </nav>
   </div>
 </template>
 
 <script>
-  export default {
 
-  }
+export default {
+
+}
+
 </script>
 
 <style>
-  .navbar-section {
-    background-color: #212121;
-    height: 20vh;
+  .main_navbar {
+    display: flex;
+    flex-direction: column;
+    height: inherit;
     width: 100%;
   }
-  .upper-section {
-    height: 50%;
+  nav {
+    background-color: #212121;
+    width: 100%;
+  }
+  nav .nav-wrapper {
     display: flex;
+    align-items: center;
+    position: static !important;
   }
-  .searchbar {
-    width: 65%;
-  }
-  .searchbar a {
-    width: 10%;
+  nav form {
+    padding-left: 20px;
+    width: 80%;
     height: 50%;
-    transition: all 0.3s ease; /* Add transition for hover effects */
   }
-  .searchbar i {
-    position: absolute;
-    padding-left: 70px;
-    padding-top: 55px;
-    transform: translate(-50%,-50%);
-    -ms-transform: translate(-50%,-50%);
+  .input-field {
+    position: static !important;
   }
-  #searchbartext {
-    width: 105%;
-    height: 50%;
-    margin-top: 16px;
-    margin-left: 20px;
-    padding-left: 35px;
-    font-size: 15px;
-    border: none;
-    border-radius: 30px;
-    color: white;
-    background-color: #303030;
+  .input-field input[type=search] {
+    line-height: inherit;
+    transition: .3s background-color;
+    border-radius: 20px;
+    background-color: #424242;
   }
-  .upper-section img {
+  .input-field>label {
+    padding-left: 10px !important;
+  }
+  .img-profile {
+    display: flex;
+    align-items: center;
+    padding-left: 15px;
     width: 10%;
+    height: inherit;
+  }
+  .img-profile img {
     border-radius: 50%;
-    padding-left: 16%;
-    padding-top: 20px;
+    height: 50%;
+    width: 80%;
+    border: 2px solid #CD7D0B;
   }
-  .upper-section a {
+  .notif-icon {
+    display: flex;
+    align-items: center;
+    padding-left: 15px;
     width: 10%;
-    padding: 12px 0; /* Some top and bottom padding */
-    transition: all 0.3s ease; /* Add transition for hover effects */
-    color: white; /* White text color */
+    height: inherit;
   }
-  #strict{
-    padding-top: 5px;
+  .notif-icon i {
+    height: 50%;
+    width: 100%;
   }
-  .upper-section i:hover {
+  nav i:hover {
     color: #CD7D0B;
   }
-  .lower-section {
-    height: 50%;
+  nav .input-field label i:hover {
+    color: #CD7D0B;
   }
-  .lower-section a {
-      float: left; /* Float links side by side */
-      text-align: center; /* Center-align text */
-      width: 25%; /* Equal width (5 icons with 20% width each = 100%) */
-      padding: 10px 0; /* Some top and bottom padding */
-      transition: all 0.3s ease; /* Add transition for hover effects */
-      color: white; /* White text color */
-      font-size: 25px; /* Increased font size */
+
+  .icons-below {
+    display: inline-flex;
+    justify-content: space-around;
+    height: inherit;
+    width: 100%;
   }
-  .lower-section i:hover {
-      color: #CD7D0B;
-  }
-</style scoped>
+</style>

@@ -35,6 +35,7 @@ let login = require('./login');
 let dashboard = require('./dashboard');
 let profile = require('./profile');
 let logout = require('./logout');
+let cart = require('./cart');
 
 let clients = ['/mobile', ''];
 for(let i in clients){
@@ -43,6 +44,8 @@ for(let i in clients){
     app.use(`${clients[i]}/profile`, profile);
     app.use(`${clients[i]}/logout`, logout);
     app.use(`${clients[i]}/login`, login);
+    app.use(`${clients[i]}/cart`, cart);
+
 }
 
 module.exports = app;

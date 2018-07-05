@@ -1,18 +1,16 @@
 <template>
   <div>
+    <h1> Nothing Else Yet! </h1>
   </div>
 </template>
 
 <script>
 
-export default {
-
-}
 </script>
 
 <style>
 body {
-  background: linear-gradient( #2A1B43,#5C1C4F);
+  background-color: #212121;
   font-family: 'Montserrat', sans-serif;
 }
 body, html {
