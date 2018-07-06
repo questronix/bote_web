@@ -8,4 +8,8 @@ router.get('/', (req, res, next)=> {
 });
 
 
+router.get('/:something', (req, res, next)=> {
+  res.render('mobile/barProfile');
+});
+
 module.exports = router;
