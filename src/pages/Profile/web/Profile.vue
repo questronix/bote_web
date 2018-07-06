@@ -1,8 +1,17 @@
 <template>
-  <div id="profile">
-      <nav-bar isLoggedIn> </nav-bar>    
-      <profile-nav :isEditting="isEditting" :toggleSave="toggleSave" :edit="edit" :edituser='edituser'  :user='user' :save ="save" > </profile-nav>    
+  <div class="profile">
+    <div class="container">
+      <nav-bar isLoggedIn> </nav-bar>   
+      <div class="cover_photo">
+      <img src="https://i.imgur.com/zt2y9eB.gif">
+      </div>
+      <div class="navigation_container">
+        <profile-nav :isEditting="isEditting" :toggleSave="toggleSave" :edit="edit" :edituser='edituser'  :user='user' :save ="save" > </profile-nav>    
+      </div>
+      
+      
       <feeds :user='user'></feeds>
+    </div>
   </div>
 </template>
 
@@ -23,7 +32,7 @@
           emailEdit: 'sw33tjhemerlyn16@gmail.com'
         },
         isEditting: false,
-        save: false
+        save: false        
       }
     },
     methods: {
@@ -44,4 +53,5 @@
       }
     }
   }  
+    
 </script>

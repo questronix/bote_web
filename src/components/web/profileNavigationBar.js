@@ -8,7 +8,7 @@ let profileNavigationBar = Vue.component('profile-nav', {
         beers: 230,
         followers: 456,
         following: 349,
-        avatar: "https://materiell.com/wp-content/uploads/2015/03/doug_full1.png"       
+        avatar: "https://avatars3.githubusercontent.com/u/5698765?s=460&v=4"
 
     };
   },
@@ -31,8 +31,9 @@ let profileNavigationBar = Vue.component('profile-nav', {
                         
                                 <li id="name"> 
                                         
-                                        <span v-if="isEditting === false"> {{user.name}} </span>
-                                        <input v-else="isEditting === true" type="text" :placeholder="user.name" v-model="edituser.nameEdit">        
+                                        <span v-if="isEditting === false"> {{user.name}} </span>                                        
+                                        <input v-else="isEditting === true" type="text" :placeholder="user.name" v-model="edituser.nameEdit" class="validate">        
+                                        
                                 </li>
                                 <br/>
                                 <li>    
@@ -53,34 +54,43 @@ let profileNavigationBar = Vue.component('profile-nav', {
                                         <input v-else="isEditting === true" type="text" :placeholder="user.email" v-model="edituser.emailEdit">
                                 </li> 
                         </ul>
-                        
-                        <a href="#"> 
-                                <span> {{bars}} </span>        
-                                Bars 
-                        </a>
+                        <div class="editing">
+                                <a v-if="isEditting === false" id="editprofile" v-on:click="edit" class="btn waves-effect waves-light "><i class="material-icons right">settings</i>Edit Profile</a>
+                                
+                                <div v-else="isEditting === true">
+                                <a id="editprofile" v-on:click="toggleSave" class="btn wave-effect waves-light" >Save</a>
+                                <a id="editcancel" v-on:click="edit" class="btn wave-effect waves-light" >Cancel</a>
+                        </div>
+                        <div class="tabs">
+                                <div>
+                                        <a href="#"> 
+                                                <span> {{bars}} </span>        
+                                                Bars 
+                                        </a>
+                                </div>
 
-                
-                        <a href="#"> 
-                                <span> {{beers}} </span>
-                                Beers 
-                        </a>
-
-                
-                        <a href="#"> 
-                                <span> {{followers}} </span>
-                                Followers 
+                                <div>
+                                        <a href="#"> 
+                                                <span> {{beers}} </span>
+                                                Beers 
+                                        </a>
+                                </div>
                         
-                        </a>
-                
-                        <a href="#"> 
-                                <span> {{following}} </span>        
-                                Following                                        
-                        </a>
-                
-                        <button v-if="isEditting === false" id="editprofile" v-on:click="edit" > Edit Profile</button>
-                        <div v-else="isEditting === true">
-                        <button id="editprofile" v-on:click="toggleSave" >Save</button>
-                        <button id="editcancel" v-on:click="edit" >Cancel</button>
+                                <div>
+                                        <a href="#"> 
+                                                <span> {{followers}} </span>
+                                                Followers 
+                                        
+                                        </a>
+                                </div>
+
+                                <div>
+                                <a href="#"> 
+                                        <span> {{following}} </span>        
+                                        Following                                        
+                                </a>
+                                </div>
+                        </div>        
                         </div>
                 </div>
         </div>
