@@ -6,7 +6,13 @@ import coverPhoto from '../../../components/web/coverPhoto';
 import '../../../css/background.css';
 import feed from '../../../components/web/feed';
 
- new Vue({
-  el: '#profile',
-  render: h => h(Profile)
-})
+import Storage from '../../../lib/Storage';
+
+if (Storage.getKey('access-token')){
+  new Vue({
+    el: '#profile',
+    render: h => h(Profile)
+  })
+}else{
+  window.location.href = '/'
+}

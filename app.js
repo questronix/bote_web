@@ -48,8 +48,6 @@ for(let i in clients){
     app.use(`${clients[i]}/logout`, logout);
     app.use(`${clients[i]}/login`, login);
     app.use(`${clients[i]}/cart`, cart);
-
-    app.use(`${clients[i]}/barProfile`, barProfile);
     app.use(`${clients[i]}/bars`, bars);
     app.use(`${clients[i]}/settings`, settings);
 }
