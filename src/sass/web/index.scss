@@ -1,0 +1,64 @@
+$buttonbackground: #e48909;
+$buttontextcolor: white;
+$title: #e48909;
+
+body,html{
+    height: 100%;
+}
+#bote_landing{
+    min-height: 800px;
+    background-image: url(https://i.imgur.com/5LX5EMP.jpg);
+    position: relative;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+
+      
+.btn .social{
+    background-color:orange;
+}
+.card_container{
+    height: 600px;
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color:#212121;
+    padding:50px 50px;
+    position:relative;
+
+
+}
+
+img{
+    background-color: black;
+}
+
+.card{
+    margin:30px;
+}
+
+.card .card-content{
+    background-color: #e48909;
+    color: white;
+}
+
+.card .card-content .card-title {
+    color: black;
+
+}
+
+.card .card-reveal{
+    background-color: #e48909;
+    color:black;
+}
+
+.page-footer{
+    background-color: black;
+}
+
+img{
+    width:30%;
+}

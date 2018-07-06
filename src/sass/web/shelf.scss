@@ -1,0 +1,82 @@
+$title: #e48909;
+$text: white;
+$icon: white;
+$iconhover: #e48909;
+$button: #e48909;
+$background: #424242;
+
+.beers{
+    margin: 90px 3% 20px;
+    #header{   
+        display: flex;
+        justify-content: space-between;
+        flex-direction: row;
+        align-items: flex-end; 
+        margin-bottom: 10px;
+        h1{
+            color:$title;
+            margin:0;
+        }
+        #filter{
+            color: $text;
+            i{
+                font-size: x-large;
+            }
+        }
+        button{
+            border: {
+                color: $button;
+                style: solid;
+                radius: 5px;
+            }
+            font: {
+                weight: bold;
+                size: medium;
+            }
+            background: none;
+            color: $button;
+            padding: 15px;
+            &:hover {
+                background-color: $button;
+                color: $text;
+            }
+        }    
+    }
+}
+
+.maincontent{
+    background-color: $background;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+#beercards{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+#loadmore{
+    display: flex;
+    justify-content: center;
+    button{
+        border: {
+            color: $button;
+            style: solid;
+        }
+        font: {
+            weight: bold;
+            size: medium;
+        }
+        background: none;
+        color: $button;
+        padding: 15px 40%;
+        margin-top: 5%;
+        &:hover {
+            background-color: $button;
+            color: $text;
+        }
+    }    
+}

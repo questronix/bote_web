@@ -18,7 +18,6 @@
           <a href="#"><i class="material-icons">notifications</i></a>
         </div>
       </div>
-
     </nav>
 
     <nav>

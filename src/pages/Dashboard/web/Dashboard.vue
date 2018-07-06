@@ -1,9 +1,9 @@
 <template>
   <div id="dashboard">
     
-  <nav-bar isLoggedIn> </nav-bar>
+    <nav-bar isLoggedIn> </nav-bar>
+    <main-content> </main-content>
     
-    <h1>Dashboard</h1>
   </div>
 </template>
 

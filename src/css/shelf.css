@@ -1,0 +1,57 @@
+.beers {
+  margin: 90px 3% 20px; }
+  .beers #header {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    align-items: flex-end;
+    margin-bottom: 10px; }
+    .beers #header h1 {
+      color: #e48909;
+      margin: 0; }
+    .beers #header #filter {
+      color: white; }
+      .beers #header #filter i {
+        font-size: x-large; }
+    .beers #header button {
+      border-color: #e48909;
+      border-style: solid;
+      border-radius: 5px;
+      font-weight: bold;
+      font-size: medium;
+      background: none;
+      color: #e48909;
+      padding: 15px; }
+      .beers #header button:hover {
+        background-color: #e48909;
+        color: white; }
+
+.maincontent {
+  background-color: #424242;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  display: flex;
+  flex-direction: column; }
+
+#beercards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly; }
+
+#loadmore {
+  display: flex;
+  justify-content: center; }
+  #loadmore button {
+    border-color: #e48909;
+    border-style: solid;
+    font-weight: bold;
+    font-size: medium;
+    background: none;
+    color: #e48909;
+    padding: 15px 40%;
+    margin-top: 5%; }
+    #loadmore button:hover {
+      background-color: #e48909;
+      color: white; }
+
+/*# sourceMappingURL=shelf.css.map */
