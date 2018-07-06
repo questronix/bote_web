@@ -30,8 +30,6 @@ router.get('/profile/:username', (req, res)=>{
   }).catch(error=>{
     res.send(error);
   });
-
-  else res.render('web/profile');
 });
 
 module.exports = router;

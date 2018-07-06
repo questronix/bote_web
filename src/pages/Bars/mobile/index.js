@@ -1,10 +1,13 @@
 import Vue from 'vue/dist/vue';
 import Bars from './Bars.vue';
-
+import Storage from '../../../lib/Storage'
 import Api from '../../../lib/Api.js';
 
-
-new Vue({
-  el: '#bars',
-  render: h => h(Bars)
-})
+if (Storage.getKey('access-token')){
+  new Vue({
+    el: '#bars',
+    render: h => h(Bars)
+  })
+}else{
+  window.location.href = 'login';
+}
