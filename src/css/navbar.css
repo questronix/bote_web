@@ -12,16 +12,14 @@ body{
     top:0;  
     width: 100%;
     min-width:720px;
-img{
-    width: 50px;
-    margin-left: 30px;
-    padding-top:3px;
-    padding-bottom: 0px;
+    img{
+        width:50px;
+        margin-left: 30px;
+        padding-top:3px;
+        padding-bottom: 0px;
+    }
 }
-}
-.bote_logo{
-    width: 30%;
-}
+
 
 .navigation a{
     float : left;
