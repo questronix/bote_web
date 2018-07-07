@@ -1,10 +1,11 @@
 const express = require('express');
 const router = express.Router();
-const ajax = require('../common/services/Ajax');
+const ajax = require('../Common/services/Ajax');
 
-// router.get('/', (req, res, next) => {
-  // redirect to own profile
-// });
+router.get('/', (req, res, next) => {
+  if (req.baseUrl.indexOf('mobile') > -1) res.render('mobile/profile');
+  else res.render('web/profile');
+});
 
 
 router.get('/:username', (req, res, next) => {
@@ -14,7 +15,6 @@ router.get('/:username', (req, res, next) => {
   });
   ajax.get()
   .then( data => {
-    console.log(data)
     res.send(data);
   })
   .catch( error => {

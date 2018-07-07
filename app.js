@@ -30,14 +30,14 @@ app.use(session({
     resave: false
 }));
 
-let home = require('./Modules/home');
-let login = require('./Modules/login');
-let dashboard = require('./Modules/dashboard');
-let profile = require('./Modules/profile');
-let logout = require('./Modules/logout');
-let cart = require('./Modules/cart');
-let bars = require('./Modules/bars');
-let settings = require('./Modules/settings');
+let home = require('./Modules/Home');
+let login = require('./Modules/Login');
+let dashboard = require('./Modules/Dashboard');
+let profile = require('./Modules/Profile');
+let logout = require('./Modules/Logout');
+let cart = require('./Modules/Cart');
+let bars = require('./Modules/Bars');
+let settings = require('./Modules/Settings');
 
 
 let clients = ['/mobile', ''];

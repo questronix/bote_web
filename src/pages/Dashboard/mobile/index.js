@@ -6,10 +6,9 @@ import Storage from '../../../lib/Storage';
 
 let session = Storage.getKey('access-token');
 if(session){
-  Api.get('/profile', {
+  Api.get('/profile/me', {
     'x-access-token': session.token,
   }).then(data=>{
-    console.log('hello from Dashboard/index.js');
     if(data.response.statusCode == 200){
       Storage.setKey('user-details', data.body);
     }
