@@ -6,7 +6,7 @@ import '../../../css/background.css';
 import navigationBar from '../../../components/web/navigationBar';
 
 if(Storage.getKey('access-token')){
-    window.location.href = '/mobile/dashboard';
+    window.location.href = '/dashboard';
 }else {
     new Vue ({
     el: '#login',

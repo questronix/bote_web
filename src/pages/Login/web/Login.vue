@@ -32,8 +32,9 @@
 
 <script>
 import index from './index.js';
-
+import Storage from '../../../lib/Storage';
 import Api from '../../../lib/Api.js';
+
 export default {
     data: function(){
                 return {
@@ -43,31 +44,20 @@ export default {
         },
         methods: {
             login() {
-                Api.post('/login/send', {
+                Api.post('/login', null, {
                     username: this.username,
                     password: this.password
-                })
-                .then(data=>{
-                    console.log(data);
-                    if(data.body.status === 1 && data.body.user.status === 1) window.location.href = '/dashboard';
-                    else alert(data.body.errors[0].message);
-                })
-                .catch(error=>{
-                    console.log(error);
+                }).then(data=>{
+                if(data.response.statusCode == 200){
+                    Storage.setKey('access-token', data.body);
+                    window.location.href = '/dashboard';
+                }
+                }).catch(error=>{
+                console.log(error);
                 });
-                console.log(this.username);
-                console.log(this.password);
             }
         }
 }
-// Get the modal
-var modal = document.getElementById('id01');
 
-// When the user clicks anywhere outside of the modal, close it
-window.onclick = function(event) {
-    if (event.target == modal) {
-        modal.style.display = "none";
-    }
-}
 </script>
 
