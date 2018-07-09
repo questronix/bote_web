@@ -5,7 +5,7 @@ import profileNavigationBarComponent from '../../../components/web/profileNaviga
 import coverPhoto from '../../../components/web/coverPhoto';
 import '../../../css/background.css';
 import '../../../css/profile.css';
-import feed from '../../../components/web/feed';
+// import feed from '../../../components/web/feed';
 
 
 import Storage from '../../../lib/Storage';

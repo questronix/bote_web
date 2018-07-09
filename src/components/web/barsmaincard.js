@@ -24,7 +24,7 @@ let main = Vue.component('main-content',{
                 
             <div class="maincontent">
                 <div id="barcards">
-                <bar-card v-for="(bar, index) in bars" :key="index" :barname="bar.barname" :bardetails="bar.bardetails" :img="bar.img"> </bar-card>
+                <bar- card v-for="(bar, index) in bars" :key="index" :barname="bar.barname" :bardetails="bar.bardetails" :img="bar.img"> </bar-card>
                 <bar-card v-for="(bar, index) in bars" :key="index" :barname="bar.barname" :bardetails="bar.bardetails" :img="bar.img"> </bar-card>
                 <bar-card v-for="(bar, index) in bars" :key="index" :barname="bar.barname" :bardetails="bar.bardetails" :img="bar.img"> </bar-card>
                 <bar-card v-for="(bar, index) in bars" :key="index" :barname="bar.barname" :bardetails="bar.bardetails" :img="bar.img"> </bar-card>
