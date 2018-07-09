@@ -5,8 +5,14 @@ import footer from '../../../components/web/footer.vue';
 import infocard from '../../../components/web/homeinfocard.vue';
 import '../../../css/background.css';
 import '../../../css/index.css';
+import Storage from '../../../lib/Storage';
 
- new Vue({
-  el: '#app',
-  render: h => h(App)
-})
+
+if(Storage.getKey('access-token')){
+  window.location.href = '/dashboard';
+}else{
+  new Vue({
+    el: '#app',
+    render: h => h(App)
+  });
+}

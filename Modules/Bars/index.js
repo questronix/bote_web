@@ -4,9 +4,14 @@ const ajax = require('../Common/services/Ajax');
 
 
 router.get('/', (req, res, next)=> {
-  if (req.query.id)
-    res.render('mobile/bars');
-  else res.render('mobile/barProfile');
+  if(req.baseUrl.indexOf('mobile') > -1){
+    if (req.query.id)
+      res.render('mobile/bars');
+    else res.render('mobile/barProfile');  
+  }else{
+    res.render('web/bars');
+  }
+  
 });
 
 module.exports = router;

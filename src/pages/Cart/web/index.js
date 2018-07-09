@@ -5,14 +5,15 @@ import navigationBar from '../../../components/web/navigationBar';
 import main from '../../../components/web/cartmaincard.vue';
 import '../../../css/background.css';
 
-let index = new Vue({
-  el: '#cart',
-  render: h => h(Cart),
-  data: function(){
-    return{
-      isLoggedIn: true
-    }
-  }
-})
+import Storage from '../../../lib/Storage';
 
-export default index;
+
+if (Storage.getKey('access-token')){
+  new Vue({
+    el: '#cart',
+    render: h => h(Cart)
+  })
+}else{
+  window.location.href = 'login';
+}
+

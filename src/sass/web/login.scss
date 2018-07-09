@@ -1,0 +1,17 @@
+$text: white;
+$background: #e48909;
+$hover: #e65100;
+
+.btn-large{
+    border-radius:25px;
+    color: $text;
+    background-color: $background;
+    font-size: 17px;
+    font-weight: bold; 
+    &:hover {
+        background-color: $hover;
+    }
+}
+.remember{
+    margin-top: 10px;
+}
