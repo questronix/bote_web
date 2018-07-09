@@ -7,7 +7,7 @@ import Storage from '../../../lib/Storage';
 let session = Storage.getKey('access-token');
 if(session){
   Api.get('/profile/me', {
-    'x-acceSS-token': session.token,
+    'x-access-token': session.token,
   }).then(data=>{
     if(data.response.statusCode == 200){
       Storage.setKey('user-details', data.body);
@@ -21,5 +21,5 @@ if(session){
     render: h => h(Dashboard)
   });
 }else{
-  window.location.href = '/mobile/login';
+  window.location.href = 'login';
 }

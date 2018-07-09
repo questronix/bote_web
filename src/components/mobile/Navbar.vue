@@ -18,7 +18,6 @@
           <a href="#"><i class="material-icons">notifications</i></a>
         </div>
       </div>
-      
     </nav>
 
     <nav>
@@ -80,7 +79,7 @@ export default {
     width: 10%;
     height: inherit;
   }
-  img {
+  .img-profile img {
     border-radius: 50%;
     height: 50%;
     width: 80%;

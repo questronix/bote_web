@@ -13,6 +13,9 @@
 
 <style>
   .bar-card {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
     height: 30vh;
     width: 100%;
     background-color: #424242;
