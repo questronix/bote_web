@@ -1,14 +1,11 @@
 <template>
   <div>
-
+    <h1> Nothing Else Yet! </h1>
   </div>
 </template>
 
 <script>
 
-export default {
-
-}
 </script>
 
 <style>

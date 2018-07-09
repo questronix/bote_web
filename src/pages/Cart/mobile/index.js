@@ -1,13 +1,14 @@
 import Vue from 'vue/dist/vue';
-import BarProfile from './BarProfile.vue';
-import Storage from '../../../lib/Storage';
+import Cart from './CartWindow.vue';
 import Api from '../../../lib/Api.js';
+
+import Storage from '../../../lib/Storage';
 
 if (Storage.getKey('access-token')){
   new Vue({
-    el: '#barProfile',
-    render: h => h(BarProfile)
+    el: '#cart',
+    render: h => h(Cart)
   })
-}else{
+}else {
   window.location.href = 'login';
 }

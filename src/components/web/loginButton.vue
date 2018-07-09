@@ -27,6 +27,7 @@
 <script>
 import Vue from 'vue/dist/vue';
 import Api from '../../lib/Api.js';
+import Storage from '../../lib/Storage';
 
 let loginbutton = Vue.component('login-button', {
   data: function(){
@@ -37,20 +38,17 @@ let loginbutton = Vue.component('login-button', {
     },
     methods: {
         login() {
-            Api.post('login/send', {
-                username: this.username,
-                password: this.password
-            })
-            .then(data=>{
-                console.log(data);
-                if(data.body.status === 1 && data.body.user.status === 1) window.location.href = '/dashboard';
-                else alert(data.body.errors[0].message);
-            })
-            .catch(error=>{
-                console.log(error);
-            });
-            console.log(this.username);
-            console.log(this.password);
+           Api.post('/login', null, {
+          username: this.username,
+          password: this.password
+        }).then(data=>{
+          if(data.response.statusCode == 200){
+            Storage.setKey('access-token', data.body);
+            window.location.href = '/dashboard';
+          }
+        }).catch(error=>{
+          console.log(error);
+        });
         }
     }
 });

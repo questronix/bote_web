@@ -1,40 +1,6 @@
 
 
 <template>
-        
-       <!-- <div class="drinkslist">
-            <div id="header">
-               <div>
-                    <input type="checkbox">
-                    <span> Select all items </span>
-               </div>
-               <span> Price </span>
-               <span> Quantity </span>
-                
-            </div>
-
-            <div id="drink" v-for="(beer, index) in beers" :key="index">
-                <div id="firstrow">
-                    <input type="checkbox">
-                    <div id="drinkimage">
-                    </div>
-                    <div id="info">
-                        <div> {{beer.beername}} </div>
-                        <div> {{beer.amount}} </div>
-                    </div>
-                </div>
-                <div> 
-                    Php {{beer.price}} </div>
-                <div id="quantity"> 
-                    <a href="#" id="quantityicon" v-on:click="decreaseQuantity(beer.quantity,index)"><i class="material-icons">remove_circle_outline</i></a>
-                    {{beer.quantity}}
-                    <a href="#" id="quantityicon" v-on:click="increaseQuantity(beer.quantity,index)"><i class="material-icons">add_circle_outline</i></a></div>
-            </div>
-        </div>
-        <div id="summary">
-            <span> Total: {{total}} </span>
-        </div>
-            -->
         <div class="cart container">
             <div class="row">
                 <div class="col s8">
@@ -56,7 +22,7 @@
                                         <br/>
                                         <br/>
                                     </div>
-                                    <h6>{{beer.beername}}</h6>{{beer.amount}} </td>
+                                    <h6>{{beer.beername}}</h6>{{beer.amount}} (Php {{beer.price}})</td>
                                 <td> Php {{beer.price * beer.quantity}} </td>
                                 <td>
                                     <i class="orange-text material-icons" v-on:click="decreaseQuantity(beer.quantity,index)">remove_circle_outline</i>
