@@ -25,7 +25,7 @@ let profileNavigationBar = Vue.component('profile-nav', {
   template: `
         <div class="profile_all">
                 <div class="profilenav">
-                        <img :src="avatar" class="avatar"/>
+                        <img :src="avatar" class="circle responsive-img"/>
 
                         <ul>
                         
@@ -58,38 +58,43 @@ let profileNavigationBar = Vue.component('profile-nav', {
                                 <a v-if="isEditting === false" id="editprofile" v-on:click="edit" class="btn waves-effect waves-light "><i class="material-icons right">settings</i>Edit Profile</a>
                                 
                                 <div v-else="isEditting === true">
-                                <a id="editprofile" v-on:click="toggleSave" class="btn wave-effect waves-light" >Save</a>
+                                <a id="editsave" v-on:click="toggleSave" class="btn wave-effect waves-light" >Save</a>
                                 <a id="editcancel" v-on:click="edit" class="btn wave-effect waves-light" >Cancel</a>
                         </div>
+
+
+
+                        
+
                         <div class="tabs">
-                                <div>
-                                        <a href="#"> 
+                                <li class="tab">
+                                        <a class="active" href="#"> 
                                                 <span> {{bars}} </span>        
                                                 Bars 
                                         </a>
-                                </div>
+                                </li>
 
-                                <div>
+                                <li class="tab">
                                         <a href="#"> 
-                                                <span> {{beers}} </span>
+                                                <span>{{beers}} </span>
                                                 Beers 
                                         </a>
-                                </div>
+                                </li>
                         
-                                <div>
+                                <li class="tab">
                                         <a href="#"> 
                                                 <span> {{followers}} </span>
                                                 Followers 
                                         
                                         </a>
-                                </div>
+                                </li>
 
-                                <div>
+                                <li class="tab">
                                 <a href="#"> 
                                         <span> {{following}} </span>        
                                         Following                                        
                                 </a>
-                                </div>
+                                </li>
                         </div>        
                         </div>
                 </div>

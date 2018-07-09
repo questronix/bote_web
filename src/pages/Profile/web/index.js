@@ -5,7 +5,7 @@ import profileNavigationBar from '../../../components/web/profileNavigationBar';
 import coverPhoto from '../../../components/web/coverPhoto';
 import '../../../css/background.css';
 import '../../../css/profile.css';
-import feed from '../../../components/web/feed';
+// import feed from '../../../components/web/feed';
 
 new Vue({
   el: '#profile',
