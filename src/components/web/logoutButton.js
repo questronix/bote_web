@@ -1,11 +1,10 @@
 import Api from '../../lib/Api.js';
 import Vue from 'vue/dist/vue';
-
-let loginbutton = Vue.component('logout-button', {
+let logout = Vue.component('logout-button', {
     template: `<a v-on:click="logout">Log Out</a>`,
     methods: {
       logout: function(){
-        Api.post('logout', {
+        Api.post('/logout', {
         }).then(data=>{
           console.log(data);
           window.location.href = '/';
@@ -16,4 +15,4 @@ let loginbutton = Vue.component('logout-button', {
     }
   }
 );
-export default loginbutton;
+export default logout;
