@@ -6,6 +6,11 @@ const express = require('express');
 //session
 const session = require('express-session');
 
+const cfenv = require('cfenv');
+const appEnv = cfenv.getAppEnv();
+
+console.log(appEnv);
+
 //create instance
 const app = express();
 
@@ -22,6 +27,8 @@ app.use(bodyParser.urlencoded({ extended: true })); // for parsing application/x
 
 // serve the files out of ./public as our main files
 app.use('/static', express.static(path.join(__dirname, 'dist/public/')));
+app.use('/static/img', express.static(path.join(__dirname, 'src/assets')));
+app.use('/static/css', express.static(path.join(__dirname, 'src/css')));
 
 //declare session middleware
 app.use(session({
