@@ -49,14 +49,8 @@
 </template>
 
 <script>
-  import 'materialize-css';
-
   export default{
-    mounted(){
-      let el = document.querySelectorAll('.tabs');
-      var instance = M.Tabs.init(el,{});
-      console.log(instance);
-    },
+  
     data: function() {
       return{
         user: {
