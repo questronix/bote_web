@@ -1,6 +1,6 @@
 /**
  * Ken Crucillo
- * 
+ *
  * Config to load all Vue components in webpack automatically
  */
 const path = require('path');
@@ -12,6 +12,10 @@ const jsFilesToInject = {
   loginMobile: [`${APP_DIR}/Login/mobile/index.js`],
   dashboardMobile: [`${APP_DIR}/Dashboard/mobile/index.js`],
   profileMobile: [`${APP_DIR}/Profile/mobile/index.js`],
+  cartMobile: [`${APP_DIR}/Cart/mobile/index.js`],
+
+  cartMobile: [`${APP_DIR}/Cart/mobile/index.js`],
+
   barProfileMobile: [`${APP_DIR}/BarProfile/mobile/index.js`],
   barsMobile: [`${APP_DIR}/Bars/mobile/index.js`],
   settingsMobile: [`${APP_DIR}/Settings/mobile/index.js`],
@@ -19,6 +23,7 @@ const jsFilesToInject = {
 
 
   homeWeb: [`${APP_DIR}/Home/web/index.js`],
+  loginWeb: [`${APP_DIR}/Login/web/index.js`],
   dashboardWeb: [`${APP_DIR}/Dashboard/web/index.js`],
   profileWeb: [`${APP_DIR}/Profile/web/index.js`],
   shelfWeb: [`${APP_DIR}/Shelf/web/index.js`],

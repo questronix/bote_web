@@ -6,7 +6,7 @@
 </template>
 
 <script>
-import index from './index.js';
+import'./index.js';
 
 
 export default{}

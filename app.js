@@ -30,14 +30,14 @@ app.use(session({
     resave: false
 }));
 
-let home = require('./home');
-let login = require('./login');
-let dashboard = require('./dashboard');
-let profile = require('./profile');
-let logout = require('./logout');
-let barProfile = require('./barProfile');
-let bars = require('./bars');
-let settings = require('./settings');
+let home = require('./Modules/Home');
+let login = require('./Modules/Login');
+let dashboard = require('./Modules/Dashboard');
+let profile = require('./Modules/Profile');
+let logout = require('./Modules/Logout');
+let cart = require('./Modules/Cart');
+let bars = require('./Modules/Bars');
+let settings = require('./Modules/Settings');
 
 
 let clients = ['/mobile', ''];
@@ -47,7 +47,7 @@ for(let i in clients){
     app.use(`${clients[i]}/profile`, profile);
     app.use(`${clients[i]}/logout`, logout);
     app.use(`${clients[i]}/login`, login);
-    app.use(`${clients[i]}/barProfile`, barProfile);
+    app.use(`${clients[i]}/cart`, cart);
     app.use(`${clients[i]}/bars`, bars);
     app.use(`${clients[i]}/settings`, settings);
 }

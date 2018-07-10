@@ -1,7 +1,7 @@
 const express = require('express');
 const router = express.Router();
 
-const ajax = require('../common/services/Ajax');
+const ajax = require('../Common/services/Ajax');
 
 router.post('/', (req, res, next)=>{
   ajax.setOptions({
