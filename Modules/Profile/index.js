@@ -7,7 +7,6 @@ router.get('/', (req, res, next) => {
   else res.render('web/profile');
 });
 
-
 router.get('/:username', (req, res, next) => {
   ajax.setOptions({
     url: `${process.env.CORE_URL}/users/${req.params.username}`,
@@ -18,6 +17,20 @@ router.get('/:username', (req, res, next) => {
     res.send(data);
   })
   .catch( error => {
+    res.json(error);
+  })
+});
+
+router.put('/:username', (req, res, next) => {
+  ajax.setOptions({
+    url: `${process.env.CORE_URL}/users/${req.params.username}`,
+    headers: req.headers
+  });
+  ajax.put(req.body)
+  .then(data => {
+    res.send(data);
+  })
+  .catch(error => {
     res.json(error);
   })
 });
