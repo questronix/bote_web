@@ -12,20 +12,20 @@
           </div>
         </form>
         <div class="img-profile">
-          <img src="https://i2-prod.mirror.co.uk/incoming/article10263400.ece/ALTERNATES/s1200/PROD-Kim-Jong-Un.jpg">
+          <a href='/mobile/profile'><img src="https://i2-prod.mirror.co.uk/incoming/article10263400.ece/ALTERNATES/s1200/PROD-Kim-Jong-Un.jpg"></a>
         </div>
         <div class="notif-icon">
-          <a href="#"><i class="material-icons">notifications</i></a>
+          <a href="/mobile/notifications"><i class="material-icons">notifications</i></a>
         </div>
       </div>
     </nav>
 
     <nav>
       <div class="icons-below">
-        <a href="#"><i class="material-icons">home</i></a>
-        <a href="#"><i class="material-icons">shopping_cart</i></a>
-        <a href="#"><i class="material-icons">message</i></a>
-        <a href="#"><i class="material-icons">settings</i></a>
+        <a href="/mobile/dashboard"><i class="material-icons">home</i></a>
+        <a href="/mobile/cart"><i class="material-icons">shopping_cart</i></a>
+        <a href="/mobile/message"><i class="material-icons">message</i></a>
+        <a href="/mobile/settings"><i class="material-icons">settings</i></a>
       </div>
     </nav>
   </div>
