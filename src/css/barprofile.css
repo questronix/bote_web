@@ -1,0 +1,17 @@
+.barprofile .cover_photo img {
+  padding-top: 60px;
+  width: 1000px;
+  margin-bottom: -10px;
+  align-items: center;
+  position: relative;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover; }
+.barprofile .header .section {
+  margin-left: 20px; }
+.barprofile .tabs {
+  display: flex;
+  justify-content: space-evenly; }
+
+/*# sourceMappingURL=barprofile.css.map */
