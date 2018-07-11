@@ -2,22 +2,22 @@
   <div v-if="stay" class="col s12 m7">
    <div class="card horizontal">
      <div class="card-image">
-       <img src="/static/img/beerimage-1.jpg">
+       <img :src="this.beerdata.img">
      </div>
      <div class="card-stacked">
        <div class="card-content">
          <div class="flex-end-close">
            <button id="layout_closebutton" v-on:click="removeCartCard"><i class="material-icons">close</i></button>
          </div>
-         <span id="beername">{{this.beerdata[0].beername}}</span>
-         <span id="description">{{this.beerdata[0].beerdesc}}</span>
+         <span id="beername">{{this.beerdata.beername}}</span>
+         <span id="description">{{this.beerdata.beerdesc}}</span>
        </div>
        <div class="card-action">
          <span id="quantity_text"> Quantity: </span>
          <a class="btn-floating btn-small waves-effect waves-light" v-on:click="subtract"><i class="material-icons">remove</i></a>
-         <span id="quantity_data_1"> {{this.usercart[0].quantity}}</span>
+         <span id="quantity_data_1"> {{this.usercart.quantity}}</span>
          <a class="btn-floating btn-small waves-effect waves-light" v-on:click="add"><i class="material-icons">add</i></a>
-         <span id="quantity_data_2"> {{this.usercart[0].totalcost}}</span>
+         <span id="quantity_data_2"> {{this.usercart.totalcost}}</span>
        </div>
      </div>
    </div>
@@ -26,33 +26,21 @@
 
 <script>
   export default {
-    data: () => { /*SAMPLE DATA*/
+    data: () => { 
       return {
-        stay: true,
-        beerdata: [
-          { beercode: '1', beername: 'Red Horse Beer', beercost: 95, beerdesc: 'extra strong beer that brings you that pure alcoholic experience'},
-          { beercode: '2', beername: 'San Miguel Beer', beercost: 90, beerdesc: 'nice beer'}
-        ],
-        usercart: [
-          {
-            userid: 10015,
-            beercode: '1',
-            quantity: 1,
-            totalcost: 95
-          }
-        ]
+        stay: true
       }
     },
-    props: ['url'],
+    props: ['usercart','beerdata','isAdd', 'isSubtract'],
     methods: {  /*Trial Methods*/
       add: function() {
-        this.usercart[0].quantity = this.usercart[0].quantity + 1;
-        this.usercart[0].totalcost = this.usercart[0].totalcost + 95;
+        this.usercart.quantity = this.usercart.quantity + 1;
+        this.usercart.totalcost = this.usercart.totalcost + 95;
       },
       subtract: function () {
-        if(this.usercart[0].quantity != 0){
-          this.usercart[0].quantity--;
-          this.usercart[0].totalcost-=95;
+        if(this.usercart.quantity != 0){
+          this.usercart.quantity--;
+          this.usercart.totalcost-=95;
         }
       },
       removeCartCard: function(){
@@ -114,7 +102,7 @@
     color: white;
   }
   #description {
-    font-size: 0.5em;
+    font-size: 0.825em;
     color: white;
   }
   #quantity_text {

@@ -1,6 +1,6 @@
 <template>
     <div class="navbar-profile">
-        <a href="">
+        <a href="#">
             <div id="bottle" class="navbar-profile">
                 <span> Bottles </span>
                 <span> {{bottles}} </span>

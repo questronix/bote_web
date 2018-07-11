@@ -1,5 +1,4 @@
 import Vue from 'vue/dist/vue';
-import Api from '../../../lib/Api.js';
 import Cart from './Cart.vue';
 import navigationBar from '../../../components/web/navigationBar';
 import main from '../../../components/web/cartmaincard.vue';
