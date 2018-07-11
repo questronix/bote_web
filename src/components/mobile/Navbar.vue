@@ -12,10 +12,10 @@
           </div>
         </form>
         <div class="img-profile">
-          <a href='/mobile/profile'><img src="https://i2-prod.mirror.co.uk/incoming/article10263400.ece/ALTERNATES/s1200/PROD-Kim-Jong-Un.jpg"></a>
+          <img src="https://i2-prod.mirror.co.uk/incoming/article10263400.ece/ALTERNATES/s1200/PROD-Kim-Jong-Un.jpg">
         </div>
         <div class="notif-icon">
-          <a href="/mobile/notifications"><i class="material-icons">notifications</i></a>
+          <i class="material-icons">notifications</i><
         </div>
       </div>
     </nav>

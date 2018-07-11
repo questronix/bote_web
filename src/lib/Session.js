@@ -1,7 +1,7 @@
 import Storage from './Storage';
 import Api from './Api';
 
-module.exports.sessionReady = (onReady)=>{
+export const sessionReady = (onReady)=>{
   let session = Storage.getKey('access-token');
   if(session){
     Api.get('/profile/me', {
@@ -10,12 +10,12 @@ module.exports.sessionReady = (onReady)=>{
       if(data.response.statusCode == 200){
         console.log('USER AUTHORIZED');
         Storage.setKey('user-details', data.body);
+        onReady();
       }else if(data.response.statusCode == 401){
         console.log('USER UNAUTHORIZED');
         Storage.deleteKey('access-token');
         Storage.deleteKey('user-details');
         window.location.href = 'login';
-        onReady();
       }
     }).catch(error=>{
       console.log('ERROR USER UNAUTHORIZED', error);
