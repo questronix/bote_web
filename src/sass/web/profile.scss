@@ -5,6 +5,14 @@
     align-items: center;
     flex-direction: column;
 }
+
+.profile_container{
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+}
 .cover_photo{
     img {
         padding-top: 60px;
@@ -19,10 +27,20 @@
     }
 }
 
+#bars .bar_card{
+    
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+
+}
+
 .profile{
     .profilenav{
+        background-color: black;
         img{
-        
             
             width: 200px;
             position: relative;
@@ -48,7 +66,7 @@
 }
 
 .navigation_container{
-    background-color: black;
+    
     width: 1000px;
 
 }
@@ -90,6 +108,7 @@
      align-items: center;
      background-color:  black;
      margin-top: -33px;
+     margin-bottom: 15px;
      
      a{
         color:#e48909;   
@@ -117,7 +136,7 @@ img.responsive-img, video.responsive-video {
     background-color: white !important;
     border-radius: 10px;
     width: 1000px;
-    margin-top:30px;
+    margin-top:15px;
 }
 
 .tabs .tab a:hover, .tabs .tab a.active {
@@ -167,3 +186,11 @@ input:not([type]), input[type=text]:not(.browser-default), input[type=password]:
 }
 
 
+
+.card{
+    img{
+        max-height: 200px;
+        object-fit: cover;
+        height: 200px;
+    }
+}
