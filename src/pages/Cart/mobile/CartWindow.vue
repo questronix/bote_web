@@ -28,7 +28,24 @@
     </li>
     <li class="collection-item">
       <div class="checkout-btn">
-        <a class="waves-effect waves-light btn">Checkout</a>
+        <!-- Modal Trigger -->
+        <a class="waves-effect waves-light btn modal-trigger" href="#modal1">Checkout</a>
+        <!-- Modal Structure -->
+        <div id="modal1" class="modal">
+          <div class="flex-end-close-modal">
+           <button id="layout_closebutton_modal" class="modal-close"><i class="material-icons">close</i></button>
+          </div> 
+          <div class="modal-content">
+            <span> THANK YOU FOR PURCHASING! </span>
+            <span> LOGO </span>
+            <span> Total Cost: Php 95 </span>
+            <span> YOU NOW HAVE: </span>
+          </div>
+          <div class="modal-footer">
+            <a href="#undo" class="modal-close waves-effect waves-green btn-flat"><span id="modal-button">Undo</span></a>
+            <a href="#confirm" class="modal-close waves-effect waves-green btn-flat"><span id="modal-button">Confirm</span></a>
+          </div>
+        </div>
       </div>
     </li>
   </ul>
@@ -39,11 +56,24 @@
   import CartCard from '../../../components/mobile/CartCard.vue';
 
   export default {
+    data: () => {
+      return {
+        
+      }
+    },
     components: {
       Navbar,
       CartCard
+    },
+    methods: {
+      
     }
   }
+
+  document.addEventListener('DOMContentLoaded', function() {
+    const elems = document.querySelectorAll('.modal');
+    const instances = M.Modal.init(elems);
+  });
 </script>
 
 <style>
@@ -132,5 +162,40 @@ h5 {
 }
 #change-color {
   color: #CD7D0B;
+}
+.modal .modal-content{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #212121;
+  color: white;
+}
+.flex-end-close-modal {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    background-color: #212121;
+}
+#modal1 {
+  background-color: #212121;
+  border-radius: 25px;
+}
+.modal .modal-footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #212121;
+}
+#modal-button {
+  color: white;
+}
+#layout_closebutton_modal {
+    background-color: #212121;
+    height: 25px;
+    width: 25px;
+    color: white;
+    border-style: none;
+    outline: none;
+    padding-right: 6% !important;
 }
 </style>

@@ -22,10 +22,10 @@
 
     <nav>
       <div class="icons-below">
-        <a href="#"><i class="material-icons">home</i></a>
-        <a href="#"><i class="material-icons">shopping_cart</i></a>
+        <a href="/mobile/dashboard"><i class="material-icons">home</i></a>
+        <a href="/mobile/cart"><i class="material-icons">shopping_cart</i></a>
         <a href="#"><i class="material-icons">message</i></a>
-        <a href="#"><i class="material-icons">settings</i></a>
+        <a href="/mobile/settings"><i class="material-icons">settings</i></a>
       </div>
     </nav>
   </div>
