@@ -3,15 +3,12 @@ import Bars from './Bars.vue';
 import navigationBar from '../../../components/web/navigationBar';
 import main from '../../../components/web/barsmaincard';
 import '../../../css/background.css';
-import Storage from '../../../lib/Storage';
-import Api from '../../../lib/Api';
 
+import { sessionReady } from '../../../lib/Session';
 
-if (Storage.getKey('access-token')){
+sessionReady(function(){
   new Vue({
     el: '#bars',
     render: h => h(Bars)
-  })
-}else{
-  window.location.href = 'login';
-}
+  });
+});

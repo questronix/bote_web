@@ -3,15 +3,11 @@ import BarProfile from './BarProfile.vue';
 import navigationBar from '../../../components/web/navigationBar';
 import main from '../../../components/web/barprofilemaincard.vue';
 import '../../../css/background.css';
-import Storage from '../../../lib/Storage';
-import Api from '../../../lib/Api';
+import { sessionReady } from '../../../lib/Session';
 
-
-if (Storage.getKey('access-token')){
+sessionReady(function(){
   new Vue({
     el: '#barprofile',
     render: h => h(BarProfile)
-  })
-}else{
-  window.location.href = 'login';
-}
+  });
+});

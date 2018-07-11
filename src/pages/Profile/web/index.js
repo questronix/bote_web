@@ -8,15 +8,11 @@ import '../../../css/profile.css';
 // import feed from '../../../components/web/feed';
 
 
-import Storage from '../../../lib/Storage';
-import Api from '../../../lib/Api';
+import { sessionReady } from '../../../lib/Session';
 
-
-if (Storage.getKey('access-token')){
+sessionReady(function(){
   new Vue({
     el: '#profile',
     render: h => h(Profile)
-  })
-}else{
-  window.location.href = 'login';
-}
+  });
+});
