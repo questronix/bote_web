@@ -1,13 +1,13 @@
 <template>
-  <div class="col s12 m7">
+  <div v-if="stay" class="col s12 m7">
    <div class="card horizontal">
      <div class="card-image">
-       <img src="http://sanmiguelbrewery.com.ph/images/brands08.jpg">
+       <img src="/static/img/beerimage-1.jpg">
      </div>
      <div class="card-stacked">
        <div class="card-content">
          <div class="flex-end-close">
-           <button id="layout_closebutton"><i class="material-icons">close</i></button>
+           <button id="layout_closebutton" v-on:click="removeCartCard"><i class="material-icons">close</i></button>
          </div>
          <span id="beername">{{this.beerdata[0].beername}}</span>
          <span id="description">{{this.beerdata[0].beerdesc}}</span>
@@ -15,9 +15,9 @@
        <div class="card-action">
          <span id="quantity_text"> Quantity: </span>
          <a class="btn-floating btn-small waves-effect waves-light" v-on:click="subtract"><i class="material-icons">remove</i></a>
-         <span v-model="usercart.quantity" id="quantity_data_1"> {{this.usercart[0].quantity}}</span>
+         <span id="quantity_data_1"> {{this.usercart[0].quantity}}</span>
          <a class="btn-floating btn-small waves-effect waves-light" v-on:click="add"><i class="material-icons">add</i></a>
-         <span v-model="usercart.totalcost" id="quantity_data_2"> {{this.usercart[0].totalcost}}</span>
+         <span id="quantity_data_2"> {{this.usercart[0].totalcost}}</span>
        </div>
      </div>
    </div>
@@ -28,8 +28,7 @@
   export default {
     data: () => { /*SAMPLE DATA*/
       return {
-        isAdd: false,
-        isSubtract: false,
+        stay: true,
         beerdata: [
           { beercode: '1', beername: 'Red Horse Beer', beercost: 95, beerdesc: 'extra strong beer that brings you that pure alcoholic experience'},
           { beercode: '2', beername: 'San Miguel Beer', beercost: 90, beerdesc: 'nice beer'}
@@ -55,6 +54,9 @@
           this.usercart[0].quantity--;
           this.usercart[0].totalcost-=95;
         }
+      },
+      removeCartCard: function(){
+        this.stay = false;
       }
     }
   }
@@ -73,6 +75,7 @@
     margin-top: auto;
     margin-bottom: auto;
     padding-left: 10px !important;
+    width: 25%;
   }
   .card-image img{
     border-color: solid black !important;
@@ -80,6 +83,8 @@
     height: 14vh !important;
     position: static !important;
     justify-content: center !important;
+    border: 4px solid #CD7D0B;
+    width: 100% !important;
   }
   .card-content {
     display: flex;

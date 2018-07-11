@@ -7,43 +7,13 @@
       <img src="https://i.imgur.com/zt2y9eB.gif">
       </div>
 
-  <div class="row">
-    <div class="col s12">
-      <ul class="tabs">
-        <li class="tab col s3"><a href="#test1">Test 1</a></li>
-        <li class="tab col s3"><a class="active" href="#test2">Test 2</a></li>
-        <li class="tab col s3 disabled"><a href="#test3">Disabled Tab</a></li>
-        <li class="tab col s3"><a href="#test4">Test 4</a></li>
-      </ul>
-    </div>
-    <div id="test1" class="col s12">Test 1</div>
-    <div id="test2" class="col s12">Test 2</div>
-    <div id="test3" class="col s12">Test 3</div>
-    <div id="test4" class="col s12">Test 4</div>
-  </div>
+  
       <div class="navigation_container">
         <profile-nav :isEditting="isEditting" :toggleSave="toggleSave" :edit="edit" :edituser='edituser'  :user='user' :save ="save" > </profile-nav>    
       </div>
       
       
-      <div class="col s12 m8 offset-m2 l6 offset-l3" v-for="(post_feed,index) in post_feeds" :key="index">
-        <div class="card-panel grey lighten-5 z-depth-1">
-          <div class="row valign-wrapper">
-            
-            <div class="col s2">
-              <img :src="post_feed.img" alt="" class="circle responsive-img"> 
-            </div>
-          
-            <div class="col s11">
-              <span id="feed_name">{{post_feed.username}}</span>
-              <br/>
-              <span class="black-text">
-                {{post_feed.post}}
-              </span>
-            </div>
-          </div>
-        </div>
-      </div>
+      
     </div>
   </div>
 </template>

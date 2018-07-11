@@ -1,16 +1,14 @@
 import Api from '../../lib/Api.js';
 import Vue from 'vue/dist/vue';
+import Storage from '../../lib/Storage';
+
 let logout = Vue.component('logout-button', {
-    template: `<a v-on:click="logout">Log Out</a>`,
+    template: `<a v-on:click="logout" href="javascript:void(0)">Log Out</a>`,
     methods: {
       logout: function(){
-        Api.post('/logout', {
-        }).then(data=>{
-          console.log(data);
-          window.location.href = '/';
-        }).catch(error=>{
-          console.log(error);
-        });
+          Storage.deleteKey('access-token');
+          Storage.deleteKey('user-details');
+          window.location.href = 'login';        
       }
     }
   }
