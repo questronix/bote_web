@@ -4,7 +4,7 @@ import { sessionReady } from '../../../lib/Session';
 
 sessionReady(function(){
   new Vue({
-    el: '#barProfile',
+    el: '#barprofile',
     render: h => h(BarProfile)
   });
 });
