@@ -58,7 +58,7 @@
                                 <div class="col s3">
                                 <div class="card">
                                     <div class="card-image">
-                                    <img src="https://pbs.twimg.com/profile_images/951749034741415936/6kLj8Qyw_400x400.jpg">
+                                    <img src="/static/img/paymaya.jpg">
                                     </div>
                                 </div>
                                 </div>
@@ -66,22 +66,17 @@
                                 <div class="col s3">
                                 <div class="card">
                                     <div class="card-image">
-                                    <img src="https://pbs.twimg.com/profile_images/951749034741415936/6kLj8Qyw_400x400.jpg">
+                                    <img src="/static/img/paymaya.jpg">
                                     </div>
                                 </div>
                                 </div>
 
-                                <div class="col s3">
-                                <div class="card">
-                                    <div class="card-image">
-                                    <img src="https://pbs.twimg.com/profile_images/951749034741415936/6kLj8Qyw_400x400.jpg">
-                                </div>
-                                </div>
+                                
 
                                 <div class="col s3">
                                 <div class="card">
                                     <div class="card-image">
-                                    <img src="https://pbs.twimg.com/profile_images/951749034741415936/6kLj8Qyw_400x400.jpg">
+                                    <img src="/static/img/paymaya.jpg">
                                     </div>
                                 </div>
                                 </div>
