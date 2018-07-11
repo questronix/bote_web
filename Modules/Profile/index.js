@@ -24,8 +24,7 @@ router.put('/:username', (req, res, next) => {
   ajax.setOptions({
     url: `${process.env.CORE_URL}/users/${req.params.username}`,
     headers: req.headers
-  });
-  ajax.put(req.body)
+  }).put(req.body)
   .then(data => {
     res.send(data);
   })
@@ -38,8 +37,7 @@ router.get('/:username/following', (req, res, next) => {
   ajax.setOptions({
     url: `${process.env.CORE_URL}/users/${req.params.username}`,
     headers: req.headers
-  });
-  ajax.get()
+  }).get()
   .then( data => {
     res.send(data);
   })
@@ -52,8 +50,7 @@ router.get('/:username/followers', (req, res, next) => {
   ajax.setOptions({
     url: `${process.env.CORE_URL}/users/${req.params.username}/followers`,
     headers: req.headers
-  });
-  ajax.get()
+  }).get()
   .then( data => {
     res.send(data);
   })
@@ -68,8 +65,7 @@ router.get('/:username/shelf', (req, res, next) => {
     ajax.setOptions({
       url: `${process.env.CORE_URL}/users/${req.params.username}/bottles`,
       headers: req.headers
-    });
-    ajax.get()
+    }).get()
     .then( data => {
       res.send(data);
     })
@@ -88,8 +84,7 @@ router.get('/:username/bars', (req, res, next) => {
     ajax.setOptions({
       url: `${process.env.CORE_URL}/users/${req.params.username}/bars`,
       headers: req.headers
-    });
-    ajax.get()
+    }).get()
     .then( data => {
       res.send(data);
     })
