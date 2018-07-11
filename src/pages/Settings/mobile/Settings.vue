@@ -8,17 +8,36 @@
         <a href="#!" class="collection-item">Account Settings</a>
         <a href="#!" class="collection-item">Privacy Settings</a>
         <a href="#!" class="collection-item">Payment Settings</a>
-        <a href="#!" class="collection-item">Log out</a>
+        <a v-on:click="logout" class="collection-item">Log out</a>
       </div>
     </div>
 </template>
 
 <script>
 
-import Navbar from '../../../components/mobile/Navbar.vue';
+import Navbar   from '../../../components/mobile/Navbar.vue';
+import Api      from '../../../lib/Api.js';
+import Storage  from '../../../lib/Storage.js';
+
+
 export default {
     components: {
       Navbar,
+    },
+    methods: {
+        logout: function(event){
+            Api.post('/logout', {
+                "x-access-token": Storage.getKey('access-token')
+            }, null)
+            .then( res=>{
+                Storage.deleteKey('access-token');
+                Storage.deleteKey('user-details');
+                window.location.href = '/mobile/login';
+            })
+            .catch( error=>{
+                console.log(error);
+            })
+        }
     }
 }
 </script>
