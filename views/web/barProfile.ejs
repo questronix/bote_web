@@ -6,26 +6,25 @@
     
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/css/materialize.min.css">
-    <link rel="stylesheet" href="/static/css/cartWeb.css">
-  
-    <title>Cart</title>
+    <link rel="stylesheet" href="/static/css/barProfileWeb.css">
+    <title>Bar Profile</title>
   </head>
   <body>
-    <div id="cart"></div>
-    
+    <div id="barprofile"></div>
     
     <script
-    src="https://code.jquery.com/jquery-3.3.1.js"
-    integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
-    crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/js/materialize.min.js"></script>
-    <script src="/static/cartWeb/cartWeb-bundle.js" type="text/javascript"></script>
-
-    <script>  
-        $(document).ready(function(){
-          $('.modal').modal();
-        });
+        src="https://code.jquery.com/jquery-3.3.1.js"
+        integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+        crossorigin="anonymous">
     </script>
-  
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/js/materialize.min.js"></script>
+
+    <script src="/static/barProfileWeb/barProfileWeb-bundle.js" type="text/javascript"></script>
+    <script>
+    $(document).ready(function(){
+      $('.tabs').tabs();
+    });  
+    </script>
     </body>
 </html>
