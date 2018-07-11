@@ -4,7 +4,7 @@ const router = express.Router();
 router.get('/', (req, res, next) => {
   if(req.headers["x-access-token"]){
     ajax.setOptions({
-      url: `${process.env.CORE_URL}/users/${req.body.username}`,
+      url: `${process.env.CORE_URL}/users/${req.body.username}/cart`,
       headers: req.headers
     }).get()
     .then(data => {
