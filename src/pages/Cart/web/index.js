@@ -12,7 +12,7 @@ sessionReady(function(){
   let session = Storage.getKey('access-token'); //returns {msg: ..., token: ...}
 
   /*Api call to web server http://localhost:PORT/cart (GET)
-  * its core counterpart is http://locahost:CORE_PORT/users/:username/cart
+  * its core counterpart is http://locahost:CORE_PORT/users/me/cart
   * a. subsequent requests must contain the header 'x-access-token'
   * b. parse the data obtained since they are stringified
   */
