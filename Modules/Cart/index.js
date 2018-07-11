@@ -8,7 +8,7 @@ router.get('/', (req, res, next)=>{
 
 router.get('/', (req, res, next) => {
   ajax.setOptions({
-    url: `${process.env.CORE_URL}/users/${req.params.username}/cart`,
+    url: `${process.env.CORE_URL}/users/${req.user.username}/cart`,
     headers: req.headers
   });
   ajax.get()
