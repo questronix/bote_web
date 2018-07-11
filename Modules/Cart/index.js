@@ -1,10 +1,12 @@
 const express = require('express');
 const router = express.Router();
 
+const ajax = require('../Common/services/Ajax');
+
 router.get('/', (req, res, next) => {
   if(req.headers["x-access-token"]){
     ajax.setOptions({
-      url: `${process.env.CORE_URL}/users/${req.body.username}/cart`,
+      url: `${process.env.CORE_URL}/users/${req.headers["username"]}/cart`,
       headers: req.headers
     }).get()
     .then(data => {
