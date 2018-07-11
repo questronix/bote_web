@@ -1,14 +1,10 @@
 import Vue from 'vue/dist/vue';
 import Profile from './Profile.vue';
+import { sessionReady } from '../../../lib/Session';
 
-import Api from '../../../lib/Api.js';
-import Storage from '../../../lib/Storage';
-
-if (Storage.getKey('access-token')){
+sessionReady(function(){
   new Vue({
     el: '#profile',
     render: h => h(Profile)
-  })
-}else{
-  window.location.href = 'login';
-}
+  });
+});

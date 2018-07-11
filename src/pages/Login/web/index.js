@@ -1,18 +1,13 @@
 import Vue from 'vue/dist/vue';
 import Login from './Login.vue';
-import Storage from '../../../lib/Storage';
 import '../../../css/login.css';
 import '../../../css/background.css';
 import navigationBar from '../../../components/web/navigationBar';
+import { sessionReady } from '../../../lib/Session';
 
-if(Storage.getKey('access-token')){
-    window.location.href = '/dashboard';
-}else {
-    new Vue ({
+sessionReady(function(){
+  new Vue({
     el: '#login',
     render: h => h(Login)
-
-        
-    });
-}
-
+  });
+});

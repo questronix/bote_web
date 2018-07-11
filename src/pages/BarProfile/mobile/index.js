@@ -1,13 +1,10 @@
 import Vue from 'vue/dist/vue';
 import BarProfile from './BarProfile.vue';
-import Storage from '../../../lib/Storage';
-import Api from '../../../lib/Api.js';
+import { sessionReady } from '../../../lib/Session';
 
-if (Storage.getKey('access-token')){
+sessionReady(function(){
   new Vue({
     el: '#barProfile',
     render: h => h(BarProfile)
-  })
-}else{
-  window.location.href = 'login';
-}
+  });
+});
