@@ -28,7 +28,6 @@
     padding: 10px 20px;
     margin: 0;
     border-bottom: none;
-    margin-bottom: 10px;
 }
 
 .collection{
