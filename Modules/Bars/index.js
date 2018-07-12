@@ -9,7 +9,7 @@ router.get('/', (req, res, next)=> {
       res.render('mobile/bars');
     else res.render('mobile/barProfile');  
   }else{
-    res.render('web/bars');
+    res.render('web/bars/barProfile');
   }
   
 });
