@@ -54,7 +54,7 @@ export default {
   }
   nav form {
     padding-left: 20px;
-    width: 82%;
+    width: 85%;
     height: 50%;
   }
   .input-field {
@@ -72,14 +72,14 @@ export default {
   .img-profile {
     display: flex;
     align-items: center;
-    padding-left: 15px;
+    padding-left: 20px;
     width: 15%;
     height: inherit;
   }
   .img-profile img {
     border-radius: 50%;
     height: 50%;
-    width: 80%;
+    width: 50%;
     border: 2px solid #CD7D0B;
   }
   .img-profile a {
