@@ -51,7 +51,7 @@
 
     
     </div>
-    <div id="bote_landing"></div>
+    <div id="bote_bg"></div>
     
     
 

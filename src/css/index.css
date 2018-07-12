@@ -8,8 +8,21 @@ body, html {
   background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;
-  background-size: cover; }
+  background-size: cover; 
+}
 
+  #bote_bg {
+    min-height: 800px;
+    background-image: url(' http://images-hdwallpapers.com/wp-content/uploads/2017/12/Night-Club.jpg');
+    position: relative;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover; 
+  }
+  
+
+ 
 .btn .social {
   background-color: orange; }
 

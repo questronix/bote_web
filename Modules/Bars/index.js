@@ -13,6 +13,7 @@ router.get('/', (req, res, next)=> {
     .then( data=>{ res.json(data) })
     .catch(error=>{res.json(error)})
   }else{
+
     if(req.baseUrl.indexOf('mobile') > -1)
       res.render('mobile/bars');
     else
@@ -37,7 +38,7 @@ router.get('/:barname', (req, res)=>{
     if(req.baseUrl.indexOf('mobile') > -1)
       res.render('mobile/bars');
     else
-      res.render('web/bars');
+      res.render('web/barProfile');
   }
 })
 
