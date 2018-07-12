@@ -16,7 +16,6 @@ export const sessionReady = (onReady)=>{
         Storage.deleteKey('access-token');
         Storage.deleteKey('user-details');
         window.location.href = 'login';
-        onReady();
       }
     }).catch(error=>{
       console.log('ERROR USER UNAUTHORIZED', error);
@@ -28,6 +27,6 @@ export const sessionReady = (onReady)=>{
     console.log('USER NOTOKEN');
     Storage.deleteKey('access-token');
     Storage.deleteKey('user-details');
-    window.location.href = 'login';
+    onReady();
   }
 };
