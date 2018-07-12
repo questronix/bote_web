@@ -1,14 +1,17 @@
 <template>
-  <div v-bind:src="url" class="bar-card">
-    <img :src="url"/>
+  <div class="bar-card">
+    <img :src="this.barsdata">
     <div class="bars-text"> <slot> </slot> </div>
   </div>
 </template>
 
 <script>
   export default {
-    props: ['url']
+    props: ['barsdata']
   }
+  $(document).ready(function(){
+    $('.materialboxed').materialbox();
+  });
 </script>
 
 <style>

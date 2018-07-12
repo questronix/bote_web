@@ -1,6 +1,6 @@
 <template>
   <div id="loginpage">      
-      <nav-bar> </nav-bar>
+      <nav-bar :isLoggedIn="isLoggedIn"> </nav-bar>
     
         <form @submit.prevent="login" class="container">
             <div class="imgcontainer">
@@ -36,10 +36,14 @@ import Storage from '../../../lib/Storage';
 import Api from '../../../lib/Api.js';
 
 export default {
+    mounted(){
+        this.checkIfLoggedIn();
+    },
     data: function(){
                 return {
                     username: '',
-                    password:''
+                    password:'',
+                    isLoggedIn: false
                 }
         },
         methods: {
@@ -55,6 +59,14 @@ export default {
                 }).catch(error=>{
                 console.log(error);
                 });
+            },
+            checkIfLoggedIn(){
+                if(Storage.getKey('access-token')){
+                    this.isLoggedIn = true;
+                }else{
+                    this.isLoggedIn = false;
+                }
+                console.log(this.isLoggedIn);
             }
         }
 }
