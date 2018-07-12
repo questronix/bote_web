@@ -17,6 +17,7 @@ const jsFilesToInject = {
   barsMobile: [`${APP_DIR}/Bars/mobile/index.js`],
   settingsMobile: [`${APP_DIR}/Settings/mobile/index.js`],
   inboxMobile: [`${APP_DIR}/Inbox/mobile/index.js`],
+  notificationMobile: [`${APP_DIR}/Notification/mobile/index.js`],
 
 
 

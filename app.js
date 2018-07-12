@@ -46,7 +46,7 @@ let cart = require('./Modules/Cart');
 let bars = require('./Modules/Bars');
 let settings = require('./Modules/Settings');
 let inbox = require('./Modules/Inbox');
-
+let notification = require('./Modules/Notification');
 
 let clients = ['/mobile', ''];
 for(let i in clients){
@@ -59,6 +59,7 @@ for(let i in clients){
     app.use(`${clients[i]}/bars`, bars);
     app.use(`${clients[i]}/settings`, settings);
     app.use(`${clients[i]}/inbox`, inbox);
+    app.use(`${clients[i]}/notification`, notification);
 }
 
 module.exports = app;

@@ -8,15 +8,10 @@
             <label class="label-icon" for="search">
               <a href="#"><i class="material-icons">search</i></a>
             </label>
-            <!-- <i class="material-icons">close</i> -->
           </div>
         </form>
         <div class="img-profile">
-
           <a href="/mobile/profile/me"><img src="https://i2-prod.mirror.co.uk/incoming/article10263400.ece/ALTERNATES/s1200/PROD-Kim-Jong-Un.jpg"></a>
-        </div>
-        <div class="notif-icon">
-          <a href="#notif"><i class="material-icons">notifications</i></a>
         </div>
       </div>
     </nav>
@@ -26,6 +21,7 @@
         <a href="/mobile/dashboard"><i class="material-icons">home</i></a>
         <a href="/mobile/cart"><i class="material-icons">shopping_cart</i></a>
         <a href="/mobile/inbox"><i class="material-icons">message</i></a>
+        <a href="/mobile/notification"><i class="material-icons">notifications</i></a>
         <a href="/mobile/settings"><i class="material-icons">settings</i></a>
       </div>
     </nav>
@@ -58,7 +54,7 @@ export default {
   }
   nav form {
     padding-left: 20px;
-    width: 80%;
+    width: 82%;
     height: 50%;
   }
   .input-field {
@@ -77,7 +73,7 @@ export default {
     display: flex;
     align-items: center;
     padding-left: 15px;
-    width: 10%;
+    width: 15%;
     height: inherit;
   }
   .img-profile img {
