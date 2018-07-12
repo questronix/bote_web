@@ -1,7 +1,7 @@
 <template>
     <div class="navbar-profile">
        <div class="row">
-            <div class="">
+            <div class="col s12">
             <ul class="tabs tabs-fixed-width swipeable">
                 <li class="tab col s3"><a class="" href="#bottles">Bottles</a></li>
                 <li class="tab col s3"><a href="#bars">Bars</a></li>
@@ -63,4 +63,5 @@
     background-color: #212121;
     outline: none;
 }
+
 </style>

@@ -8,15 +8,10 @@
             <label class="label-icon" for="search">
               <a href="#"><i class="material-icons">search</i></a>
             </label>
-            <!-- <i class="material-icons">close</i> -->
           </div>
         </form>
         <div class="img-profile">
-
-          <img src="https://i2-prod.mirror.co.uk/incoming/article10263400.ece/ALTERNATES/s1200/PROD-Kim-Jong-Un.jpg">
-        </div>
-        <div class="notif-icon">
-          <i class="material-icons">notifications</i>
+          <a href="/mobile/profile/me"><img src="https://i2-prod.mirror.co.uk/incoming/article10263400.ece/ALTERNATES/s1200/PROD-Kim-Jong-Un.jpg"></a>
         </div>
       </div>
     </nav>
@@ -25,7 +20,8 @@
       <div class="icons-below">
         <a href="/mobile/dashboard"><i class="material-icons">home</i></a>
         <a href="/mobile/cart"><i class="material-icons">shopping_cart</i></a>
-        <a href="/mobile/message"><i class="material-icons">message</i></a>
+        <a href="/mobile/inbox"><i class="material-icons">message</i></a>
+        <a href="/mobile/notification"><i class="material-icons">notifications</i></a>
         <a href="/mobile/settings"><i class="material-icons">settings</i></a>
       </div>
     </nav>
@@ -58,7 +54,7 @@ export default {
   }
   nav form {
     padding-left: 20px;
-    width: 80%;
+    width: 85%;
     height: 50%;
   }
   .input-field {
@@ -76,15 +72,20 @@ export default {
   .img-profile {
     display: flex;
     align-items: center;
-    padding-left: 15px;
-    width: 10%;
+    padding-left: 20px;
+    width: 15%;
     height: inherit;
   }
   .img-profile img {
     border-radius: 50%;
     height: 50%;
-    width: 80%;
+    width: 50%;
     border: 2px solid #CD7D0B;
+  }
+  .img-profile a {
+    display: inherit;
+    align-items: center;
+    height: inherit;
   }
   .notif-icon {
     display: flex;
