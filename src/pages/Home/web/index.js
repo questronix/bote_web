@@ -8,9 +8,7 @@ import '../../../css/index.css';
 import Storage from '../../../lib/Storage';
 import { sessionReady } from '../../../lib/Session';
 
-
   new Vue({
     el: '#app',
     render: h => h(App)
   });
-

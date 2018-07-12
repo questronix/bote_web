@@ -3,7 +3,7 @@ body, html {
 
 #bote_landing {
   min-height: 800px;
-  background-image: url(https://i.imgur.com/5LX5EMP.jpg);
+  background-image: url('/static/img/landingpage.jpg');
   position: relative;
   background-attachment: fixed;
   background-position: center;

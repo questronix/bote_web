@@ -11,7 +11,7 @@ let navigationBar = Vue.component('nav-bar',{
     template:
         `
         <div class="navigation">
-            <img src="https://i.imgur.com/LIjxAK3.png">
+            <img src="/static/img/bote_logo.png">
             <search-bar placeholder="Search"> </search-bar>
             <div class="pages" v-if="isLoggedIn === true">
                 <a href="/dashboard"><strong>Home</strong></a>                
