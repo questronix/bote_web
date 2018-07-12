@@ -1,9 +1,9 @@
 <template>
   <ul class="collection">
     <li id="stretch" class="collection-item"><Navbar/></li>
-    <li class="collection-item"><CartCard></CartCard></li>
-    <li class="collection-item"><CartCard></CartCard></li>
-    <li class="collection-item"><CartCard></CartCard></li>
+    <li class="collection-item"><CartCard :usercart="usercart[0]" :beerdata="beerdata[0]" :isAdd="isAdd" :isSubtract="isSubtract"></CartCard></li>
+    <li class="collection-item"><CartCard :usercart="usercart[1]" :beerdata="beerdata[1]" :isAdd="isAdd" :isSubtract="isSubtract"></CartCard></li>
+    <li class="collection-item"><CartCard :usercart="usercart[2]" :beerdata="beerdata[2]" :isAdd="isAdd" :isSubtract="isSubtract"></CartCard></li>
     <li class="collection-item">
       <div class="totals-box">
         <div class="subtotal-line">
@@ -36,10 +36,10 @@
            <button id="layout_closebutton_modal" class="modal-close"><i class="material-icons">close</i></button>
           </div> 
           <div class="modal-content">
-            <span> THANK YOU FOR PURCHASING! </span>
-            <span> LOGO </span>
-            <span> Total Cost: Php 95 </span>
-            <span> YOU NOW HAVE: </span>
+            <span id="change-color"> THANK YOU FOR PURCHASING! </span>
+            <img src="/static/img/bottlecap-logo.png">
+            <span id="change-color"> Total Cost: Php {{this.fullcost}} </span>
+            <span id="change-color"> YOU NOW HAVE: </span>
           </div>
           <div class="modal-footer">
             <a href="#undo" class="modal-close waves-effect waves-green btn-flat"><span id="modal-button">Undo</span></a>
@@ -56,17 +56,51 @@
   import CartCard from '../../../components/mobile/CartCard.vue';
 
   export default {
-    data: () => {
-      return {
-        
-      }
-    },
     components: {
       Navbar,
       CartCard
     },
+    data: () => { /*SAMPLE DATA*/
+      return {
+        isAdd: false,
+        isSubtract: false,
+        beerdata: [
+          { beercode: '1', img: "/static/img/beerimage-1.jpg", beername: 'Red Horse Beer', beercost: 95, beerdesc: 'Extra strong beer that brings you that pure alcoholic experience'},
+          { beercode: '2', img: "/static/img/beerimage-2.png", beername: 'San Miguel Pale Pilsen', beercost: 95, beerdesc: 'Soothing and refreshing beer for batak people'},
+          { beercode: '3', img: "/static/img/beerimage-3.png", beername: 'San Mig Light', beercost: 95, beerdesc: 'Beer for chill people who just want to feel those marvelous city lights'}
+        ],
+        usercart: [
+          {
+            userid: 10015,
+            beercode: '1',
+            quantity: 1,
+            totalcost: 95
+          },
+          {
+            userid: 10015,
+            beercode: '2',
+            quantity: 1,
+            totalcost: 95
+          },
+          {
+            userid: 10015,
+            beercode: '3',
+            quantity: 1,
+            totalcost: 95
+          }
+        ],
+        fullcost: 285
+        // fullcost: this.calculateTotalCost()
+      }
+    },
     methods: {
-      
+      // calculateTotalCost: function () {
+      //   let temp = 0;
+      //   this.usercart.forEach(function(individual_cost) {
+      //     temp += individual_cost.totalcost;
+      //   });
+      //   return temp;
+      // }
     }
   }
 
@@ -170,6 +204,10 @@ h5 {
   background-color: #212121;
   color: white;
 }
+.modal-content img {
+  height: 10vh;
+  width: 10vh;
+}
 .flex-end-close-modal {
     display: flex;
     flex-direction: column;
@@ -197,5 +235,9 @@ h5 {
     border-style: none;
     outline: none;
     padding-right: 6% !important;
+}
+#change-color {
+  color: #CD7D0B;
+  font-weight: bold;
 }
 </style>
