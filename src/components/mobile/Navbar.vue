@@ -13,10 +13,10 @@
         </form>
         <div class="img-profile">
 
-          <img src="https://i2-prod.mirror.co.uk/incoming/article10263400.ece/ALTERNATES/s1200/PROD-Kim-Jong-Un.jpg">
+          <a href="/mobile/profile/me"><img src="https://i2-prod.mirror.co.uk/incoming/article10263400.ece/ALTERNATES/s1200/PROD-Kim-Jong-Un.jpg"></a>
         </div>
         <div class="notif-icon">
-          <i class="material-icons">notifications</i>
+          <a href="#notif"><i class="material-icons">notifications</i></a>
         </div>
       </div>
     </nav>
@@ -85,6 +85,11 @@ export default {
     height: 50%;
     width: 80%;
     border: 2px solid #CD7D0B;
+  }
+  .img-profile a {
+    display: inherit;
+    align-items: center;
+    height: inherit;
   }
   .notif-icon {
     display: flex;
