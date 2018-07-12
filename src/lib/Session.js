@@ -15,18 +15,18 @@ export const sessionReady = (onReady)=>{
         console.log('USER UNAUTHORIZED');
         Storage.deleteKey('access-token');
         Storage.deleteKey('user-details');
-        window.location.href = 'login';
+        window.location.href = '/login';
       }
     }).catch(error=>{
       console.log('ERROR USER UNAUTHORIZED', error);
       Storage.deleteKey('access-token');
       Storage.deleteKey('user-details');
-      window.location.href = 'login';
+      window.location.href = '/login';
     });
   }else{
     console.log('USER NOTOKEN');
     Storage.deleteKey('access-token');
     Storage.deleteKey('user-details');
-    onReady();
+    window.location.href = '/login';
   }
 };
