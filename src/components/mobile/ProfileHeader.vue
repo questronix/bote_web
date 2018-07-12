@@ -1,7 +1,7 @@
 <template>
     <div class="profile-header">
         <div class="profile-top">
-            <a href="../dashboard"><i class="material-icons">arrow_back</i> </a>
+            <a href="../dashboard"><i class="material-icons">arrow_back</i></a>
         </div>
         <div class="profile-details">
             <img id="prof-pic" src="https://www.w3schools.com/howto/img_avatar.png" />
