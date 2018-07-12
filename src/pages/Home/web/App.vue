@@ -1,13 +1,13 @@
 <template>
   <div id="index">
     
-    <nav-bar> </nav-bar>
+    <nav-bar :isLoggedIn="isLoggedIn"> </nav-bar>
     <div id="bote_landing"></div>
     
     <div class="card_container">
       <div class="card">
         <div class="card-image waves-effect waves-block waves-light">
-          <img class="activator" src="https://i.imgur.com/Q0dvQJ6.png">
+          <img class="activator" src="/static/img/share_drink.png">
         </div>
         <div class="card-content">
           <span class="card-title activator"> Share a Bottle<i class="material-icons right">more_vert</i></span>
@@ -21,7 +21,7 @@
       
       <div class="card">
         <div class="card-image waves-effect waves-block waves-light">
-          <img class="activator" src="https://i.imgur.com/W3m051Q.png">
+          <img class="activator" src="/static/img/find_drink.png">
         </div>
         
         <div class="card-content">
@@ -36,7 +36,7 @@
 
       <div class="card">
         <div class="card-image waves-effect waves-block waves-light">
-          <img class="activator" src="https://i.imgur.com/T6MjN0k.png">
+          <img class="activator" src="static/img/invite_friends.png">
         </div>
         
         <div class="card-content">
@@ -64,7 +64,7 @@
               
               <div class="col l6 s12">
 
-                <img src="https://i.imgur.com/LIjxAK3.png">
+                <img src="/static/img/bote_logo.png">
                 <p>First beer sharing application</p>
               </div>
               <div class="col l4 offset-l2 s12">
@@ -89,5 +89,28 @@
   </div>
 </template>
 
-
-
+<script>
+import Storage from '../../../lib/Storage';
+  export default{
+    mounted(){
+        this.checkIfLoggedIn();
+    },
+    data: function(){
+                return {
+                    username: '',
+                    password:'',
+                    isLoggedIn: false
+                }
+        },
+        methods: {
+            checkIfLoggedIn(){
+                if(Storage.getKey('access-token')){
+                    this.isLoggedIn = true;
+                }else{
+                    this.isLoggedIn = false;
+                }
+                console.log(this.isLoggedIn);
+            }
+        }
+  }
+</script>

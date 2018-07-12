@@ -27,7 +27,7 @@ export default {
     methods: {
         logout: function(event){
             Api.post('/logout', {
-                "x-access-token": Storage.getKey('access-token')
+                "x-access-token": Storage.getKey('access-token').token
             }, null)
             .then( res=>{
                 Storage.deleteKey('access-token');

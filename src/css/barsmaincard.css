@@ -1,42 +1,77 @@
 .bars {
   margin-top: 90px; }
-  .bars h1 {
-    color: #e48909; }
-  .bars #filter {
-    float: left;
-    color: white;
-    margin-right: 40%;
-    margin-left: 5%; }
-    .bars #filter i {
-      font-size: 40px; }
+  .bars .header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between; }
+    .bars .header #title {
+      color: #e48909;
+      font-weight: bold; }
+    .bars .header .btn-large {
+      background-color: transparent; }
+  .bars .collection, .bars .collection-item {
+    background-color: transparent;
+    border: none; }
+  .bars .barslist {
+    display: flex; }
 
-.maincontent {
-  background-color: #424242;
-  margin: 20px 3% 20px;
-  padding-top: 20px;
-  padding-bottom: 20px;
-  display: flex;
-  flex-direction: column; }
+/*
+.bars{
+    margin-top: 90px;
+    
+    h1{
+        color:$title;
+    }
+    #filter{
+        float: left;
+        color: $text;
+        margin: {
+            right: 40%;
+            left: 5%;
+        }
+        i{
+            font-size: 40px;
+        }
+    }
+}
 
-#barcards {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-evenly; }
+.maincontent{
+    background-color: $background;
+    margin: 20px 3% 20px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+}
 
-#loadmore {
-  display: flex;
-  justify-content: center; }
-  #loadmore button {
-    border-color: #e48909;
-    border-style: solid;
-    font-weight: bold;
-    font-size: medium;
-    background: none;
-    color: #e48909;
-    padding: 15px 40%;
-    margin-top: 5%; }
-    #loadmore button:hover {
-      background-color: #e48909;
-      color: white; }
+#barcards{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+#loadmore{
+    display: flex;
+    justify-content: center;
+    button{
+        border: {
+            color: $button;
+            style: solid;
+        }
+        font: {
+            weight: bold;
+            size: medium;
+        }
+        background: none;
+        color: $button;
+        padding: 15px 40%;
+        margin-top: 5%;
+        &:hover {
+            background-color: $button;
+            color: $text;
+        }
+    }    
+}
+*/
 
 /*# sourceMappingURL=barsmaincard.css.map */

@@ -7,6 +7,31 @@ $background: #424242;
 
 .bars{
     margin-top: 90px;
+    .header{
+       display: flex;
+       align-items: center;
+        justify-content: space-between;
+       #title{
+           color: $title;
+           font-weight: bold;
+       }
+       .btn-large{
+           background-color: transparent;
+       }
+    }
+
+    .collection, .collection-item{
+        background-color: transparent;
+        border: none;
+    }
+
+    .barslist{
+        display: flex;
+    }
+}
+/*
+.bars{
+    margin-top: 90px;
     
     h1{
         color:$title;
@@ -61,3 +86,4 @@ $background: #424242;
         }
     }    
 }
+*/
