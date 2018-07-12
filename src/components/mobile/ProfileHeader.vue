@@ -5,14 +5,14 @@
         </div>
         <div class="profile-details">
             <img id="prof-pic" src="https://www.w3schools.com/howto/img_avatar.png" />
-            <h2>Name</h2>
+            <p id="name">Name</p>
         </div>
         <div class="location">
             <i class="material-icons">place</i>
-            <h3>Location</h3>
+            <p id="loc">Location</p>
         </div>
         <div class="about">
-            <h4>If you want to drink hit me up!</h4>
+            <p id="bio">If you want to drink hit me up!</p>
              <i class="material-icons">edit</i>
         </div>
     </div>
@@ -58,12 +58,15 @@
 
 }
 
-.profile-header .profile-details h2{
+#name{
     text-align: center;
     text-transform: uppercase;
+    font-size: 20px;
+    color: #f2f2f2;
 }
-.profile-header .profile-details h3{
+#loc{
     font-size: 15px;
+    color: #f2f2f2;
 }
 .profile-top {
     width: 100%;
@@ -81,7 +84,7 @@
     color: #CD7D0B;
     font-size: 20px;
     margin-left: 20px;
-    margin-top: 20px;
+    margin-top: 15px;
 }
 
 .location{
@@ -105,7 +108,8 @@
     
 }
 
-.about h4{
+#bio{
     font-size: 12px;
+    color: #f2f2f2;
 }
 </style>
