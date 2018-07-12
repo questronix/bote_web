@@ -55,8 +55,6 @@ body, html {
     position: relative;
 }
 .collection{
-    position: absolute;
-    bottom: 0;
     border: none;
 }
 

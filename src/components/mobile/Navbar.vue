@@ -15,7 +15,7 @@
           <img src="https://i2-prod.mirror.co.uk/incoming/article10263400.ece/ALTERNATES/s1200/PROD-Kim-Jong-Un.jpg">
         </div>
         <div class="notif-icon">
-          <i class="material-icons">notifications</i><
+          <i class="material-icons">notifications</i>
         </div>
       </div>
     </nav>
