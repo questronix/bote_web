@@ -19,6 +19,7 @@
 </template>
 
 <script>
+  import './index.js';
   export default{
   
     data: function() {

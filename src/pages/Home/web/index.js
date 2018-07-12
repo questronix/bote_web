@@ -6,11 +6,11 @@ import infocard from '../../../components/web/homeinfocard.vue';
 import '../../../css/background.css';
 import '../../../css/index.css';
 
+import Storage from '../../../lib/Storage';
 import { sessionReady } from '../../../lib/Session';
 
-sessionReady(function(){
-  new Vue({
-    el: '#app',
-    render: h => h(App)
-  });
-});
+    new Vue({
+      el: '#app',
+      render: h => h(App)
+    });
+  
