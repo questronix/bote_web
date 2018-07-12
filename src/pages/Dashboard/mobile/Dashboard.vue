@@ -1,9 +1,9 @@
 <template>
   <div>
     <Navbar/>
-    <BarCard :barsdata="barsdata[0].img_rated">TOP RATED BARS</BarCard>
-    <BarCard :barsdata="barsdata[0].img_nearest">NEAREST BARS</BarCard>
-    <BarCard :barsdata="barsdata[0].img_cheapest">CHEAPEST BARS</BarCard>
+     <a href="/mobile/bars"><BarCard :barsdata="barsdata[0].img_rated">TOP RATED BARS</BarCard></a>
+     <a href="/mobile/bars"><BarCard :barsdata="barsdata[0].img_nearest">NEAREST BARS</BarCard></a>
+     <a href="/mobile/bars"><BarCard :barsdata="barsdata[0].img_cheapest">CHEAPEST BARS</BarCard></a>
   </div>
 </template>
 
