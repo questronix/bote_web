@@ -9,7 +9,7 @@ router.get('/', (req, res, next)=> {
       url: `${process.env.CORE_URL}/bars`,
       headers: req.headers
     })
-    .put(req.query)
+    .get()
     .then( data=>{ res.json(data) })
     .catch(error=>{res.json(error)})
   }else{

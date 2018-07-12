@@ -15,7 +15,7 @@
                                                     <img src="/static/img/barimage.jpg">
                                             </div>
                                             <div class="card-content">
-                                                <span class="card-title activator grey-text text-darken-4">{{bar.barname}}</span>
+                                                <span class="card-title activator grey-text text-darken-4">{{bar.name}}</span>
                                                 <p><a href="#">This is a link</a></p>
                                             </div>
                                             <div class="card-reveal">
@@ -58,27 +58,37 @@
 <script>
 import Vue from 'vue/dist/vue';
 import '../../css/barsmaincard.css';
+import Storage from '../../lib/Storage';
+import Api from '../../lib/Api.js';
+
 
 let main = Vue.component('main-content',{
+    mounted(){
+        this.viewBars();
+    },
     data: function(){
         return{
             loadmore: false,
             img : 'https://pixel.nymag.com/imgs/daily/grub/2017/best-of-new-york/uws-bar-es.w710.h473.jpg',
-            bars: [{barname:"Bar Ni Jemma W0w", bardetails: "mura d2", img:"https://pixel.nymag.com/imgs/daily/grub/2017/best-of-new-york/uws-bar-es.w710.h473.jpg"},
-                   {barname: "Bar 2", bardetails: "try mo 2", img:"https://pixel.nymag.com/imgs/daily/grub/2017/best-of-new-york/uws-bar-es.w710.h473.jpg"},
-                   {barname: "Barz", bardetails: "bar ito ni gemma", img:"https://pixel.nymag.com/imgs/daily/grub/2017/best-of-new-york/uws-bar-es.w710.h473.jpg"},
-                   {barname: "Barz", bardetails: "bar ito ni gemma", img:"https://pixel.nymag.com/imgs/daily/grub/2017/best-of-new-york/uws-bar-es.w710.h473.jpg"},
-                   {barname: "Bar 2", bardetails: "try mo 2", img:"https://pixel.nymag.com/imgs/daily/grub/2017/best-of-new-york/uws-bar-es.w710.h473.jpg"},
-                   {barname: "Barz", bardetails: "bar ito ni gemma", img:"https://pixel.nymag.com/imgs/daily/grub/2017/best-of-new-york/uws-bar-es.w710.h473.jpg"},
-                   {barname: "Barz", bardetails: "bar ito ni gemma", img:"https://pixel.nymag.com/imgs/daily/grub/2017/best-of-new-york/uws-bar-es.w710.h473.jpg"},
-                   {barname: "Barz", bardetails: "bar ito ni gemma", img:"https://pixel.nymag.com/imgs/daily/grub/2017/best-of-new-york/uws-bar-es.w710.h473.jpg"},
-                   {barname:"Bar Ni Jemma W0w", bardetails: "mura d2", img:"https://pixel.nymag.com/imgs/daily/grub/2017/best-of-new-york/uws-bar-es.w710.h473.jpg"}]
+            bars: {}
         }
     },
     methods: {
         toggleLoadMore(){
             this.loadmore = !this.loadmore;
-        }
+        },
+        viewBars() {
+                let session = Storage.getKey('access-token');
+                   Api.get('/bars',{
+                       'x-access-token': session.token
+                    }).then(data=>{    
+                        console.log(JSON.parse(data.body));
+                        let bars = JSON.parse(data.body);
+                        this.bars = bars;
+                    }).catch(error=>{
+                        console.log(error);
+                    });
+            }
     }
         
 });
