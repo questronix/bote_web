@@ -5,14 +5,15 @@
             <h1>NEAREST BARS</h1>
         </div>
     <ul class="collection">
-    <li class="collection-item avatar">
+    
+    <a href="/mobile/barprofile/"><li class="collection-item avatar">
       <img src="http://valkyrie.thepalacemanila.com/Media/uploads/p19hvas3ruvbv6q0m061h401jd44.jpg" alt="" class="circle">
       <span class="title">Valkyrie Manila</span>
       <p>36 9th Avenue, Taguig, Metro Manila <br>
          0.3 km
       </p>
       <a href="#!" class="secondary-content"><i class="material-icons">place</i></a>
-    </li>
+    </li></a>
     <li class="collection-item avatar">
       <img src="http://valkyrie.thepalacemanila.com/Media/uploads/p19hvas3ruvbv6q0m061h401jd44.jpg" alt="" class="circle">
       <span class="title">Valkyrie Manila</span>
