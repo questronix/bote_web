@@ -7,7 +7,7 @@ const ajax = require('../Common/services/Ajax');
 router.get('/', (req, res, next) => {
   if(req.headers["x-access-token"]){
     ajax.setOptions({
-      url: `${process.env.CORE_URL}/users/me/cart`,
+      url: `${process.env.CORE_URL}/cart`,
       headers: req.headers
     }).get()
     .then(data => {
@@ -25,7 +25,7 @@ router.get('/', (req, res, next) => {
 /* add to cart */
 router.post('/', (req, res, next) => {
   ajax.setOptions({
-    url: `${process.env.CORE_URL}/users/me/cart`,
+    url: `${process.env.CORE_URL}/cart`,
     headers: req.headers
   }).post(req.body)
   .then(data => {
@@ -39,7 +39,7 @@ router.post('/', (req, res, next) => {
 /* get item from cart */
 router.get('/items/:item_id', (req, res, next) => {
   ajax.setOptions({
-    url: `${process.env.CORE_URL}/users/me/cart/items/${req.params.item_id}`,
+    url: `${process.env.CORE_URL}/cart/items/${req.params.item_id}`,
     headers: req.headers
   }).get()
   .then(data => {
@@ -53,7 +53,7 @@ router.get('/items/:item_id', (req, res, next) => {
 /* update item in cart */
 router.put('/items/:item_id', (req, res, next) => {
   ajax.setOptions({
-    url: `${process.env.CORE_URL}/users/me/cart/items/${req.params.item_id}`,
+    url: `${process.env.CORE_URL}/cart/items/${req.params.item_id}`,
     headers: req.headers
   }).put(req.body)
   .then(data => {
