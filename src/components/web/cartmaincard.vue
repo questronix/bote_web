@@ -23,14 +23,14 @@
                                         <br/>
                                         <br/>
                                     </div>
-                                    <h6>{{beer.beername}}</h6>{{beer.amount}} (Php {{beer.price}})</td>
-                                <td> Php {{beer.price}} </td>
+                                    <h6>{{beer.brand_name}}</h6>(Php {{beer.amount}})</td>
+                                <td> Php {{beer.amount}} </td>
                                 <td>
-                                    <i class="orange-text material-icons" v-on:click="decreaseQuantity(beer.quantity,index)">remove_circle_outline</i>
-                                    {{beer.quantity}}
-                                    <i class="orange-text material-icons" v-on:click="increaseQuantity(beer.quantity,index)">add_circle_outline</i>
+                                    <i class="orange-text material-icons" v-on:click="decreaseQuantity(beer.qty,index)">remove_circle_outline</i>
+                                    {{beer.qty}}
+                                    <i class="orange-text material-icons" v-on:click="increaseQuantity(beer.qty,index)">add_circle_outline</i>
                                 </td>
-                                <td> Php {{beer.price * beer.quantity}} </td>
+                                <td> Php {{beer.amount * beer.qty}} </td>
                             </tr>
                         </tbody>
                     </table>
@@ -97,31 +97,31 @@
 import Vue from 'vue/dist/vue';
 import Api from '../../lib/Api.js';
 import '../../css/cart.css';
-
-
+import Storage from '../../lib/Storage';
+import { sessionReady } from '../../lib/Session';
  
 let main = Vue.component('main-content', {
-    
+    mounted(){
+        this.viewCart();
+    },
    data: function(){
         return{
             confirmModal: 'close',
             total: 1000.00,
             img : 'https://pixel.nymag.com/imgs/daily/grub/2017/best-of-new-york/uws-bar-es.w710.h473.jpg',
-            beers: [{beername:"beer ", amount: "500mL", price:500.00, quantity:1, img:"https://pixel.nymag.com/imgs/daily/grub/2017/best-of-new-york/uws-bar-es.w710.h473.jpg"},
-                   {beername: "beer 2", amount: "300mL", price:300.00, quantity:1, img:"https://pixel.nymag.com/imgs/daily/grub/2017/best-of-new-york/uws-bar-es.w710.h473.jpg"},
-                   {beername: "beer ni Gemma", amount: "800mL", price:200.00, quantity:1, img:"https://pixel.nymag.com/imgs/daily/grub/2017/best-of-new-york/uws-bar-es.w710.h473.jpg"}]
+            beers: {}
         }
     },
     methods: {
-        increaseQuantity(quantity,key){
-            quantity++;
-           this.beers[key].quantity = quantity;
-           this.updateTotal(this.total+this.beers[key].price);
+        increaseQuantity(qty,key){
+            qty++;
+           this.beers[key].qty = qty;
+           this.updateTotal(this.total+this.beers[key].amount);
         },
-        decreaseQuantity(quantity,key){
-            if(quantity > 0){quantity--;
-            this.beers[key].quantity = quantity;
-            this.updateTotal(this.total-this.beers[key].price);
+        decreaseQuantity(qty,key){
+            if(qty > 0){qty--;
+            this.beers[key].qty = qty;
+            this.updateTotal(this.total-this.beers[key].amount);
             }
         },
         updateTotal(updated){
@@ -131,6 +131,19 @@ let main = Vue.component('main-content', {
             if(this.confirmModal === 'close'){
                 console.log('close');
             }
+        },
+        viewCart() {
+        let session = Storage.getKey('access-token');
+           Api.get('/cart',{
+               'x-access-token': session.token
+            }).then(data=>{    
+                console.log(JSON.parse(data.body));
+                let beers = JSON.parse(data.body);
+            
+                this.beers = beers.data;
+            }).catch(error=>{
+                console.log(error);
+            });
         }
     }
 });
