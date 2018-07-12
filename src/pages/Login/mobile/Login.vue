@@ -1,18 +1,22 @@
 <template>
-    <div id="login">
+  <div id="login">
+    <img src="/static/img/logo.png">
     <h1>Sign in</h1>
+    <span v-if="wrongCredentials" id="errorLogin"> 
+      Username and Password do not match. Please try again!
+    </span>
     <form @submit.prevent="login">
-    
-    <i class="material-icons">person</i>
-    <input type="text" placeholder="Enter username" v-model="username" required>
-
-    <i class="material-icons">lock</i>
-    <input type="password" placeholder="Enter password" v-model="password" required>
-    <button type="submit">Login</button>
+      <div class="input-field col s6">
+        <i class="material-icons prefix">account_circle</i>
+        <input v-model="username" id="icon_prefix1" type="text" class="validate" placeholder="Username" required>
+      </div>
+      <div class="input-field col s6">
+        <i class="material-icons prefix">lock</i>
+        <input v-model="password" id="icon_prefix2" type="password" class="validate" placeholder="Password" required>
+      </div>
+      <button v-on:click="login" type="submit">Login</button>
     </form>
-
-
-    </div>
+  </div>
 </template>
 
 <script>
@@ -23,13 +27,13 @@ import Storage from '../../../lib/Storage';
 export default {
   data (){
     return {
+     wrongCredentials: false,
      username: '',
      password: ''
     }
   },
   methods: {
     login() {
-
         Api.post('/mobile/login', null, {
           username: this.username,
           password: this.password
@@ -37,6 +41,10 @@ export default {
           if(data.response.statusCode == 200){
             Storage.setKey('access-token', data.body);
             window.location.href = '/mobile/dashboard';
+          }else{
+            this.wrongCredentials = true;
+            this.username = '';
+            this.password = '';
           }
         }).catch(error=>{
           console.log(error);
@@ -58,10 +66,14 @@ body, html {
 }
 #login{
     display: flex;
+    padding-top: 15%;
     align-items: center;
+    justify-content: center;
     flex-direction: column;
-    text-align: center;
-
+}
+#login img {
+  width: 30vh;
+  height: 30vh;
 }
 i {
     position: absolute;
@@ -70,7 +82,11 @@ i {
     margin-top: 15px;
     margin-left: 7px;
 }
-
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
 button {
     font-family: 'Montserrat', sans-serif;
     font-weight: bold;
@@ -83,6 +99,7 @@ button {
     background-color: #CD7D0B;
     opacity: 0.8;
     background-repeat: no-repeat;
+    outline: none;
 }
 button:hover {
     transition-duration: 0.4s;
@@ -92,19 +109,46 @@ button:hover {
 
 h1 {
   color: #CD7D0B;  
-  margin-top: 300px;
-  text-align: center;
 }
-input[type=text], input[type=password] {
-  border-radius: 25px;
-  width: 100%;
-  padding: 15px;
-  margin: 5px 0 22px 0;
-  display: inline-block;
-  border: none;
-  background: #424242;
-  text-indent: 30px;
+#errorLogin {
+  color: #CD7D0B; 
+  font-size: 0.825em;
+  margin-bottom: 10px;
+}
+@media only screen and (min-width: 400px) {
+  input[type=text], input[type=password] {
+    border-radius: 25px;
+    width: 45vh;
+    padding: 15px;
+    margin: 5px 0 22px 0;
+    display: inline-block;
+    border: none;
+    background: #424242;
+    text-indent: 30px;
+    font-weight: bold;
+    color: white;
+    outline: none;
+  }
 }
 
+@media only screen and (max-width: 399px) {
+  input[type=text], input[type=password] {
+    border-radius: 25px;
+    width: 100%;
+    padding: 15px;
+    margin: 5px 0 22px 0;
+    display: inline-block;
+    border: none;
+    background: #424242;
+    text-indent: 30px;
+    font-weight: bold;
+    color: white;
+    outline: none;
+  }
+}
+input:-webkit-autofill {
+    -webkit-box-shadow: 0 0 0 30px #424242 inset;
+    -webkit-text-fill-color: white !important;
+}
 </style>
 
