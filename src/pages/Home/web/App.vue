@@ -1,7 +1,7 @@
 <template>
   <div id="index">
     
-    <nav-bar> </nav-bar>
+    <nav-bar :isLoggedIn="isLoggedIn"> </nav-bar>
     <div id="bote_landing"></div>
     
     <div class="card_container">
@@ -89,5 +89,28 @@
   </div>
 </template>
 
-
-
+<script>
+import Storage from '../../../lib/Storage';
+  export default{
+    mounted(){
+        this.checkIfLoggedIn();
+    },
+    data: function(){
+                return {
+                    username: '',
+                    password:'',
+                    isLoggedIn: false
+                }
+        },
+        methods: {
+            checkIfLoggedIn(){
+                if(Storage.getKey('access-token')){
+                    this.isLoggedIn = true;
+                }else{
+                    this.isLoggedIn = false;
+                }
+                console.log(this.isLoggedIn);
+            }
+        }
+  }
+</script>
