@@ -3,7 +3,7 @@ const router = express.Router();
 const ajax = require('../Common/services/Ajax');
 
 
-router.put('/', (req, res, next)=> {
+router.get('/', (req, res, next)=> {
   if (req.headers['x-access-token']){
     ajax.setOptions({
       url: `${process.env.CORE_URL}/bars`,
