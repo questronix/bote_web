@@ -27,7 +27,11 @@ router.get('/:barname', (req, res)=>{
       headers: req.headers
     })
     .get()
-    .then( data=>{ res.json(data) })
+    .then( data=>{
+      data.response.body = JSON.parse(data.response.body)
+      data.body = JSON.parse(data.body);
+      res.json(data);
+    })
     .catch(error=>{res.json(error)})
   }else{
     if(req.baseUrl.indexOf('mobile') > -1)
