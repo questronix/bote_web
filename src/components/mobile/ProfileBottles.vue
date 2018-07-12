@@ -1,39 +1,73 @@
 <template>
     <div class="profile-bottles">
-        <ul class="collection">
-    <li class="collection-item avatar">
-      <img src="https://cdn.shopify.com/s/files/1/1335/2603/products/drinkka-san-miguel-red-horse-330ml.jpg?v=1526864548" alt="" class="circle">
-      <span class="title">Red Horse</span>
-      <p>Red Horse Beer is an extra-strong lager brewed by San Miguel Brewery.<br>
-      </p>
-    </li>
-    <li class="collection-item avatar">
-      <img src="https://cdn.shopify.com/s/files/1/1335/2603/products/drinkka-san-miguel-red-horse-330ml.jpg?v=1526864548" alt="" class="circle">
-      <span class="title">Red Horse</span>
-      <p>Red Horse Beer is an extra-strong lager brewed by San Miguel Brewery.<br>
-      </p>
-    </li>
-    <li class="collection-item avatar">
-      <img src="https://cdn.shopify.com/s/files/1/1335/2603/products/drinkka-san-miguel-red-horse-330ml.jpg?v=1526864548" alt="" class="circle">
-      <span class="title">Red Horse</span>
-      <p>Red Horse Beer is an extra-strong lager brewed by San Miguel Brewery.<br>
-      </p>
-    </li>
-    <li class="collection-item avatar">
-      <img src="https://cdn.shopify.com/s/files/1/1335/2603/products/drinkka-san-miguel-red-horse-330ml.jpg?v=1526864548" alt="" class="circle">
-      <span class="title">Red Horse</span>
-      <p>Red Horse Beer is an extra-strong lager brewed by San Miguel Brewery.<br>
-      </p>
-    </li>
-    <li class="collection-item avatar">
-      <img src="https://cdn.shopify.com/s/files/1/1335/2603/products/drinkka-san-miguel-red-horse-330ml.jpg?v=1526864548" alt="" class="circle">
-      <span class="title">Red Horse</span>
-      <p>Red Horse Beer is an extra-strong lager brewed by San Miguel Brewery.<br>
-      </p>
-    </li>
+    <ul class="collection">
+        <li class="collection-item avatar">
+        <img src="https://cdn.shopify.com/s/files/1/1335/2603/products/drinkka-san-miguel-red-horse-330ml.jpg?v=1526864548" alt="" class="circle">
+        <span class="title">Red Horse</span>
+        <p>Red Horse Beer is an extra-strong lager brewed by San Miguel Brewery.<br>
+        </p>
+        <div class="card-action">
+         <span id="quantity_text"> Quantity: </span>
+         <a class="waves-effect waves-light btn-floating btn-small"><i class="material-icons">remove</i></a>
+         <span id="quantity_data_1">5</span>
+         <a class="waves-effect waves-light btn-floating btn-small"><i class="material-icons">add</i></a>
+         <a class="waves-effect waves-light btn">CONSUME</a>
+       </div>
+        </li>
+         <li class="collection-item avatar">
+        <img src="https://cdn.shopify.com/s/files/1/1335/2603/products/drinkka-san-miguel-red-horse-330ml.jpg?v=1526864548" alt="" class="circle">
+        <span class="title">Red Horse</span>
+        <p>Red Horse Beer is an extra-strong lager brewed by San Miguel Brewery.<br>
+        </p>
+        <div class="card-action">
+         <span id="quantity_text"> Quantity: </span>
+         <a class="waves-effect waves-light btn-floating btn-small"><i class="material-icons">remove</i></a>
+         <span id="quantity_data_1">5</span>
+         <a class="waves-effect waves-light btn-floating btn-small"><i class="material-icons">add</i></a>
+         <a class="waves-effect waves-light btn">CONSUME</a>
+       </div>
+        </li>
+         <li class="collection-item avatar">
+        <img src="https://cdn.shopify.com/s/files/1/1335/2603/products/drinkka-san-miguel-red-horse-330ml.jpg?v=1526864548" alt="" class="circle">
+        <span class="title">Red Horse</span>
+        <p>Red Horse Beer is an extra-strong lager brewed by San Miguel Brewery.<br>
+        </p>
+        <div class="card-action">
+         <span id="quantity_text"> Quantity: </span>
+         <a class="waves-effect waves-light btn-floating btn-small"><i class="material-icons">remove</i></a>
+         <span id="quantity_data_1">5</span>
+         <a class="waves-effect waves-light btn-floating btn-small"><i class="material-icons">add</i></a>
+         <a class="waves-effect waves-light btn">CONSUME</a>
+       </div>
+        </li>
+         <li class="collection-item avatar">
+        <img src="https://cdn.shopify.com/s/files/1/1335/2603/products/drinkka-san-miguel-red-horse-330ml.jpg?v=1526864548" alt="" class="circle">
+        <span class="title">Red Horse</span>
+        <p>Red Horse Beer is an extra-strong lager brewed by San Miguel Brewery.<br>
+        </p>
+        <div class="card-action">
+         <span id="quantity_text"> Quantity: </span>
+         <a class="waves-effect waves-light btn-floating btn-small"><i class="material-icons">remove</i></a>
+         <span id="quantity_data_1">5</span>
+         <a class="waves-effect waves-light btn-floating btn-small"><i class="material-icons">add</i></a>
+         <a class="waves-effect waves-light btn">CONSUME</a>
+       </div>
+        </li>
+         <li class="collection-item avatar">
+        <img src="https://cdn.shopify.com/s/files/1/1335/2603/products/drinkka-san-miguel-red-horse-330ml.jpg?v=1526864548" alt="" class="circle">
+        <span class="title">Red Horse</span>
+        <p>Red Horse Beer is an extra-strong lager brewed by San Miguel Brewery.<br>
+        </p>
+        <div class="card-action">
+         <span id="quantity_text"> Quantity: </span>
+         <a class="waves-effect waves-light btn-floating btn-small"><i class="material-icons">remove</i></a>
+         <span id="quantity_data_1">5</span>
+         <a class="waves-effect waves-light btn-floating btn-small"><i class="material-icons">add</i></a>
+         <a class="waves-effect waves-light btn">CONSUME</a>
+       </div>
+        </li>
     
-  </ul>
-  
+    </ul>
     </div>
 </template>
 
@@ -62,10 +96,6 @@
 
 }
 
-.collection .material-icons{
-    color: #cd7d08;
-}
-
 p{
     color: #9B9B9B;
     font-size: 10px;
@@ -78,4 +108,47 @@ p{
     height: 8vh;
 }
 
+.card-action {
+    margin-top: 10px;
+    margin-bottom: 5px;
+    display: flex;
+    justify-content: space-between;
+}
+
+#quantity_text {
+    color: #CD7D0B;
+    font-size: 20px;
+    margin-top: 5px;
+    /* font-weight: bold; */
+}
+#quantity_data_1 {
+    margin-top: 5px;
+    font-size: 1.25em;
+    font-weight: bold;
+    color: white;
+}
+#quantity_data_2 {
+    padding-left: 70px;
+    padding-right: 20px;
+    font-size: 1.25em;
+    font-weight: bold;
+    color: #CD7D0B;
+}
+.btn-floating, .btn-small{
+    background-color:#CD7D0B;
+}
+
+.btn:hover, .btn-large:hover, .btn-small:hover {
+    background-color: #CD7D0B;
+}
+
+.btn{
+    background-color:#CD7D0B;
+    border-radius: 30px;
+    float: right;
+}
+.collection .material-icons {
+    color: #f2f2f2 !important;
+    font-weight: bold !important;
+}
 </style>
