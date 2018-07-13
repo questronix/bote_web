@@ -180,7 +180,7 @@ mounted(){
                         
                                 <li id="name"> 
                                         
-                                        <span v-if="isEditting === false"> {{useruser.fn}} </span> 
+                                        <span v-if="isEditting === false"> {{user.user.fn}} </span> 
                                         <input v-else="isEditting === true" type="text" :placeholder="user.user.fn" v-model="edituser.fnameEdit" class="validate">        
                                         <span v-if="isEditting === false"> {{user.user.ln}} </span>
                                         <input v-else="isEditting === true" type="text" :placeholder="user.user.ln" v-model="edituser.lnameEdit" class="validate"> 

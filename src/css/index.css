@@ -3,26 +3,13 @@ body, html {
 
 #bote_landing {
   min-height: 800px;
-  background-image: url('/static/img/landingpage.jpg');
+  background-image: url(https://i.imgur.com/5LX5EMP.jpg);
   position: relative;
   background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;
-  background-size: cover; 
-}
+  background-size: cover; }
 
-  #bote_bg {
-    min-height: 800px;
-    background-image: url(' http://images-hdwallpapers.com/wp-content/uploads/2017/12/Night-Club.jpg');
-    position: relative;
-    background-attachment: fixed;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover; 
-  }
-  
-
- 
 .btn .social {
   background-color: orange; }
 
@@ -34,9 +21,6 @@ body, html {
   background-color: #212121;
   padding: 50px 50px;
   position: relative; }
-
-img {
-  background-color: black; }
 
 .card {
   margin: 30px; }
