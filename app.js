@@ -38,6 +38,7 @@ app.use(session({
 }));
 
 let home = require('./Modules/Home');
+let notFound = require('./Modules/Error');
 let login = require('./Modules/Login');
 let dashboard = require('./Modules/Dashboard');
 let profile = require('./Modules/Profile');
@@ -52,6 +53,7 @@ let error = require('./Modules/Error')
 let clients = ['/mobile', ''];
 for(let i in clients){
     app.use(`${clients[i]}`, home);
+    app.use(`${clients[i]}/*`, notFound);
     app.use(`${clients[i]}/dashboard`, dashboard);
     app.use(`${clients[i]}/profile`, profile);
     app.use(`${clients[i]}/logout`, logout);
