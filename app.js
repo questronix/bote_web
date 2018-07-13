@@ -52,7 +52,6 @@ let notification = require('./Modules/Notification');
 let clients = ['/mobile', ''];
 for(let i in clients){
     app.use(`${clients[i]}`, home);
-    app.use(`${clients[i]}/*`, notFound);
     app.use(`${clients[i]}/dashboard`, dashboard);
     app.use(`${clients[i]}/profile`, profile);
     app.use(`${clients[i]}/logout`, logout);
@@ -62,6 +61,7 @@ for(let i in clients){
     app.use(`${clients[i]}/settings`, settings);
     app.use(`${clients[i]}/inbox`, inbox);
     app.use(`${clients[i]}/notification`, notification);
+    app.use(`${clients[i]}/*`, notFound);
 }
 
 module.exports = app;
