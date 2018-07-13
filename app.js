@@ -61,6 +61,7 @@ for(let i in clients){
     app.use(`${clients[i]}/settings`, settings);
     app.use(`${clients[i]}/inbox`, inbox);
     app.use(`${clients[i]}/notification`, notification);
+    app.use(`${clients[i]}/error`, error);
     app.use(`${clients[i]}/*`, notFound);
 }
 

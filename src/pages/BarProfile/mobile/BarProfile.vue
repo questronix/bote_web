@@ -1,20 +1,26 @@
 <template>
     <div id="barProfile">
     <bar-profile-header url="http://valkyrie.thepalacemanila.com/Media/uploads/p19hvas3ruvbv6q0m061h401jd44.jpg">Valkyrie Manila</bar-profile-header>
-    <bar-profile-item></bar-profile-item>
+    <bar-profile-item />
+    <bar-profile-item />
+    <bar-profile-item />
+    <bar-profile-item />
+    <bar-profile-item />
+    <bar-profile-item />
     </div>
 </template>
 
 <script>
 import BarProfileHeader from '../../../components/mobile/BarProfileHeader.vue'
 import BarProfileAlert from '../../../components/mobile/BarProfileAlert.vue'
-import BarProfileItemCard from '../../../components/mobile/BarProfileItemCard.vue'
+import BarProfileItem from '../../../components/mobile/BarProfileItem.vue'
+
 
 export default {
   components: {
     BarProfileHeader,
     BarProfileAlert,
-    BarProfileItemCard,
+    BarProfileItem,
   }
 }
 </script>

@@ -6,7 +6,7 @@
         </div>
     <ul class="collection">
     
-    <a href="/mobile/barprofile/"><li class="collection-item avatar">
+    <a href="/mobile/bars/barprofile/"><li class="collection-item avatar">
       <img src="http://valkyrie.thepalacemanila.com/Media/uploads/p19hvas3ruvbv6q0m061h401jd44.jpg" alt="" class="circle">
       <span class="title">Valkyrie Manila</span>
       <p>36 9th Avenue, Taguig, Metro Manila <br>
