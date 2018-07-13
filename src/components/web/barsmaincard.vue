@@ -79,12 +79,10 @@ let main = Vue.component('main-content',{
         },
         viewBars() {
                 let session = Storage.getKey('access-token');
-                   Api.get('/bars',{
+                   Api.get('/bars?'+(window.location.href).split('?')[1],{
                        'x-access-token': session.token
-                    }).then(data=>{    
-                        console.log(JSON.parse(data.body));
-                        let bars = JSON.parse(data.body);
-                        this.bars = bars;
+                    }).then(data=>{
+                        this.bars = data.body;
                     }).catch(error=>{
                         console.log(error);
                     });
