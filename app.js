@@ -38,6 +38,7 @@ app.use(session({
 }));
 
 let home = require('./Modules/Home');
+let notFound = require('./Modules/Error');
 let login = require('./Modules/Login');
 let dashboard = require('./Modules/Dashboard');
 let profile = require('./Modules/Profile');
@@ -45,7 +46,8 @@ let logout = require('./Modules/Logout');
 let cart = require('./Modules/Cart');
 let bars = require('./Modules/Bars');
 let settings = require('./Modules/Settings');
-let notFound = require('./Modules/Error');
+let inbox = require('./Modules/Inbox');
+let notification = require('./Modules/Notification');
 
 let clients = ['/mobile', ''];
 for(let i in clients){
@@ -58,6 +60,8 @@ for(let i in clients){
     app.use(`${clients[i]}/cart`, cart);
     app.use(`${clients[i]}/bars`, bars);
     app.use(`${clients[i]}/settings`, settings);
+    app.use(`${clients[i]}/inbox`, inbox);
+    app.use(`${clients[i]}/notification`, notification);
 }
 
 module.exports = app;

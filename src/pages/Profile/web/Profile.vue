@@ -19,15 +19,18 @@
 </template>
 
 <script>
+  import './index.js';
+  import Api from '../../../lib/Api';
+  import Storage from '../../../lib/Storage';
   export default{
+    mounted(){
+      this.viewUserInfo();
+      // this.editInit();
+    },
   
     data: function() {
       return{
         user: {
-         name: 'MhizSx Jhemerlyn',
-         username: '@jh3m3rlYn',
-         address: 'Makati City',
-         email: 'sw33tjhemerlyn16@gmail.com',
          
         },
         post_feeds:[
@@ -44,10 +47,11 @@
           {username: 'Kenster1234567890', post: 'This is a sample post. Bote app dabest. Wooooh hello world.', img:"https://avatars3.githubusercontent.com/u/5698765?s=460&v=4"},
         ],
         edituser: {
-          nameEdit: 'MhizSx Jhemerlyn',
-          usernameEdit: '@jh3m3rlYn',
-          addressEdit: 'Makati City',
-          emailEdit: 'sw33tjhemerlyn16@gmail.com'
+          fnameEdit: '',
+          lnameEdit: '',
+          usernameEdit: '',
+          addressEdit: '',
+          emailEdit: ''
         },
         isEditting: false,
         save: false        
@@ -63,11 +67,37 @@
         this.isEditting = false;
         this.saveEdit();
       },
+      // editInit(){
+      //     this.edituser.fnameEdit = this.user.fn;
+      //     this.edituser.lnameEdit = this.user.ln;
+      //     this.edituser.usernameEdit = this.user.username;
+      //     this.edituser.addressEdit = this.user.address;
+      //     this.edituser.emailEdit = this.user.email
+      // },
       saveEdit(){
-        this.user.name = this.edituser.nameEdit;
-        this.user.username = this.edituser.usernameEdit;
-        this.user.address = this.edituser.addressEdit;
-        this.user.email= this.edituser.emailEdit;
+        console.log(`Hello` + this.edituser.lnameEdit);
+        this.user.user.fn = this.edituser.fnameEdit;
+        this.user.user.ln = this.edituser.lnameEdit;
+        this.user.user.username = this.edituser.usernameEdit;
+        this.user.user.address = this.edituser.addressEdit;
+        this.user.user.email= this.edituser.emailEdit;
+      },
+      viewUserInfo(){
+        let session = Storage.getKey('access-token');
+        Api.get(`/profile/me`, {                        
+                'x-access-token': session.token,                
+        })
+        .then(data=>{
+                let user=JSON.parse(data.body);
+                console.log(JSON.parse(data.body));
+                
+                this.user=(user);
+                console.log(this.user.user);
+                
+        })
+        .catch(error=>{
+                console.log(error);
+        })
       }
     }
   }  

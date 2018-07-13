@@ -1,83 +1,67 @@
 <template>
     <div class="navbar-profile">
-        <a href="#">
-            <div id="bottle" class="navbar-profile">
-                <span> Bottles </span>
-                <span> {{bottles}} </span>
+       <div class="row">
+            <div class="col s12">
+            <ul class="tabs tabs-fixed-width swipeable">
+                <li class="tab col s3"><a class="" href="#bottles">Bottles</a></li>
+                <li class="tab col s3"><a href="#bars">Bars</a></li>
+                <li class="tab col s3"><a href="#following">Following</a></li>
+                <li class="tab col s3"><a href="#followers">Followers</a></li>
+            </ul>
             </div>
-        </a>
-        <a href="#">
-        <div id="bar" class="navbar-profile">
-            <span> Bars </span>
-            <span> {{bars}} </span>
+            <div id="bottles" class="col s12">
+                <profile-bottles />
+            </div>
+            <div id="bars" class="">
+                <profile-card url="http://poolclub.thepalacemanila.com/Media/uploads/p19mru2gkj7o7ubldmfi2rjks5.jpg">Palace Pool Club</profile-card>
+                <profile-card url="http://poolclub.thepalacemanila.com/Media/uploads/p19mru2gkj7o7ubldmfi2rjks5.jpg">Palace Pool Club</profile-card>
+                <profile-card url="http://poolclub.thepalacemanila.com/Media/uploads/p19mru2gkj7o7ubldmfi2rjks5.jpg">Palace Pool Club</profile-card>
+            </div>
+            <div id="following" class="col s12">
+                <profile-following />
+            </div>
+            <div id="followers" class="col s12">
+                <profile-followers />
+            </div>
         </div>
-        </a>
-        <a href="#">
-        <div id="following" class="navbar-profile">
-            <span> Following </span>
-            <span> {{following}} </span>
-        </div>
-        </a>
-        <a href="#">
-        <div id="follower" class="navbar-profile">
-            <span> Followers </span>
-            <span> {{followers}} </span>
-        </div>
-        </a>
     </div>
 </template>
 <script>
+    import ProfileCard from './ProfileCard.vue'
+    import ProfileBottles from './ProfileBottles.vue'
+    import ProfileFollowers from './ProfileFollowers.vue'
+    import ProfileFollowing from './ProfileFollowing.vue'
+
     export default {
-        data: () => {
-            return {
-                bottles: 15,
-                bars: 15,
-                following: 100,
-                followers: 2500
-            };
-        },
-        methods: {
-            
+        components: {
+            ProfileCard,
+            ProfileBottles,
+            ProfileFollowers,
+            ProfileFollowing,
         }
     }
 </script>
-<style scoped>
-    .navbar-profile {
-        width: 100%;
-        padding-top: 10px;
-        padding-bottom: 10px;
-        font-family: 'Montserrat', sans-serif;
-    }
-    #bottle {
-        display: inline-grid;
-        text-align: center;
-        width: 22%;
-        padding-left: 10px;
-        
-    }
-    #bar {
-        display: inline-grid;
-        text-align: center;
-        width: 18%;
-    }
-    #following {
-        display: inline-grid;
-        text-align: center;
-        width: 27%;
-    }
-    #follower {
-        display: inline-grid;
-        text-align: center;
-        width: 22%;
-    }
-    a {
-        color: #f2f2f2;
-        text-decoration: none;
-    }
-    a:hover {
-        color: #CD7D0B;
-    }
-    a:active {
-        color: #CD7D0B;
-    }
+
+<style>
+.tabs{
+    background-color: #212121;
+}
+.tabs .tab a {
+    color: #f2f2f2;
+    
+}
+.tabs .tab a:hover, .tabs .tab a.active{
+    color: #CD7D0B;
+}
+
+.tabs .indicator {
+   
+    background-color: #CD7D0B;
+}
+
+.tabs .tab a:focus, .tabs .tab a:focus.active {
+    background-color: #212121;
+    outline: none;
+}
+
 </style>
