@@ -8,7 +8,7 @@ $background: #424242;
     .cover_photo{
         img {
             padding-top: 60px;
-            width: 1000px;
+            width: 100%;
             margin-bottom: -10px;
             align-items: center;
             position: relative;
@@ -24,7 +24,14 @@ $background: #424242;
         }
     }
     .tabs{
-        display: flex;
         justify-content: space-evenly;
-    }
+        background-color: black;
+        a {
+          color: #e48909; 
+        }
+      
+      .tabs .tab a:focus, .tabs .tab a:focus.active {
+        background-color: transparent;
+        outline: none; }
+      }
 }

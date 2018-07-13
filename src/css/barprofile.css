@@ -1,6 +1,6 @@
 .barprofile .cover_photo img {
   padding-top: 60px;
-  width: 1000px;
+  width: 100%;
   margin-bottom: -10px;
   align-items: center;
   position: relative;
@@ -13,5 +13,7 @@
 .barprofile .tabs {
   display: flex;
   justify-content: space-evenly; }
-
+.barprofile .tabs a{
+    color: #e48909;
+}
 /*# sourceMappingURL=barprofile.css.map */

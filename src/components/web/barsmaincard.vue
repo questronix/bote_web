@@ -8,23 +8,24 @@
         
         <div class="grey darken-3 section">
 
-                        <div class="row">
-                            <div class="col s6 m4" v-for="(bar, index) in bars" :key="index">
-                                    <div class="card">
-                                            <div class="card-image waves-effect waves-block waves-light">
-                                                    <img src="/static/img/barimage.jpg">
-                                            </div>
-                                            <div class="card-content">
-                                                <span class="card-title activator grey-text text-darken-4">{{bar.name}}</span>
-                                                <p><a href="#">This is a link</a></p>
-                                            </div>
-                                            <div class="card-reveal">
-                                                <span class="card-title grey-text text-darken-4">Visit Bar Profile<i class="material-icons right">close</i></span>
-                                                <p>Here is some more information about this product that is only revealed once clicked on.</p>
-                                            </div>
-                                    </div>
+            <div class="row">
+                <div class="col s3 m4" v-for="(bar, index) in bars" :key="index">
+                        <div class="card">
+                            <div class="card-image waves-effect waves-block waves-light">
+                                    <img src="/static/img/barimage.jpg">
+                            </div>
+                            <div class="card-content">
+                                <span class="card-title activator grey-text text-darken-4">{{bar.name}}</span>
+                                <p><a :href="'/bars/'+bar.name">Bar Profile</a></p>
+                            </div>
+                            <div class="card-reveal">
+                                <span class="card-title grey-text text-darken-4">Bar Details<i class="material-icons right">close</i></span>
+                                <p>Here is some more information about this product that is only revealed once clicked on.</p>
                             </div>
                         </div>
+                </div>
+            </div>
+
         </div>
            <!-- <a href="#" id="filter" ><i class="material-icons">filter_list</i></a>
             <h1>BARS</h1>
