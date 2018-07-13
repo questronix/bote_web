@@ -12,6 +12,11 @@ import ProfileHeader from '../../../components/mobile/ProfileHeader.vue'
 import NavbarProfile from '../../../components/mobile/NavbarProfile.vue'
 import Api from '../../../lib/Api.js';
 
+$(document).ready(function(){
+          $('.tabs').tabs({
+        });
+      }); 
+
 export default {
   components: {
     Slideout,

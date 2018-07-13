@@ -3,7 +3,7 @@
         <img :src="url"/>
         <div class="bar-title"><slot></slot></div>
         <i id ="fire" class="material-icons">whatshot</i>
-        <i id="back" class="material-icons">arrow_back</i>
+        <a href="/mobile/bars"><i id="back" class="material-icons">arrow_back</i></a>
 
         <div class="details-bg"></div>
     </div>

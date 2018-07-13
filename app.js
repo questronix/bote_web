@@ -53,7 +53,6 @@ let error = require('./Modules/Error')
 let clients = ['/mobile', ''];
 for(let i in clients){
     app.use(`${clients[i]}`, home);
-    app.use(`${clients[i]}/*`, notFound);
     app.use(`${clients[i]}/dashboard`, dashboard);
     app.use(`${clients[i]}/profile`, profile);
     app.use(`${clients[i]}/logout`, logout);
@@ -64,6 +63,7 @@ for(let i in clients){
     app.use(`${clients[i]}/inbox`, inbox);
     app.use(`${clients[i]}/notification`, notification);
     app.use(`${clients[i]}/error`, error);
+    app.use(`${clients[i]}/*`, notFound);
 }
 
 module.exports = app;
