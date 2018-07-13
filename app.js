@@ -48,7 +48,6 @@ let bars = require('./Modules/Bars');
 let settings = require('./Modules/Settings');
 let inbox = require('./Modules/Inbox');
 let notification = require('./Modules/Notification');
-let notFound = require('./Modules/Error')
 
 let clients = ['/mobile', ''];
 for(let i in clients){
