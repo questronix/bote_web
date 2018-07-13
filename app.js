@@ -38,6 +38,7 @@ app.use(session({
 }));
 
 let home = require('./Modules/Home');
+let notFound = require('./Modules/Error');
 let login = require('./Modules/Login');
 let dashboard = require('./Modules/Dashboard');
 let profile = require('./Modules/Profile');
@@ -45,7 +46,6 @@ let logout = require('./Modules/Logout');
 let cart = require('./Modules/Cart');
 let bars = require('./Modules/Bars');
 let settings = require('./Modules/Settings');
-let notFound = require('./Modules/Error');
 let inbox = require('./Modules/Inbox');
 let notification = require('./Modules/Notification');
 
