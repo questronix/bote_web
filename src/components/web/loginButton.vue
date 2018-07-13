@@ -15,10 +15,6 @@
               <input v-model="password" type="password" placeholder="Password" required />
               <label class="box"> <input type="checkbox" checked="unchecked" name="remember" /> Remember me </label>
               <button type="submit" class="login_button"> LOGIN </button>
-              
-              <div class="container" >
-                  <span class="psw"> <a href="#"> Forgot password?</a></span>
-              </div>
           </form>
       </div>
     </div>
@@ -224,5 +220,6 @@ html{
   padding-right:10px;
   
 }
+
 
 </style>
