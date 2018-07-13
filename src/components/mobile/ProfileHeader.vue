@@ -5,11 +5,11 @@
         </div>
         <div class="profile-details">
             <img id="prof-pic" src="https://www.w3schools.com/howto/img_avatar.png" />
-            <p id="name">Name</p>
+            <p id="name">{{user.user.fn}} {{user.user.ln}}</p>
         </div>
         <div class="location">
             <i class="material-icons">place</i>
-            <p id="loc">Location</p>
+            <p id="loc">{{user.user.address}}</p>
         </div>
         <div class="about">
             <p id="bio">If you want to drink hit me up!</p>
@@ -25,9 +25,9 @@
                 data: 0
             };
         },
-        methods: {
-            
-        }
+        props: {
+        user: Object,
+         },
     }
 </script>
 
@@ -35,7 +35,7 @@
 
 .profile-header {
     width: 100%;
-    height: 40vh;
+    height: 37vh;
     display: flex;
     flex-direction: column;
     color: #f2f2f2;

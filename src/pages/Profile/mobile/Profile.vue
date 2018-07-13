@@ -1,40 +1,61 @@
 <template>
     <div id="profile">
-    <profile-header></profile-header>
-    <navbar-profile></navbar-profile>
+    <profile-header :user='user'></profile-header>
+    <navbar-profile :user='user'></navbar-profile>
     </div>   
 </template>
 
 <script>
 
-import Slideout from 'vue-slideout'
-import ProfileHeader from '../../../components/mobile/ProfileHeader.vue'
-import NavbarProfile from '../../../components/mobile/NavbarProfile.vue'
-import Api from '../../../lib/Api.js';
+  import Slideout from 'vue-slideout'
+  import ProfileHeader from '../../../components/mobile/ProfileHeader.vue'
+  import NavbarProfile from '../../../components/mobile/NavbarProfile.vue'
+  import Api from '../../../lib/Api.js';
+  import Storage from '../../../lib/Storage';
 
-$(document).ready(function(){
-          $('.tabs').tabs({
-        });
-      }); 
+  $(document).ready(function(){
+            $('.tabs').tabs({
+          });
+        }); 
 
-export default {
-  components: {
-    Slideout,
-    ProfileHeader,
-    NavbarProfile,
+  export default {
+    components: {
+      Slideout,
+      ProfileHeader,
+      NavbarProfile,
 
-  },
-  methods: {
-      logout() {
-        Api.post('logout', {
-        }).then(data=>{
-          console.log(data);
-        }).catch(error=>{
-          console.log(error);
-        });
+    },
+    mounted(){
+      this.viewUserInfo();
+    },
+
+    data: function(){
+      return{
+        user:{
+
+        },
       }
+    },
+    methods: {
+    viewUserInfo(){
+          let session = Storage.getKey('access-token');
+          Api.get(`/profile/me`, {                        
+                  'x-access-token': session.token,                
+          })
+          .then(data=>{
+                  let user=JSON.parse(data.body);
+                  console.log(JSON.parse(data.body));
+                  
+                  this.user=(user);
+                  console.log(this.user.user);
+                  
+          })
+          .catch(error=>{
+                  console.log(error);
+          })
+        }
+    }
   }
-}
 </script>
 
 <style>
