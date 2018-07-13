@@ -19,7 +19,7 @@
                 <label class="box"> <input type="checkbox" checked="unchecked" name="remember" /> <span></span>Remember me </label>
             </div>
             <div class="row">
-                <a type="submit" class="col s12 btn-large" id="login_button">LOGIN</a>
+                <a type="submit" v-on:click="login" class="col s12 btn-large" id="login_button">LOGIN</a>
             </div>
               
             <div class="row" >

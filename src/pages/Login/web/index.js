@@ -5,9 +5,7 @@ import '../../../css/background.css';
 import navigationBar from '../../../components/web/navigationBar';
 import { sessionReady } from '../../../lib/Session';
 
-sessionReady(function(){
-  new Vue({
-    el: '#login',
-    render: h => h(Login)
-  });
+new Vue({
+  el: '#login',
+  render: h => h(Login)
 });

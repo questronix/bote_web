@@ -5,7 +5,7 @@ const ajax = require('../Common/services/Ajax');
 
 router.get('/', (req, res, next) => {
   if(req.baseUrl.indexOf('mobile') > -1) res.render('mobile/login');
-  else res.render('web/index');
+  else res.render('web/login');
 });
 
 router.post('/', (req, res, next)=>{

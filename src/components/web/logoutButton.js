@@ -8,7 +8,7 @@ let logout = Vue.component('logout-button', {
       logout: function(){
           Storage.deleteKey('access-token');
           Storage.deleteKey('user-details');
-          window.location.href = 'login';        
+          window.location.href = '/login';        
       }
     }
   }
