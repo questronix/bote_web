@@ -47,6 +47,7 @@ let bars = require('./Modules/Bars');
 let settings = require('./Modules/Settings');
 let inbox = require('./Modules/Inbox');
 let notification = require('./Modules/Notification');
+let error = require('./Modules/Error')
 
 let clients = ['/mobile', ''];
 for(let i in clients){
@@ -60,6 +61,7 @@ for(let i in clients){
     app.use(`${clients[i]}/settings`, settings);
     app.use(`${clients[i]}/inbox`, inbox);
     app.use(`${clients[i]}/notification`, notification);
+    app.use(`${clients[i]}/error`, error);
 }
 
 module.exports = app;

@@ -40,7 +40,7 @@ export default {
   .main_navbar {
     display: flex;
     flex-direction: column;
-    height: inherit;
+    height: auto;
     width: 100%;
   }
   nav {
