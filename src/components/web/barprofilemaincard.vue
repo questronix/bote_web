@@ -2,15 +2,15 @@
 
 <template>
         <div class="barprofile container">
-            <!-- Cover Photo -->
-            <div class="row cover_photo">
+            <div class="cover_photo">
                 <img src="https://i.imgur.com/zt2y9eB.gif">
             </div>
             <div class="header white">
                 <div class="section">
-                    <h5> {{bardetails.barname}} </h5>
-                    {{bardetails.location}} <br/>
-                    {{bardetails.openhours}}
+                    <h5> {{bardetails.name}} </h5>
+                    {{bardetails.address}} <br/>
+                    {{bardetails.opening}} - {{bardetails.closing}}<br/>
+                    {{bardetails.days}}
                 </div>
 
                 <div class="row">
@@ -44,8 +44,8 @@
                 </div>
             </div>
                 
-                <div id="home">
-                    <div class="white section">
+                <div id="home" class="white section">
+                    <div class="container">
                         <h5> Featured Drinks </h5>
                         <div class="row">
                             <div class="col s4">
@@ -84,7 +84,8 @@
                                 <p>{{beer.beeramount}} <br>
                                     {{beer.price}}
                                 </p>
-                                <a href="#!" class="secondary-content"><i class="material-icons">grade</i></a>
+                                
+                                <a class="btn orange white-text secondary-content">ADD TO CART</a>
                             </li>
                         </ul>
                                     
@@ -105,18 +106,33 @@
 import Vue from 'vue/dist/vue';
 import Api from '../../lib/Api.js';
 import '../../css/barprofile.css';
+import Storage from '../../lib/Storage';
 
  
 let main = Vue.component('main-content', {
-    
-   data: function(){
+    mounted(){
+        this.viewSpecificBar();
+    },
+    data: function(){
         return{
             bardetails: { barname: "Bar ni Gemma", beercount: 20, followers: 250, rating: 4.5, openhours: "12NN-3AM", location: "Makati City"},
             confirmModal: 'close',
             img : 'https://pixel.nymag.com/imgs/daily/grub/2017/best-of-new-york/uws-bar-es.w710.h473.jpg',
-            beers: [{beername:"beer ", amount: "500mL", price:500.00, quantity:1, img:"https://pixel.nymag.com/imgs/daily/grub/2017/best-of-new-york/uws-bar-es.w710.h473.jpg"},
-                   {beername: "beer 2", amount: "300mL", price:300.00, quantity:1, img:"https://pixel.nymag.com/imgs/daily/grub/2017/best-of-new-york/uws-bar-es.w710.h473.jpg"},
-                   {beername: "beer ni Gemma", amount: "800mL", price:200.00, quantity:1, img:"https://pixel.nymag.com/imgs/daily/grub/2017/best-of-new-york/uws-bar-es.w710.h473.jpg"}]
+            beers: {}
+        }
+    },
+    methods: {
+        viewSpecificBar(){
+            let session = Storage.getKey('access-token');
+            Api.get(window.location.pathname,{
+                'x-access-token': session.token
+            }).then(data=>{    
+                console.log(data.body.items);
+                this.bardetails = data.body;
+                this.beers = data.body.items;
+            }).catch(error=>{
+                console.log(error);
+            });
         }
     }
 });
