@@ -16,89 +16,89 @@
                 <div class="row">
                     <!-- Tabs -->
                     <div class="tabs">
-                            <li class="tab">
-                                <a class="active" href="#home"> 
-                                    <span> Home </span>
-                                </a>
-                            </li>
+                        <li class="tab">
+                            <a class="active" href="#home"> 
+                                <span> Home </span>
+                            </a>
+                        </li>
 
-                            <li class="tab">
-                                <a href="#drinks"> 
-                                    <span> All Drinks </span>
-                                        </a>
-                            </li>
-                            
-                            <li class="tab">
-                                <a href="#photos"> 
-                                    <span> Photos  </span>
-                                        
-                                </a>
-                            </li>
+                        <li class="tab">
+                            <a href="#drinks"> 
+                                <span> All Drinks </span>
+                                    </a>
+                        </li>
+                        
+                        <li class="tab">
+                            <a href="#photos"> 
+                                <span> Photos  </span>
+                                    
+                            </a>
+                        </li>
 
-                            <li class="tab">
-                                <a href="#reviews"> 
-                                    <span> Reviews </span>                           
-                                </a>
-                            </li>
+                        <li class="tab">
+                            <a href="#reviews"> 
+                                <span> Reviews </span>                           
+                            </a>
+                        </li>
                     </div>              
                 </div>
             </div>
-                
-                <div id="home" class="white section">
-                    <div class="container">
-                        <h5> Featured Drinks </h5>
-                        <div class="row">
-                            <div class="col s4">
-                                <div class="card">
-                                    <div class="card-image">
-                                    <img src="/static/img/sanmiguel.jpeg">
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="col s4">
-                                <div class="card">
-                                    <div class="card-image">
-                                    <img src="/static/img/sanmiguel.jpeg">
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="col s4">
-                                <div class="card">
-                                    <div class="card-image">
-                                    <img src="/static/img/sanmiguel.jpeg">
-                                    </div>
+            
+            <div id="home" class="white section">
+                <div class="container">
+                    <h5> Featured Drinks </h5>
+                    <div class="row">
+                        <div class="col s4">
+                            <div class="card">
+                                <div class="card-image">
+                                <img src="/static/img/sanmiguel.jpeg">
                                 </div>
                             </div>
                         </div>
-                    </div>     
-                </div>
 
-                <div id="drinks">
-                     <div class="section">
-                        <ul class="collection">
-                            <li v-for="(beer, index) in beers" :key="index" class="collection-item avatar">
-                                <img src="/static/img/sanmiguel.jpeg" alt="" class="circle">
-                                <span class="title">{{beer.beername}}</span>
-                                <p>{{beer.beeramount}} <br>
-                                    {{beer.price}}
-                                </p>
-                                
-                                <a class="btn orange white-text secondary-content">ADD TO CART</a>
-                            </li>
-                        </ul>
-                                    
+                        <div class="col s4">
+                            <div class="card">
+                                <div class="card-image">
+                                <img src="/static/img/sanmiguel.jpeg">
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col s4">
+                            <div class="card">
+                                <div class="card-image">
+                                <img src="/static/img/sanmiguel.jpeg">
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                </div>
+                </div>     
+            </div>
 
-                <div id="photos">
-                    
+            <div id="drinks">
+                    <div class="section">
+                    <ul class="collection">
+                        <li v-for="(beer, index) in beers" :key="index" class="collection-item avatar">
+                            <img src="/static/img/sanmiguel.jpeg" alt="" class="circle">
+                            <h6>{{beer.brand_name}}</h6>
+                            <p> Php {{beer.amount}} <br>
+                                {{beer.type}} <br>
+                            </p>
+                            
+                            <a class="btn orange white-text secondary-content">ADD TO CART</a>
+                        </li>
+                    </ul>
+                                
                 </div>
+            </div>
 
-                <div id="reviews">
-                    
-                </div>
+            <div id="photos">
+                
+            </div>
+
+            <div id="reviews">
+                
+            </div>
         </div>
 </template>
 

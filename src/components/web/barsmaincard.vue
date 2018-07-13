@@ -79,11 +79,13 @@ let main = Vue.component('main-content',{
             this.loadmore = !this.loadmore;
         },
         viewBars() {
+            console.log("AAAAAAAAAAAAAAAAAURL" +window.location.href.split('?')[1]);
                 let session = Storage.getKey('access-token');
                    Api.get('/bars?'+(window.location.href).split('?')[1],{
                        'x-access-token': session.token
                     }).then(data=>{
                         this.bars = data.body;
+                        console.log(data.body)
                     }).catch(error=>{
                         console.log(error);
                     });
