@@ -8,17 +8,13 @@
               </div>
               <br />
               
-              <h1 class="bote_name">BOTE</h1>
+              <img src="/static/img/bote_logo.png"  >
               <br />         
               
               <input v-model="username" type="text" placeholder="Username or Email Address" required />
               <input v-model="password" type="password" placeholder="Password" required />
               <label class="box"> <input type="checkbox" checked="unchecked" name="remember" /> Remember me </label>
               <button type="submit" class="login_button"> LOGIN </button>
-              
-              <div class="container" >
-                  <span class="psw"> <a href="#"> Forgot password?</a></span>
-              </div>
           </form>
       </div>
     </div>
@@ -91,9 +87,10 @@ html{
     padding: 12px 20px;
     margin: 8px 0;
     display: inline-block;
-    border: 1px solid #ccc;
+    border: 1px solid #e48909;
     box-sizing: border-box;
     border-radius:20px;
+    color:#e48909;
 }
 
 .box{
@@ -223,5 +220,6 @@ html{
   padding-right:10px;
   
 }
+
 
 </style>
