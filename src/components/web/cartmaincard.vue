@@ -84,7 +84,7 @@
 
                         </div>
                         <div class="modal-footer">
-                        <a href="#!" class="modal-close waves-effect waves-green btn-flat orange-text">Next</a>
+                        <a href="#!" class="modal-close waves-effect waves-green btn-flat orange-text">CHECKOUT</a>
                         </div>
                     </div>
                 </div>

@@ -85,7 +85,7 @@
                                 {{beer.type}} <br>
                             </p>
                             
-                            <a class="btn orange white-text secondary-content">ADD TO CART</a>
+                            <a class="btn orange white-text secondary-content" v-on:click="addToCart(beer.id, bardetails.id, 1)">ADD TO CART</a>
                         </li>
                     </ul>
                                 
@@ -132,6 +132,21 @@ let main = Vue.component('main-content', {
                 this.beers = data.body.items;
             }).catch(error=>{
                 console.log(error);
+            });
+        },
+        addToCart(id, sid, qty){
+            console.log(id + " " + sid + " " );
+            let session = Storage.getKey('access-token');
+            Api.post('/cart', {
+                'x-access-token': session.token
+            },{
+                id: this.id,
+                sid: this.sid,
+                qty: 1
+            }).then(data=>{
+                console.log(data);
+            }).catch(error=>{
+            console.log(error);
             });
         }
     }
