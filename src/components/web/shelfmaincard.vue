@@ -1,7 +1,35 @@
 
 
 <template>
-    <div class="beers">
+<div class="container">
+    <br/>
+    <br/>
+    <div class="row">
+
+        <h3 class="orange-text"> SHELF </h3>
+    </div>
+
+    <div class="grey darken-3 section">
+        <div class="row">
+            <div class="col s3 m4" v-for="(beer, index) in beers" :key="index">
+                <div class="card">
+                    <div class="card-image waves-effect waves-block waves-light">
+                            <img src="/static/img/barimage.jpg">
+                    </div>
+                    <div class="card-content">
+                        <span class="card-title activator grey-text text-darken-4">{{beer.beername}}</span>
+                    </div>
+                    <div class="card-reveal">
+                        <span class="card-title grey-text text-darken-4">Beer Details<i class="material-icons right">close</i></span>
+                        <p>Here is some more information about this product that is only revealed once clicked on.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>   
+    <!-- <div class="beers">
             <div id="header">
                 <a href="#" id="filter" ><i class="material-icons">filter_list</i></a>
                 <h1>SHELF</h1>
@@ -30,12 +58,13 @@
                     </div>
                 </div>
             </div>
-        </div>
+        </div> -->
 </template>
 
 <script>
 import Vue from 'vue/dist/vue';
 import Api from '../../lib/Api.js';
+
 import '../../css/shelf.css'
 import beercard from './beercard.vue';
 
