@@ -69,6 +69,9 @@ import '../../css/shelf.css'
 import beercard from './beercard.vue';
 
 let shelf = Vue.component('main-content', {
+    mounted(){
+
+    },
    data: function(){
         return{
             loadmore: false,
